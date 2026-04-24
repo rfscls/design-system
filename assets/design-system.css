@@ -549,11 +549,13 @@ body.is-light .ds-sidebar-toggle{background:rgba(247,250,248,0.92);border-color:
 }
 .ds-sidebar-backdrop[hidden]{display:none}
 
-/* Décale tout le contenu pour laisser la place au sidebar (desktop) */
-body{padding-left:var(--ds-sidebar-w)}
+/* Décale tout le contenu pour laisser la place au sidebar (desktop).
+   Scopé à :has(.ds-sidebar) pour ne pas polluer les pages qui chargent
+   le DS CSS sans avoir de sidebar (landings, protos, emails, etc.). */
+body:has(.ds-sidebar){padding-left:var(--ds-sidebar-w)}
 
 @media(max-width:960px){
-  body{padding-left:0}
+  body:has(.ds-sidebar){padding-left:0}
   .ds-sidebar-toggle{display:inline-flex}
   .ds-sidebar{
     padding-top:68px;
