@@ -1,0 +1,46 @@
+{
+  "name": "@eurofiscalis/design-system",
+  "version": "1.0.0",
+  "description": "Design System Eurofiscalis — tokens CSS, composants, JS a11y et règles d'usage.",
+  "author": "Eurofiscalis",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "./assets/design-system.css",
+  "style": "./assets/design-system.css",
+  "browser": "./assets/design-system.js",
+  "exports": {
+    ".": "./assets/design-system.css",
+    "./css": "./assets/design-system.css",
+    "./js": "./assets/design-system.js",
+    "./topo": "./assets/topo-generated.css",
+    "./brand/*": "./img/brand/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "assets/design-system.css",
+    "assets/design-system.js",
+    "assets/topo-generated.css",
+    "img/brand",
+    "README.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "design-system",
+    "eurofiscalis",
+    "css",
+    "tokens"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rfscls/design-system.git"
+  },
+  "homepage": "https://github.com/rfscls/design-system#readme",
+  "bugs": {
+    "url": "https://github.com/rfscls/design-system/issues"
+  }
+}
