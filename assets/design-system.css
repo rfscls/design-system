@@ -1,17 +1,25 @@
 /* ================================================================
-   EUROFISCALIS — DESIGN SYSTEM v1
+   EUROFISCALIS — DESIGN SYSTEM v1.0.1
    ================================================================
    Import:   <link rel="stylesheet" href="assets/design-system.css">
-   Fonts:    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Instrument+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+   ⚠️ FONTS — NON EMBARQUÉES DANS CE CSS
+   Ce fichier référence Fraunces + Plus Jakarta Sans + Caveat +
+   JetBrains Mono via CSS variables, mais n'embarque PAS les
+   @font-face. Le consommateur DOIT ajouter ce <link> :
+
+   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+   Sans ce <link>, tout tombe en fallback Georgia/Times.
 
    Surfaces:
    - DEEP   #060D0E — hero, moments forts (mesh chaud)
    - DARK   #0B1517 — contenu dark (topo)
    - LIGHT  #F7FAF8 — lecture, article, docs (cross hatch)
 
-   Cards  = glassmorphism (dark .gd  /  light .gl)
-   Accent = #5ECD8C (vert)
-   Display = Montserrat | Body = Inter | Hand = Caveat
+   Cards   = glassmorphism (dark .gd  /  light .gl)
+   Accent  = #5ECD8C (vert)
+   Display = Fraunces | Body = Plus Jakarta Sans | Hand = Caveat | Mono = JetBrains Mono
    ================================================================ */
 
 @layer tokens, base, components, utilities;
@@ -99,7 +107,7 @@
 
   /* — Type (config figée v1.1) */
   --ff-display:'Fraunces',Georgia,serif;
-  --ff-body:'Plus Jakarta Sans','Inter',sans-serif;
+  --ff-body:'Plus Jakarta Sans',system-ui,sans-serif;
   --ff-hand:'Caveat',cursive;
   --ff-em:Georgia,'Times New Roman',serif;
   --ff-mono:'JetBrains Mono','Fira Code',monospace;
@@ -203,7 +211,7 @@ a:focus-visible{outline-offset:3px;border-radius:2px}
 /* ----------------------------------------------------------------
    TYPOGRAPHY
 ---------------------------------------------------------------- */
-/* Fraunces display — plus chaud que Montserrat, weight 600 pour éviter la lourdeur */
+/* Fraunces display — weight 600 pour éviter la lourdeur */
 h1,h2,h3,h4,h5,h6{font-family:var(--ff-display);letter-spacing:-0.025em;line-height:1.1;color:var(--head)}
 :where(.is-light, .f-light) :is(h1,h2,h3,h4,h5,h6){color:var(--lt-head)}
 h1{font-weight:600;font-size:clamp(2.125rem,5vw,3.625rem)}
