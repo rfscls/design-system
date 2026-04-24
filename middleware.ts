@@ -12,7 +12,24 @@ export const config = {
   matcher: '/((?!_next/|_vercel/|favicon.ico).*)',
 };
 
+// Assets publics — consommables sans auth depuis n'importe quel site
+// (landings, emails, prototypes, apps externes qui importent le DS).
+// La doc HTML reste protégée — seule la mécanique publique est ouverte.
+const PUBLIC_PATHS = new Set([
+  '/assets/design-system.css',
+  '/assets/design-system.js',
+  '/assets/topo-generated.css',
+]);
+const PUBLIC_PREFIXES = ['/img/brand/'];
+
 export default function middleware(request: Request): Response | undefined {
+  const pathname = new URL(request.url).pathname;
+
+  // Whitelist publique — skip auth
+  if (PUBLIC_PATHS.has(pathname) || PUBLIC_PREFIXES.some(p => pathname.startsWith(p))) {
+    return;
+  }
+
   const expectedUser = process.env.SITE_USER || 'eurofiscalis';
   const expectedPass = process.env.SITE_PASSWORD;
 

@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.1] — 2026-04-24
+
+### Changed
+- **Middleware Vercel** : les assets consommables (`/assets/design-system.css`, `/assets/design-system.js`, `/assets/topo-generated.css`, `/img/brand/*`) sont désormais accessibles **sans authentification**. La doc HTML reste protégée (règles d'usage, matrices, decisions de brand).
+
+### Why
+Permet aux landings, emails, prototypes et apps externes d'importer le DS directement depuis `design-system.eurofiscalis.app` sans prompt de login. Pattern standard pour un DS distribué (cf Shadcn, Radix, Adobe Spectrum).
+
 ## [1.0.0] — 2026-04-24
 
 Première version publiable.
