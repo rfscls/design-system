@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.5] — 2026-04-27
+
+### Fixed
+- **`.prose h3`** : `font-family: var(--ff-display)` (Fraunces) → **`var(--ff-body)` (Lato)**, `font-weight: 800 → 700`, `letter-spacing: -0.02em → -0.01em`.
+
+### Why
+Correction d'asymétrie : `h3` standard est en Lato 700, mais `.prose h3` était re-overridé en Fraunces 800. Ça faisait du h3 le seul niveau dont la police varie selon le contexte, contredisant la doc qui annonce "h3/h4 en Lato". On aligne sur le comportement attendu : tous les h3 du DS sont désormais en Lato 700, cohérents entre UI et lecture éditoriale. La distinction des sous-titres dans `.prose` reste assurée par la taille (28px max) et le poids 700.
+
 ## [1.0.4] — 2026-04-27
 
 ### Changed
