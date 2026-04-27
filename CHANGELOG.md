@@ -4,6 +4,42 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.4] — 2026-04-27
+
+### Changed
+- **Police body** : `Plus Jakarta Sans` → **`Lato`**. Plus lisible pour les articles et la lecture longue. Charger avec `family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700`.
+- **Échelle typographique refondue autour d'un body 18px** (vs 17px précédemment). Toutes les classes éditoriales suivent un ratio modulaire ~1.2 :
+  - `body p` : 17 / 1.65 → **18 / 1.6**
+  - `.lead` : 19 / 1.6 → **21 / 1.5**
+  - `h1` : `clamp(34, 5vw, 58)` → **`clamp(36, 5vw, 64)`**
+  - `h2` : `clamp(30, 4.4vw, 50)` → **`clamp(32, 4.4vw, 54)`**
+  - `h3` : `clamp(17, 2vw, 21)` → **`clamp(22, 2vw, 28)`** (correction d'incohérence : plancher remonté pour distinction claire avec le body)
+  - `h4-h6` : 16 → **19** (correction d'incohérence : h4 ne doit jamais être < body)
+  - `.caption` : 13 → **14**
+  - `.eyebrow` : 11 → **12**
+  - `.read-lg/md/sm/xs` : 19/17/15.5/13.5 → **20/18/16/14**
+  - `.card p` : 14.5 → **15**
+  - `.prose p` : 17 / 1.75 → **18 / 1.7**
+  - `.prose h2` : `clamp(28, 3vw, 38)` → **`clamp(30, 3vw, 40)`**
+  - `.prose h3` : 22 → **28**
+  - `.prose li` : 16.5 → **18**
+  - `.prose blockquote` : 17 → **18**
+- Tous les `font-family: monospace` ou `'Courier New', monospace` inline ont été remplacés par `var(--ff-mono)` pour garantir JetBrains Mono partout (et éviter le fallback navigateur sur Menlo/Consolas/etc.).
+
+### Documentation
+- **Refactor complet de `design-system.html`** : la page de doc utilise maintenant les classes natives du DS (`.lead`, `.eyebrow.eyebrow-accent`, `.icode`, `.caption`) au lieu de classes custom propres à la doc (`.ds-section-sub`, `.ds-block-title`, `.ds-icode-name/-desc`). 207 remplacements de classes + 115 inline `font-size` retirés. La doc devient l'exemple ultime de l'usage du DS.
+- `assets/design-system-doc.css` : tous les overrides typographiques retirés. Ne conserve que les contraintes structurelles (padding, margin, max-width). Override doc-only : `.ds-section .lead` est ramené à la taille de `.read-md` (18 / 1.7) pour ne pas surcharger les introductions de section.
+- `README.md` enrichi avec une procédure consommateur claire (« Mettre à jour le DS dans un projet consommateur ») + procédure de rollback.
+
+### Why
+- **Lato** : lecture plus confortable sur des articles longs (`/blog/...`) que Plus Jakarta Sans, qui était plus typé interface dashboard.
+- **Body 18px** : standard éditorial moderne (NYT, Stripe, Substack, Medium tournent à 18-21px). 17px commençait à montrer ses limites sur de la prose dense.
+- **h4 ≥ body** : un titre, même mineur, ne doit jamais être plus petit que le texte qu'il chapeaute. Anti-pattern typographique corrigé.
+- **JetBrains Mono partout** : sans `var(--ff-mono)` explicite, le navigateur tombe sur la mono système (Menlo macOS, Consolas Windows…). Fix global.
+
+### Migration
+Aucun changement d'API CSS — toutes les classes existantes restent supportées. **Mais l'impact visuel est significatif** (tailles, police, hiérarchie). Tester chaque page consommatrice après bump.
+
 ## [1.0.1] — 2026-04-24
 
 ### Changed

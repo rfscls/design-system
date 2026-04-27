@@ -6,7 +6,7 @@
 <title>Eurofiscalis — Design System</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/design-system.css?v=40">
 <link rel="stylesheet" href="assets/topo-generated.css?v=4">
 <script src="assets/design-system.js?v=1" defer></script>
@@ -19,7 +19,7 @@
       <circle r="40" fill="#5ECD8C"/>
     </g>
     <text x="600" y="620" text-anchor="middle" fill="#5ECD8C" font-family="Fraunces, serif" font-size="42" font-weight="600" letter-spacing="4">DESIGN SYSTEM</text>
-    <text x="600" y="660" text-anchor="middle" fill="#5A7166" font-family="Plus Jakarta Sans, sans-serif" font-size="18" letter-spacing="2">EUROFISCALIS</text>
+    <text x="600" y="660" text-anchor="middle" fill="#5A7166" font-family="Lato, sans-serif" font-size="18" letter-spacing="2">EUROFISCALIS</text>
   </svg>
 </template>
 <svg style="position:absolute;width:0;height:0"><defs>
@@ -100,25 +100,25 @@
   <!-- FOUNDATIONS -->
   <div class="mx ds-section" id="surfaces">
     <h2>Surfaces</h2>
-    <p class="ds-section-sub">3 surfaces alternent — deep pour les moments forts (hero, CTA), dark pour la lecture dense, light pour l'article et la doc. L'accent vert <code class="icode">#5ECD8C</code> est la signature constante.</p>
+    <p class="lead">3 surfaces alternent — deep pour les moments forts (hero, CTA), dark pour la lecture dense, light pour l'article et la doc. L'accent vert <code class="icode">#5ECD8C</code> est la signature constante.</p>
 
     <div class="ds-block">
       <span class="label label-dk label-dot" style="margin-bottom:18px">Surfaces</span>
       <div class="grid-3">
         <div class="card card-outline" style="background:var(--deep);padding:48px 28px">
           <div style="font-family:var(--ff-display);font-weight:900;color:var(--head);font-size:22px;margin-bottom:6px">Deep</div>
-          <div style="color:var(--muted);font-size:12px;font-family:monospace;margin-bottom:14px">#060D0E</div>
-          <div style="color:var(--muted);font-size:13px">Hero, CTA, moments forts</div>
+          <div style="color:var(--muted);font-size:12px;font-family:var(--ff-mono);margin-bottom:14px">#060D0E</div>
+          <div class="caption">Hero, CTA, moments forts</div>
         </div>
         <div class="card card-outline" style="background:var(--dark);padding:48px 28px">
           <div style="font-family:var(--ff-display);font-weight:900;color:var(--head);font-size:22px;margin-bottom:6px">Dark</div>
-          <div style="color:var(--muted);font-size:12px;font-family:monospace;margin-bottom:14px">#0B1517</div>
-          <div style="color:var(--muted);font-size:13px">Contenu dense dark</div>
+          <div style="color:var(--muted);font-size:12px;font-family:var(--ff-mono);margin-bottom:14px">#0B1517</div>
+          <div class="caption">Contenu dense dark</div>
         </div>
         <div class="card card-outline" style="background:var(--light);padding:48px 28px;border-color:rgba(44,80,81,0.1)">
           <div style="font-family:var(--ff-display);font-weight:900;color:var(--lt-head);font-size:22px;margin-bottom:6px">Light</div>
-          <div style="color:var(--lt-muted);font-size:12px;font-family:monospace;margin-bottom:14px">#F7FAF8</div>
-          <div style="color:var(--lt-muted);font-size:13px">Article, lecture, docs</div>
+          <div style="color:var(--lt-muted);font-size:12px;font-family:var(--ff-mono);margin-bottom:14px">#F7FAF8</div>
+          <div class="caption">Article, lecture, docs</div>
         </div>
       </div>
     </div>
@@ -127,12 +127,12 @@
   <!-- BACKGROUNDS -->
   <div class="mx ds-section" id="backgrounds">
     <h2>Fonds</h2>
-    <p class="ds-section-sub">3 surfaces (<code class="icode">.f-deep</code> · <code class="icode">.f-dark</code> · <code class="icode">.f-light</code>) × 5 textures empilables. Un <strong style="color:var(--text)">fond remplit toute la surface</strong> d'une section ou d'une card — à distinguer des <a href="#decor" style="color:var(--accent)">décors</a>, qui sont des accents ponctuels posés par-dessus. Toutes les combinaisons ne se valent pas — le DS porte une opinion.</p>
+    <p class="lead">3 surfaces (<code class="icode">.f-deep</code> · <code class="icode">.f-dark</code> · <code class="icode">.f-light</code>) × 5 textures empilables. Un <strong style="color:var(--text)">fond remplit toute la surface</strong> d'une section ou d'une card — à distinguer des <a href="#decor" style="color:var(--accent)">décors</a>, qui sont des accents ponctuels posés par-dessus. Toutes les combinaisons ne se valent pas — le DS porte une opinion.</p>
 
     <!-- INTERACTIVE EXPLORER -->
     <div class="ds-block">
-      <div class="ds-block-title">Explorateur — surface × texture</div>
-      <p style="color:var(--muted);font-size:13px;margin-bottom:14px">Les textures se répartissent en <strong style="color:var(--text)">2 familles cumulables</strong> : un <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">pattern</em> (motif géométrique au-dessus du contenu) et un <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">ambient</em> (nappe lumineuse ou dégradé derrière le contenu). Une de chaque max.</p>
+      <div class="eyebrow eyebrow-accent">Explorateur — surface × texture</div>
+      <p style="color:var(--muted);margin-bottom:14px">Les textures se répartissent en <strong style="color:var(--text)">2 familles cumulables</strong> : un <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">pattern</em> (motif géométrique au-dessus du contenu) et un <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">ambient</em> (nappe lumineuse ou dégradé derrière le contenu). Une de chaque max.</p>
 
       <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px">
         <span class="eyebrow eyebrow-mono" style="min-width:72px">Pattern</span>
@@ -157,26 +157,26 @@
           <button class="css-chip" data-bg="bg-fade-light">Fade light</button>
         </div>
       </div>
-      <p style="font-size:11px;color:var(--muted);opacity:0.85;margin:0 0 18px 86px;line-height:1.6"><strong style="color:#FFB8AD">⚠ Règle de contraste</strong> — les fades n'ont de sens qu'entre deux surfaces sombres proches (<code class="icode icode-sm">deep ↔ dark</code>). Tout fade qui traverse l'axe sombre↔clair est <strong style="color:var(--text)">fortement déconseillé</strong> : <code class="icode icode-sm">bg-fade-light</code> (sur deep ou dark), <code class="icode icode-sm">bg-fade-dark</code> ou <code class="icode icode-sm">bg-fade-deep</code> sur <code class="icode icode-sm">.f-light</code>. La transition est trop brutale, le texte devient illisible dans la zone de bascule, et ça casse la cohérence de l'identité. Si tu veux passer de sombre à clair, fais-le entre deux sections distinctes, pas à l'intérieur d'une même section.</p>
+      <p class="caption" style="margin:0 0 18px 86px"><strong style="color:#FFB8AD">⚠ Règle de contraste</strong> — les fades n'ont de sens qu'entre deux surfaces sombres proches (<code class="icode icode-sm">deep ↔ dark</code>). Tout fade qui traverse l'axe sombre↔clair est <strong style="color:var(--text)">fortement déconseillé</strong> : <code class="icode icode-sm">bg-fade-light</code> (sur deep ou dark), <code class="icode icode-sm">bg-fade-dark</code> ou <code class="icode icode-sm">bg-fade-deep</code> sur <code class="icode icode-sm">.f-light</code>. La transition est trop brutale, le texte devient illisible dans la zone de bascule, et ça casse la cohérence de l'identité. Si tu veux passer de sombre à clair, fais-le entre deux sections distinctes, pas à l'intérieur d'une même section.</p>
       <div id="bg-preview-deep" class="f-deep" style="position:relative;overflow:hidden;border-radius:20px;padding:72px 40px;min-height:320px;border:1px solid rgba(94,205,140,0.08);display:flex;align-items:center;justify-content:center;text-align:center">
         <div style="position:relative;z-index:3;max-width:560px">
           <span class="label label-dk label-dot">Surface deep</span>
           <h2 style="font-size:clamp(28px,3.5vw,40px);margin-top:12px">Pour les moments <em>forts</em></h2>
-          <p style="color:var(--text);margin-top:14px;font-size:15px;line-height:1.65"><code class="icode icode-sm">.f-deep</code> — hero, sections de transition, CTA. Texture active : <code id="bg-code-deep" style="color:var(--accent);background:rgba(94,205,140,0.08);padding:2px 6px;border-radius:4px;font-family:monospace;font-size:13px">aucune</code></p>
+          <p style="color:var(--text);margin-top:14px;line-height:1.65"><code class="icode icode-sm">.f-deep</code> — hero, sections de transition, CTA. Texture active : <code id="bg-code-deep" style="color:var(--accent);background:rgba(94,205,140,0.08);padding:2px 6px;border-radius:4px;font-family:var(--ff-mono)">aucune</code></p>
         </div>
       </div>
       <div id="bg-preview-dark" class="f-dark" style="position:relative;overflow:hidden;border-radius:20px;padding:72px 40px;min-height:320px;border:1px solid rgba(94,205,140,0.08);display:flex;align-items:center;justify-content:center;text-align:center;margin-top:18px">
         <div style="position:relative;z-index:3;max-width:560px">
           <span class="label label-dk label-dot">Surface dark</span>
           <h2 style="font-size:clamp(28px,3.5vw,40px);margin-top:12px">Surface <em>intermédiaire</em></h2>
-          <p style="color:var(--text);margin-top:14px;font-size:15px;line-height:1.65"><code class="icode icode-sm">.f-dark</code> — sections neutres entre deep et light. Texture active : <code id="bg-code-dark" style="color:var(--accent);background:rgba(94,205,140,0.08);padding:2px 6px;border-radius:4px;font-family:monospace;font-size:13px">aucune</code></p>
+          <p style="color:var(--text);margin-top:14px;line-height:1.65"><code class="icode icode-sm">.f-dark</code> — sections neutres entre deep et light. Texture active : <code id="bg-code-dark" style="color:var(--accent);background:rgba(94,205,140,0.08);padding:2px 6px;border-radius:4px;font-family:var(--ff-mono)">aucune</code></p>
         </div>
       </div>
       <div id="bg-preview-light" class="f-light" style="position:relative;overflow:hidden;border-radius:20px;padding:72px 40px;min-height:320px;border:1px solid rgba(44,80,81,0.12);display:flex;align-items:center;justify-content:center;text-align:center;margin-top:18px">
         <div style="position:relative;z-index:3;max-width:560px">
           <span class="label" style="background:rgba(44,80,81,0.08);color:var(--lt-head)">Surface light</span>
           <h2 style="font-size:clamp(28px,3.5vw,40px);margin-top:12px;color:var(--lt-head)">Une lecture <em style="font-family:var(--ff-em)">apaisée</em></h2>
-          <p style="color:var(--lt-text);margin-top:14px;font-size:15px;line-height:1.65"><code class="icode icode-sm icode-lt">.f-light</code> — article, doc, contenu long. Texture active : <code id="bg-code-light" style="color:var(--lt-head);background:rgba(44,80,81,0.08);padding:2px 6px;border-radius:4px;font-family:monospace;font-size:13px">aucune</code></p>
+          <p style="color:var(--lt-text);margin-top:14px;line-height:1.65"><code class="icode icode-sm icode-lt">.f-light</code> — article, doc, contenu long. Texture active : <code id="bg-code-light" style="color:var(--lt-head);background:rgba(44,80,81,0.08);padding:2px 6px;border-radius:4px;font-family:var(--ff-mono)">aucune</code></p>
         </div>
       </div>
       <code class="code" style="margin-top:18px">&lt;!-- Surface seule --&gt;<br>&lt;section class="f-deep"&gt;...&lt;/section&gt;<br>&lt;!-- Surface + pattern --&gt;<br>&lt;section class="f-dark bg-dots"&gt;...&lt;/section&gt;<br>&lt;!-- Surface + ambient --&gt;<br>&lt;section class="f-deep bg-halo"&gt;...&lt;/section&gt;<br>&lt;!-- Surface + pattern + ambient (cumulés) --&gt;<br>&lt;section class="f-deep bg-dots bg-halo"&gt;...&lt;/section&gt;</code>
@@ -184,7 +184,7 @@
 
     <!-- USAGE MATRIX -->
     <div class="ds-block">
-      <div class="ds-block-title">Matrice d'usage recommandée</div>
+      <div class="eyebrow eyebrow-accent">Matrice d'usage recommandée</div>
       <div class="preview-box" style="padding:0">
         <table class="table" style="font-size:13px">
           <thead>
@@ -199,35 +199,35 @@
           <tbody>
             <tr><td colspan="5" class="eyebrow eyebrow-mono eyebrow-accent" style="background:rgba(94,205,140,0.04);padding:10px 14px">Patterns <span style="color:var(--muted);font-weight:500;letter-spacing:0;text-transform:none;font-family:var(--ff-body)">— motifs géométriques, au-dessus du contenu (1 max)</span></td></tr>
             <tr>
-              <td><strong style="color:var(--head)">Stars</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-stars</span></td>
+              <td><strong style="color:var(--head)">Stars</strong> <span class="icode icode-sm icode-muted">.bg-stars</span></td>
               <td style="text-align:center;color:var(--accent);font-weight:700">★</td>
               <td style="text-align:center;color:var(--text)">✓</td>
               <td style="text-align:center;color:var(--danger-light)">✗</td>
               <td style="color:var(--muted)">Brand / EU — hero, footer, section identité</td>
             </tr>
             <tr>
-              <td><strong style="color:var(--head)">Dots</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-dots</span></td>
+              <td><strong style="color:var(--head)">Dots</strong> <span class="icode icode-sm icode-muted">.bg-dots</span></td>
               <td style="text-align:center;color:var(--muted)">—</td>
               <td style="text-align:center;color:var(--accent);font-weight:700">★</td>
               <td style="text-align:center;color:var(--accent);font-weight:700">★</td>
               <td style="color:var(--muted)">Neutre — sections calmes, contenu</td>
             </tr>
             <tr>
-              <td><strong style="color:var(--head)">Grid</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-grid</span></td>
+              <td><strong style="color:var(--head)">Grid</strong> <span class="icode icode-sm icode-muted">.bg-grid</span></td>
               <td style="text-align:center;color:var(--text)">✓</td>
               <td style="text-align:center;color:var(--text)">✓</td>
               <td style="text-align:center;color:var(--text)">✓</td>
               <td style="color:var(--muted)">Data — features, stats, tableaux</td>
             </tr>
             <tr>
-              <td><strong style="color:var(--head)">Topo</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-topo</span></td>
+              <td><strong style="color:var(--head)">Topo</strong> <span class="icode icode-sm icode-muted">.bg-topo</span></td>
               <td style="text-align:center;color:var(--text)">✓</td>
               <td style="text-align:center;color:var(--text)">✓</td>
               <td style="text-align:center;color:var(--text)">✓</td>
               <td style="color:var(--muted)">Cartes, Europe, international</td>
             </tr>
             <tr>
-              <td><strong style="color:var(--head)">Noise</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-noise</span></td>
+              <td><strong style="color:var(--head)">Noise</strong> <span class="icode icode-sm icode-muted">.bg-noise</span></td>
               <td style="text-align:center;color:var(--danger-light)">✗</td>
               <td style="text-align:center;color:var(--accent);font-weight:700">★</td>
               <td style="text-align:center;color:var(--danger-light)">✗</td>
@@ -235,35 +235,35 @@
             </tr>
             <tr><td colspan="5" class="eyebrow eyebrow-mono eyebrow-accent" style="background:rgba(94,205,140,0.04);padding:10px 14px">Ambient <span style="color:var(--muted);font-weight:500;letter-spacing:0;text-transform:none;font-family:var(--ff-body)">— nappes lumineuses et dégradés, derrière le contenu (1 max, cumulable avec 1 pattern)</span></td></tr>
             <tr>
-              <td><strong style="color:var(--head)">Halo</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-halo</span></td>
+              <td><strong style="color:var(--head)">Halo</strong> <span class="icode icode-sm icode-muted">.bg-halo</span></td>
               <td style="text-align:center;color:var(--accent);font-weight:700">★</td>
               <td style="text-align:center;color:var(--text)">✓</td>
               <td style="text-align:center;color:var(--danger-light)">✗</td>
               <td style="color:var(--muted)">Profondeur — hero, CTA, sections sombres</td>
             </tr>
             <tr>
-              <td><strong style="color:var(--head)">Mint glow</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-mint-glow</span></td>
+              <td><strong style="color:var(--head)">Mint glow</strong> <span class="icode icode-sm icode-muted">.bg-mint-glow</span></td>
               <td style="text-align:center;color:var(--danger-light)">✗</td>
               <td style="text-align:center;color:var(--text)">✓</td>
               <td style="text-align:center;color:var(--accent);font-weight:700">★</td>
               <td style="color:var(--muted)">Moments forts — hero light, transitions</td>
             </tr>
             <tr>
-              <td><strong style="color:var(--head)">Fade dark</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-fade-dark</span></td>
+              <td><strong style="color:var(--head)">Fade dark</strong> <span class="icode icode-sm icode-muted">.bg-fade-dark</span></td>
               <td style="text-align:center;color:var(--accent);font-weight:700">★</td>
               <td style="text-align:center;color:var(--muted)">—</td>
               <td style="text-align:center;color:var(--danger-light)">✗</td>
               <td style="color:var(--muted)">Transition deep → dark (bas de section)</td>
             </tr>
             <tr>
-              <td><strong style="color:var(--head)">Fade deep</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-fade-deep</span></td>
+              <td><strong style="color:var(--head)">Fade deep</strong> <span class="icode icode-sm icode-muted">.bg-fade-deep</span></td>
               <td style="text-align:center;color:var(--muted)">—</td>
               <td style="text-align:center;color:var(--accent);font-weight:700">★</td>
               <td style="text-align:center;color:var(--danger-light)">✗</td>
               <td style="color:var(--muted)">Transition dark → deep (bas de section)</td>
             </tr>
             <tr>
-              <td><strong style="color:var(--head)">Fade light</strong> <span style="color:var(--muted);font-family:monospace;font-size:11px">.bg-fade-light</span></td>
+              <td><strong style="color:var(--head)">Fade light</strong> <span class="icode icode-sm icode-muted">.bg-fade-light</span></td>
               <td style="text-align:center;color:var(--danger-light)">✗</td>
               <td style="text-align:center;color:var(--muted)">—</td>
               <td style="text-align:center;color:var(--muted)">—</td>
@@ -282,23 +282,23 @@
 
     <!-- FADE GRADIENTS -->
     <div class="ds-block">
-      <div class="ds-block-title">Fades — dégradé directionnel vers une surface</div>
-      <p style="color:var(--muted);font-size:13px;margin-bottom:20px">Textures à combiner avec une surface existante. Utiles pour enchaîner deux sections sans rupture franche, ou pour fondre le bas d'un hero dans la section suivante.</p>
+      <div class="eyebrow eyebrow-accent">Fades — dégradé directionnel vers une surface</div>
+      <p style="color:var(--muted);margin-bottom:20px">Textures à combiner avec une surface existante. Utiles pour enchaîner deux sections sans rupture franche, ou pour fondre le bas d'un hero dans la section suivante.</p>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
 
         <div style="position:relative;overflow:hidden;height:160px;border-radius:14px;border:1px solid rgba(94,205,140,0.08);background:var(--deep)">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,var(--dark) 100%)"></div>
           <div class="ds-overlay-center">
-            <code style="font-size:11px;color:var(--accent);background:rgba(94,205,140,0.08);padding:3px 8px;border-radius:6px">.f-deep .bg-fade-dark</code>
-            <span style="font-size:11px;color:var(--muted)">deep → dark</span>
+            <code style="color:var(--accent);background:rgba(94,205,140,0.08);padding:3px 8px;border-radius:6px">.f-deep .bg-fade-dark</code>
+            <span class="caption">deep → dark</span>
           </div>
         </div>
 
         <div style="position:relative;overflow:hidden;height:160px;border-radius:14px;border:1px solid rgba(94,205,140,0.08);background:var(--dark)">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,var(--deep) 100%)"></div>
           <div class="ds-overlay-center">
-            <code style="font-size:11px;color:var(--accent);background:rgba(94,205,140,0.08);padding:3px 8px;border-radius:6px">.f-dark .bg-fade-deep</code>
-            <span style="font-size:11px;color:var(--muted)">dark → deep</span>
+            <code style="color:var(--accent);background:rgba(94,205,140,0.08);padding:3px 8px;border-radius:6px">.f-dark .bg-fade-deep</code>
+            <span class="caption">dark → deep</span>
           </div>
         </div>
 
@@ -306,11 +306,11 @@
           <div style="position:relative;overflow:hidden;height:160px;border-radius:14px;border:1px solid rgba(94,205,140,0.08);background:var(--dark)">
             <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,var(--light) 100%)"></div>
             <div class="ds-overlay-center">
-              <code class="icode icode-lt-solid" style="font-size:11px">.f-dark .bg-fade-light</code>
-              <span style="font-size:11px;color:var(--lt-muted)">dark → light</span>
+              <code class="icode icode-lt-solid" style="">.f-dark .bg-fade-light</code>
+              <span class="caption">dark → light</span>
             </div>
           </div>
-          <p style="font-size:11px;color:var(--muted);opacity:0.7;margin-top:8px">⚠ Déconseillé — transition trop contrastée. À réserver à des cas très spécifiques.</p>
+          <p style="color:var(--muted);opacity:0.7;margin-top:8px">⚠ Déconseillé — transition trop contrastée. À réserver à des cas très spécifiques.</p>
         </div>
 
       </div>
@@ -321,10 +321,10 @@
   <!-- COLORS -->
   <div class="mx ds-section" id="colors">
     <h2>Couleurs</h2>
-    <p class="ds-section-sub">Palette complète — surfaces, textes, brand.</p>
+    <p class="lead">Palette complète — surfaces, textes, brand.</p>
 
     <div class="ds-block">
-      <div class="ds-block-title">Brand</div>
+      <div class="eyebrow eyebrow-accent">Brand</div>
       <div class="swatch-grid">
         <div class="swatch" style="background:var(--accent)" data-token="--accent"><div class="swatch-name" style="color:#060D0E">Accent</div><div class="swatch-hex" style="color:rgba(6,13,14,0.85)"></div><div class="swatch-val" style="color:rgba(6,13,14,0.6)">var(--accent)</div></div>
         <div class="swatch" style="background:var(--accent-2)" data-token="--accent-2"><div class="swatch-name" style="color:#060D0E">Accent 2</div><div class="swatch-hex" style="color:rgba(6,13,14,0.85)"></div><div class="swatch-val" style="color:rgba(6,13,14,0.6)">var(--accent-2)</div></div>
@@ -336,7 +336,7 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Dark — textes</div>
+      <div class="eyebrow eyebrow-accent">Dark — textes</div>
       <div class="swatch-grid">
         <div class="swatch" style="background:var(--dark)" data-token="--head"><div class="swatch-name" style="color:var(--head)">Head</div><div class="swatch-hex" style="color:var(--head)"></div><div class="swatch-val" style="color:var(--head);opacity:0.65">var(--head)</div></div>
         <div class="swatch" style="background:var(--dark)" data-token="--text"><div class="swatch-name" style="color:var(--text)">Text</div><div class="swatch-hex" style="color:var(--text)"></div><div class="swatch-val" style="color:var(--text);opacity:0.7">var(--text)</div></div>
@@ -345,7 +345,7 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Light — textes</div>
+      <div class="eyebrow eyebrow-accent">Light — textes</div>
       <div class="swatch-grid">
         <div class="swatch on-light" style="background:var(--light)" data-token="--lt-head"><div class="swatch-name" style="color:var(--lt-head)">Head</div><div class="swatch-hex" style="color:var(--lt-head)"></div><div class="swatch-val" style="color:var(--lt-head);opacity:0.65">var(--lt-head)</div></div>
         <div class="swatch on-light" style="background:var(--light)" data-token="--lt-text"><div class="swatch-name" style="color:var(--lt-text)">Text</div><div class="swatch-hex" style="color:var(--lt-text)"></div><div class="swatch-val" style="color:var(--lt-text);opacity:0.7">var(--lt-text)</div></div>
@@ -354,8 +354,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Neutres — gris vrais (sans teinte verte)</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Échelle neutre à utiliser quand la teinte verte omniprésente fatigue ou quand on veut du contenu vraiment calme (métadonnées, footnotes, zones d'état).</p>
+      <div class="eyebrow eyebrow-accent">Neutres — gris vrais (sans teinte verte)</div>
+      <p class="lead" style="margin-bottom:14px">Échelle neutre à utiliser quand la teinte verte omniprésente fatigue ou quand on veut du contenu vraiment calme (métadonnées, footnotes, zones d'état).</p>
       <div class="swatch-grid">
         <div class="swatch" style="background:#F4F5F6"><div class="swatch-name" style="color:#0E1013">N 50</div><div class="swatch-hex" style="color:rgba(14,16,19,0.85)">#F4F5F6</div></div>
         <div class="swatch" style="background:#E4E6E8"><div class="swatch-name" style="color:#0E1013">N 100</div><div class="swatch-hex" style="color:rgba(14,16,19,0.85)">#E4E6E8</div></div>
@@ -370,15 +370,15 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Semantic — états (form, alertes, toasts)</div>
-      <p class="ds-section-sub" style="margin-bottom:14px;max-width:720px">Palette d'états peu sollicitée sur le site vitrine — prévue pour les usages où elle devient indispensable : formulaires de contact et espace client, dashboards ou outils internes, emails transactionnels, bannières RGPD et consentements.</p>
+      <div class="eyebrow eyebrow-accent">Semantic — états (form, alertes, toasts)</div>
+      <p class="lead" style="margin-bottom:14px;max-width:720px">Palette d'états peu sollicitée sur le site vitrine — prévue pour les usages où elle devient indispensable : formulaires de contact et espace client, dashboards ou outils internes, emails transactionnels, bannières RGPD et consentements.</p>
       <div class="swatch-grid">
         <div class="swatch" style="background:var(--success)" data-token="--success"><div class="swatch-name" style="color:#060D0E">Success</div><div class="swatch-hex" style="color:rgba(6,13,14,0.85)"></div><div class="swatch-val" style="color:rgba(6,13,14,0.6)">var(--success)</div></div>
         <div class="swatch" style="background:var(--warning)" data-token="--warning"><div class="swatch-name" style="color:#2A1D00">Warning</div><div class="swatch-hex" style="color:rgba(42,29,0,0.85)"></div><div class="swatch-val" style="color:rgba(42,29,0,0.6)">var(--warning)</div></div>
         <div class="swatch" style="background:var(--danger)" data-token="--danger"><div class="swatch-name" style="color:#2A0A05">Danger</div><div class="swatch-hex" style="color:rgba(42,10,5,0.85)"></div><div class="swatch-val" style="color:rgba(42,10,5,0.6)">var(--danger)</div></div>
         <div class="swatch" style="background:var(--info)" data-token="--info"><div class="swatch-name" style="color:#06182A">Info</div><div class="swatch-hex" style="color:rgba(6,24,42,0.85)"></div><div class="swatch-val" style="color:rgba(6,24,42,0.6)">var(--info)</div></div>
       </div>
-      <p style="font-size:13px;color:var(--muted);margin-top:14px">Pour voir l'application de ces couleurs sur un composant complet, voir la section <a href="#alerts" style="color:var(--accent)">Alerts</a>.</p>
+      <p style="color:var(--muted);margin-top:14px">Pour voir l'application de ces couleurs sur un composant complet, voir la section <a href="#alerts" style="color:var(--accent)">Alerts</a>.</p>
     </div>
 
     <code class="code">/* Appel via variables CSS */
@@ -399,12 +399,12 @@
   <!-- TYPOGRAPHY -->
   <div class="mx ds-section" id="type">
     <h2>Typographie</h2>
-    <p class="ds-section-sub">Échelle, hiérarchie et helpers inline. Pour les familles de polices, voir <a href="#fonts" style="color:var(--accent)">Polices</a> ; pour les bonnes pratiques de lisibilité, voir <a href="#reading" style="color:var(--accent)">Lecture</a> ; pour les blocs de texte long, voir <a href="#prose" style="color:var(--accent)">Article</a>.</p>
+    <p class="lead">Échelle, hiérarchie et helpers inline. Pour les familles de polices, voir <a href="#fonts" style="color:var(--accent)">Polices</a> ; pour les bonnes pratiques de lisibilité, voir <a href="#reading" style="color:var(--accent)">Lecture</a> ; pour les blocs de texte long, voir <a href="#prose" style="color:var(--accent)">Article</a>.</p>
 
     <!-- ÉCHELLE -->
     <div class="ds-block">
-      <div class="ds-block-title">Échelle — h1 à body</div>
-      <p class="ds-section-sub">Tailles fluides via <code class="icode">clamp()</code> — responsive sans breakpoint. h1/h2 en Fraunces (display), h3/h4 et body en Plus Jakarta Sans.</p>
+      <div class="eyebrow eyebrow-accent">Échelle — h1 à body</div>
+      <p class="lead">Tailles fluides via <code class="icode">clamp()</code> — responsive sans breakpoint. h1/h2 en Fraunces (display), h3/h4 et body en Lato.</p>
 
       <div class="preview-box">
         <div class="type-row">
@@ -425,7 +425,7 @@
         </div>
         <div class="type-row">
           <div class="type-row-label">h5, h6</div>
-          <div style="margin:0"><h5 style="margin:0;display:inline">Identiques à h4</h5> <span style="color:var(--muted);font-size:13px;margin-left:8px">— même style pour préserver la hiérarchie visuelle</span></div>
+          <div style="margin:0"><h5 style="margin:0;display:inline">Identiques à h4</h5> <span class="caption" style="margin-left:8px">— même style pour préserver la hiérarchie visuelle</span></div>
         </div>
         <div class="type-row">
           <div class="type-row-label">body</div>
@@ -448,37 +448,37 @@
             <tr>
               <td><strong style="color:var(--head)">h1</strong></td>
               <td>Fraunces (display)</td>
-              <td><code class="icode icode-sm">clamp(34px, 5vw, 58px)</code></td>
+              <td><code class="icode icode-sm">clamp(36px, 5vw, 64px)</code></td>
               <td style="text-align:center">600</td>
               <td style="text-align:center">1.1</td>
             </tr>
             <tr>
               <td><strong style="color:var(--head)">h2</strong></td>
               <td>Fraunces (display)</td>
-              <td><code class="icode icode-sm">clamp(30px, 4.4vw, 50px)</code></td>
+              <td><code class="icode icode-sm">clamp(32px, 4.4vw, 54px)</code></td>
               <td style="text-align:center">600</td>
               <td style="text-align:center">1.1</td>
             </tr>
             <tr>
               <td><strong style="color:var(--head)">h3</strong></td>
-              <td>Plus Jakarta Sans</td>
-              <td><code class="icode icode-sm">clamp(17px, 2vw, 21px)</code></td>
+              <td>Lato</td>
+              <td><code class="icode icode-sm">clamp(22px, 2vw, 28px)</code></td>
               <td style="text-align:center">700</td>
               <td style="text-align:center">1.3</td>
             </tr>
             <tr>
               <td><strong style="color:var(--head)">h4, h5, h6</strong></td>
-              <td>Plus Jakarta Sans</td>
-              <td><code class="icode icode-sm">16px</code></td>
+              <td>Lato</td>
+              <td><code class="icode icode-sm">19px</code></td>
               <td style="text-align:center">700</td>
               <td style="text-align:center">1.4</td>
             </tr>
             <tr>
               <td><strong style="color:var(--head)">body</strong></td>
-              <td>Plus Jakarta Sans</td>
-              <td><code class="icode icode-sm">17px</code></td>
+              <td>Lato</td>
+              <td><code class="icode icode-sm">18px</code></td>
               <td style="text-align:center">450</td>
-              <td style="text-align:center">1.65</td>
+              <td style="text-align:center">1.6</td>
             </tr>
           </tbody>
         </table>
@@ -493,8 +493,8 @@
 
     <!-- ITALIQUE ÉDITORIAL -->
     <div class="ds-block">
-      <div class="ds-block-title">Italique éditorial — <code class="icode icode-sm">&lt;em&gt;</code> dans h1/h2</div>
-      <p class="ds-section-sub">Accent typographique signature du DS. Un <code class="icode">&lt;em&gt;</code> placé dans un h1 ou un h2 bascule automatiquement en <strong style="color:var(--text)">Georgia italique</strong>, avec un <strong style="color:var(--text)">gradient vert</strong> sur le texte. À utiliser pour mettre un mot-clé en valeur au sein d'un titre — pas pour de l'italique ordinaire dans le body (qui reste en italique standard de Plus Jakarta).</p>
+      <div class="eyebrow eyebrow-accent">Italique éditorial — <code class="icode icode-sm">&lt;em&gt;</code> dans h1/h2</div>
+      <p class="lead">Accent typographique signature du DS. Un <code class="icode">&lt;em&gt;</code> placé dans un h1 ou un h2 bascule automatiquement en <strong style="color:var(--text)">Georgia italique</strong>, avec un <strong style="color:var(--text)">gradient vert</strong> sur le texte. À utiliser pour mettre un mot-clé en valeur au sein d'un titre — pas pour de l'italique ordinaire dans le body (qui reste en italique standard de Lato).</p>
 
       <div class="preview-box">
         <div class="type-row">
@@ -507,7 +507,7 @@
         </div>
         <div class="type-row">
           <div class="type-row-label">p em</div>
-          <p style="margin:0">Dans un paragraphe, <em>l'italique</em> reste l'italique standard de Plus Jakarta.</p>
+          <p style="margin:0">Dans un paragraphe, <em>l'italique</em> reste l'italique standard de Lato.</p>
         </div>
       </div>
 
@@ -517,8 +517,8 @@
 
     <!-- HELPERS INLINE -->
     <div class="ds-block">
-      <div class="ds-block-title">Helpers inline & classes utilitaires</div>
-      <p class="ds-section-sub">Classes typographiques prêtes à l'emploi pour teinter, structurer ou annoter sans créer de composant dédié. Regroupe les anciens "Helpers inline" et "Classes éditoriales".</p>
+      <div class="eyebrow eyebrow-accent">Helpers inline & classes utilitaires</div>
+      <p class="lead">Classes typographiques prêtes à l'emploi pour teinter, structurer ou annoter sans créer de composant dédié. Regroupe les anciens "Helpers inline" et "Classes éditoriales".</p>
 
       <div class="preview-box">
         <div class="type-row">
@@ -568,8 +568,8 @@
             <tr><td><code class="icode icode-sm">.accent</code></td><td>Mot en vert signature dans un texte</td><td>hérite</td></tr>
             <tr><td><code class="icode icode-sm">.sub</code></td><td>Texte secondaire muted (annotations, sous-titres)</td><td>16px</td></tr>
             <tr><td><code class="icode icode-sm">.hand</code></td><td>Signature manuscrite (Caveat), marginalia</td><td>hérite</td></tr>
-            <tr><td><code class="icode icode-sm">.lead</code></td><td>Paragraphe d'intro de section</td><td>19px</td></tr>
-            <tr><td><code class="icode icode-sm">.caption</code></td><td>Légende de figure (muted)</td><td>13px</td></tr>
+            <tr><td><code class="icode icode-sm">.lead</code></td><td>Paragraphe d'intro de section</td><td>21px</td></tr>
+            <tr><td><code class="icode icode-sm">.caption</code></td><td>Légende de figure (muted)</td><td>14px</td></tr>
             <tr><td><code class="icode icode-sm">.hero-eyebrow</code></td><td>Sur-titre placé au-dessus d'un h1</td><td>13px</td></tr>
             <tr><td><code class="icode icode-sm">.hero-badge</code></td><td>Badge pill sous un hero</td><td>—</td></tr>
             <tr><td><code class="icode icode-sm">.hero-sub</code></td><td>Sous-titre sous un h1</td><td>15px</td></tr>
@@ -598,17 +598,17 @@
   <!-- FONTS GALLERY -->
   <div class="mx ds-section" id="fonts">
     <h2>Polices</h2>
-    <p class="ds-section-sub">5 slots indépendants de polices, chacun exposé via une variable CSS (<code class="icode">--ff-display</code>, <code class="icode">--ff-body</code>, <code class="icode">--ff-mono</code>, <code class="icode">--ff-hand</code>, <code class="icode">--ff-em</code>).</p>
+    <p class="lead">5 slots indépendants de polices, chacun exposé via une variable CSS (<code class="icode">--ff-display</code>, <code class="icode">--ff-body</code>, <code class="icode">--ff-mono</code>, <code class="icode">--ff-hand</code>, <code class="icode">--ff-em</code>).</p>
 
     <!-- SUMMARY TABLE -->
     <div class="ds-block">
-      <div class="ds-block-title">Résumé — 5 slots</div>
+      <div class="eyebrow eyebrow-accent">Résumé — 5 slots</div>
       <div class="preview-box" style="padding:0">
         <table class="table">
           <thead><tr><th>Slot</th><th>Usage</th><th>CSS var</th><th>Défaut figé</th></tr></thead>
           <tbody>
             <tr><td><strong style="color:var(--head)">1 · Display</strong></td><td>H1, H2 — titres hero, sections</td><td><code>--ff-display</code></td><td>Fraunces 600</td></tr>
-            <tr><td><strong style="color:var(--head)">2 · Body</strong></td><td>Paragraphes, UI, H3, H4</td><td><code>--ff-body</code></td><td>Plus Jakarta 450</td></tr>
+            <tr><td><strong style="color:var(--head)">2 · Body</strong></td><td>Paragraphes, UI, H3, H4</td><td><code>--ff-body</code></td><td>Lato 450</td></tr>
             <tr><td><strong style="color:var(--head)">3 · Mono</strong></td><td>Code, kbd, tokens CSS</td><td><code>--ff-mono</code></td><td>JetBrains Mono</td></tr>
             <tr><td><strong style="color:var(--head)">4 · Hand</strong></td><td>Signature, marginalia, dessous de titres</td><td><code>--ff-hand</code></td><td>Caveat 600</td></tr>
             <tr><td><strong style="color:var(--head)">5 · Em</strong></td><td>Italique dans titres (contraste éditorial)</td><td><code>--ff-em</code></td><td>Georgia italic</td></tr>
@@ -619,12 +619,12 @@
 
     <!-- SPECIMENS -->
     <div class="ds-block">
-      <div class="ds-block-title">Specimens — comparer les 5 polices</div>
-      <p class="ds-section-sub">Un échantillon par slot pour visualiser les caractères et juger le rendu de chaque police en contexte.</p>
+      <div class="eyebrow eyebrow-accent">Specimens — comparer les 5 polices</div>
+      <p class="lead">Un échantillon par slot pour visualiser les caractères et juger le rendu de chaque police en contexte.</p>
       <div class="preview-box" style="padding:0">
         <div style="display:grid;grid-template-columns:minmax(160px,1fr) 2fr;gap:0">
           <div style="padding:22px 20px;border-bottom:1px solid rgba(94,205,140,0.08)">
-            <div style="font-size:10.5px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">1 · Display</div>
+            <div class="eyebrow eyebrow-accent" style="margin-bottom:6px">1 · Display</div>
             <div style="color:var(--text);font-size:13px;margin-bottom:2px">Fraunces</div>
             <code class="icode icode-sm">--ff-display</code>
           </div>
@@ -634,8 +634,8 @@
           </div>
 
           <div style="padding:22px 20px;border-bottom:1px solid rgba(94,205,140,0.08)">
-            <div style="font-size:10.5px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">2 · Body</div>
-            <div style="color:var(--text);font-size:13px;margin-bottom:2px">Plus Jakarta Sans</div>
+            <div class="eyebrow eyebrow-accent" style="margin-bottom:6px">2 · Body</div>
+            <div style="color:var(--text);font-size:13px;margin-bottom:2px">Lato</div>
             <code class="icode icode-sm">--ff-body</code>
           </div>
           <div style="padding:22px 24px;border-bottom:1px solid rgba(94,205,140,0.08);font-family:var(--ff-body)">
@@ -644,7 +644,7 @@
           </div>
 
           <div style="padding:22px 20px;border-bottom:1px solid rgba(94,205,140,0.08)">
-            <div style="font-size:10.5px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">3 · Mono</div>
+            <div class="eyebrow eyebrow-accent" style="margin-bottom:6px">3 · Mono</div>
             <div style="color:var(--text);font-size:13px;margin-bottom:2px">JetBrains Mono</div>
             <code class="icode icode-sm">--ff-mono</code>
           </div>
@@ -654,7 +654,7 @@
           </div>
 
           <div style="padding:22px 20px;border-bottom:1px solid rgba(94,205,140,0.08)">
-            <div style="font-size:10.5px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">4 · Hand</div>
+            <div class="eyebrow eyebrow-accent" style="margin-bottom:6px">4 · Hand</div>
             <div style="color:var(--text);font-size:13px;margin-bottom:2px">Caveat</div>
             <code class="icode icode-sm">--ff-hand</code>
           </div>
@@ -664,7 +664,7 @@
           </div>
 
           <div style="padding:22px 20px">
-            <div style="font-size:10.5px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:6px">5 · Em</div>
+            <div class="eyebrow eyebrow-accent" style="margin-bottom:6px">5 · Em</div>
             <div style="color:var(--text);font-size:13px;margin-bottom:2px">Georgia italic</div>
             <code class="icode icode-sm">--ff-em</code>
           </div>
@@ -680,14 +680,14 @@
   <!-- READING SCALE -->
   <div class="mx ds-section" id="reading">
     <h2>Lecture</h2>
-    <p class="ds-section-sub">Tailles recommandées pour une lecture confortable, basées sur la recherche UX (USWDS, Baymard, Smashing). <strong style="color:var(--text)">Règles clés</strong> : body ≥ 16px, line-height 1.5–1.7, largeur 50–75 caractères (sweet spot 65ch), alignement gauche.</p>
+    <p class="lead">Tailles recommandées pour une lecture confortable, basées sur la recherche UX (USWDS, Baymard, Smashing). <strong style="color:var(--text)">Règles clés</strong> : body ≥ 16px, line-height 1.6–1.7, largeur 50–75 caractères (sweet spot 65ch), alignement gauche.</p>
 
     <div class="grid-2" style="gap:20px;margin-bottom:28px">
       <div class="gd" style="padding:24px">
-        <div class="ds-block-title" style="margin-bottom:10px">✓ À faire</div>
-        <ul style="list-style:none;padding:0;color:var(--text);font-size:14px;line-height:1.9">
-          <li>· Body 16–18px desktop, 17px mobile</li>
-          <li>· Line-height 1.5–1.7 pour longs textes</li>
+        <div class="eyebrow eyebrow-accent" style="margin-bottom:10px">✓ À faire</div>
+        <ul style="list-style:none;padding:0;color:var(--text);line-height:1.9">
+          <li>· Body 18px desktop, 16–17px mobile</li>
+          <li>· Line-height 1.6 (body) à 1.7 (lecture longue)</li>
           <li>· Max-width 60–70ch (jamais &gt; 80)</li>
           <li>· Aligner à gauche (meilleure lisibilité)</li>
           <li>· Contraste WCAG AA : 4.5:1 minimum</li>
@@ -696,8 +696,8 @@
         </ul>
       </div>
       <div class="gd" style="padding:24px;border-color:rgba(255,120,120,0.14)">
-        <div class="ds-block-title" style="margin-bottom:10px;color:var(--danger-light)">✗ À éviter</div>
-        <ul style="list-style:none;padding:0;color:var(--text);font-size:14px;line-height:1.9">
+        <div class="eyebrow eyebrow-accent" style="margin-bottom:10px;color:var(--danger-light)">✗ À éviter</div>
+        <ul style="list-style:none;padding:0;color:var(--text);line-height:1.9">
           <li>· Body &lt; 14px (lecture fatigante)</li>
           <li>· Line-height &lt; 1.4 ou &gt; 2</li>
           <li>· Lignes &gt; 80 caractères</li>
@@ -710,25 +710,25 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Échelle body — 4 niveaux</div>
+      <div class="eyebrow eyebrow-accent">Échelle body — 4 niveaux</div>
       <div class="preview-box">
         <div>
-          <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><span class="kbd">.read-lg</span><span class="meta">19px · 1.7 · 62ch — intros / leads</span></div>
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><span class="kbd">.read-lg</span><span class="meta">20px · 1.7 · 62ch — intros / leads</span></div>
           <p class="read-lg" style="margin:0">Eurofiscalis accompagne plus de 400 sellers e-commerce dans leurs obligations TVA européennes. Nous gérons les immatriculations, déclarations et représentations fiscales dans les 27 pays de l'Union.</p>
         </div>
         <hr class="divider-dashed">
         <div>
-          <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><span class="kbd">.read-md</span><span class="meta">17px · 1.7 · 65ch — body par défaut</span></div>
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><span class="kbd">.read-md</span><span class="meta">18px · 1.7 · 65ch — body par défaut</span></div>
           <p class="read-md" style="margin:0">Depuis la réforme du 1er juillet 2021, les règles de TVA pour les ventes à distance dans l'UE ont été profondément modifiées. Le seuil unique de 10 000 € s'applique désormais à l'ensemble des ventes intracommunautaires B2C.</p>
         </div>
         <hr class="divider-dashed">
         <div>
-          <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><span class="kbd">.read-sm</span><span class="meta">15.5px · 1.65 · 68ch — cards, listes</span></div>
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><span class="kbd">.read-sm</span><span class="meta">16px · 1.65 · 68ch — cards, listes</span></div>
           <p class="read-sm" style="margin:0">Le guichet OSS (One-Stop Shop) permet de déclarer la TVA due dans tous les États membres via un portail unique. Une seule déclaration trimestrielle par pays de consommation.</p>
         </div>
         <hr class="divider-dashed">
         <div>
-          <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><span class="kbd">.read-xs</span><span class="meta">13.5px · 1.55 · 72ch — captions, légendes, fine print</span></div>
+          <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px"><span class="kbd">.read-xs</span><span class="meta">14px · 1.55 · 72ch — captions, légendes, fine print</span></div>
           <p class="read-xs" style="margin:0">Cabinet inscrit à l'Ordre des Experts-Comptables — représentation fiscale agréée en France, Allemagne, Espagne, Italie, Pays-Bas.</p>
         </div>
         <hr class="divider-dashed">
@@ -740,14 +740,14 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Code, kbd & labels éditoriaux</div>
-      <p class="ds-section-sub">Famille de 7 classes utilisées dans toute la doc et dans les articles. <code class="icode">.icode</code> est le cheval de bataille pour nommer une classe CSS, un token ou un fichier dans du texte courant.</p>
+      <div class="eyebrow eyebrow-accent">Code, kbd & labels éditoriaux</div>
+      <p class="lead">Famille de 7 classes utilisées dans toute la doc et dans les articles. <code class="icode">.icode</code> est le cheval de bataille pour nommer une classe CSS, un token ou un fichier dans du texte courant.</p>
 
       <div class="ds-icode-list">
         <div class="ds-icode-row">
           <div class="ds-icode-meta">
-            <div class="ds-icode-name"><code class="icode">.icode</code></div>
-            <div class="ds-icode-desc">Code inline dans du texte — classes, tokens, chemins de fichiers.</div>
+            <div class="icode"><code class="icode">.icode</code></div>
+            <div class="caption">Code inline dans du texte — classes, tokens, chemins de fichiers.</div>
           </div>
           <div class="ds-icode-sample ds-icode-sample-dark"><code class="icode">var(--accent)</code></div>
           <div class="ds-icode-sample ds-icode-sample-light"><code class="icode icode-lt">var(--accent)</code></div>
@@ -755,8 +755,8 @@
 
         <div class="ds-icode-row">
           <div class="ds-icode-meta">
-            <div class="ds-icode-name"><code class="icode">.icode-sm</code></div>
-            <div class="ds-icode-desc">Variante compacte pour tableaux denses ou légendes.</div>
+            <div class="icode"><code class="icode">.icode-sm</code></div>
+            <div class="caption">Variante compacte pour tableaux denses ou légendes.</div>
           </div>
           <div class="ds-icode-sample ds-icode-sample-dark"><code class="icode icode-sm">--head</code></div>
           <div class="ds-icode-sample ds-icode-sample-light"><code class="icode icode-lt icode-sm">--head</code></div>
@@ -764,8 +764,8 @@
 
         <div class="ds-icode-row">
           <div class="ds-icode-meta">
-            <div class="ds-icode-name"><code class="icode">.icode-muted</code></div>
-            <div class="ds-icode-desc">Code sans importance visuelle — rappels entre parenthèses, détails secondaires.</div>
+            <div class="icode"><code class="icode">.icode-muted</code></div>
+            <div class="caption">Code sans importance visuelle — rappels entre parenthèses, détails secondaires.</div>
           </div>
           <div class="ds-icode-sample ds-icode-sample-dark"><code class="icode icode-muted">optional</code></div>
           <div class="ds-icode-sample ds-icode-sample-light"><code class="icode icode-muted">optional</code></div>
@@ -773,8 +773,8 @@
 
         <div class="ds-icode-row">
           <div class="ds-icode-meta">
-            <div class="ds-icode-name"><code class="icode">.icode-lt-solid</code></div>
-            <div class="ds-icode-desc">Fond teal plein + texte clair. Pour mettre en saillance un code clé.</div>
+            <div class="icode"><code class="icode">.icode-lt-solid</code></div>
+            <div class="caption">Fond teal plein + texte clair. Pour mettre en saillance un code clé.</div>
           </div>
           <div class="ds-icode-sample ds-icode-sample-dark"><code class="icode icode-lt-solid">.hero-sub</code></div>
           <div class="ds-icode-sample ds-icode-sample-light"><code class="icode icode-lt-solid">.hero-sub</code></div>
@@ -782,8 +782,8 @@
 
         <div class="ds-icode-row">
           <div class="ds-icode-meta">
-            <div class="ds-icode-name"><code class="icode">.icode-lt-neutral</code></div>
-            <div class="ds-icode-desc">Gris neutre, sans vert. Pour un code peu saillant ou un contexte déjà saturé en vert.</div>
+            <div class="icode"><code class="icode">.icode-lt-neutral</code></div>
+            <div class="caption">Gris neutre, sans vert. Pour un code peu saillant ou un contexte déjà saturé en vert.</div>
           </div>
           <div class="ds-icode-sample ds-icode-sample-dark"><code class="icode icode-lt-neutral">.hero-sub</code></div>
           <div class="ds-icode-sample ds-icode-sample-light"><code class="icode icode-lt-neutral">.hero-sub</code></div>
@@ -791,8 +791,8 @@
 
         <div class="ds-icode-row">
           <div class="ds-icode-meta">
-            <div class="ds-icode-name"><code class="icode">.kbd</code></div>
-            <div class="ds-icode-desc">Touches clavier et raccourcis — pill vert avec bordure.</div>
+            <div class="icode"><code class="icode">.kbd</code></div>
+            <div class="caption">Touches clavier et raccourcis — pill vert avec bordure.</div>
           </div>
           <div class="ds-icode-sample ds-icode-sample-dark"><span class="kbd">⌘</span> <span class="kbd">K</span></div>
           <div class="ds-icode-sample ds-icode-sample-light"><span class="kbd">⌘</span> <span class="kbd">K</span></div>
@@ -800,8 +800,8 @@
 
         <div class="ds-icode-row">
           <div class="ds-icode-meta">
-            <div class="ds-icode-name"><code class="icode">.meta</code></div>
-            <div class="ds-icode-desc">Label éditorial — date, catégorie, auteur, fil d'Ariane.</div>
+            <div class="icode"><code class="icode">.meta</code></div>
+            <div class="caption">Label éditorial — date, catégorie, auteur, fil d'Ariane.</div>
           </div>
           <div class="ds-icode-sample ds-icode-sample-dark"><span class="meta">14 MARS 2026</span></div>
           <div class="ds-icode-sample ds-icode-sample-light"><span class="meta">14 MARS 2026</span></div>
@@ -812,7 +812,7 @@
       <div style="margin-top:18px">
         <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:10px">
           <code class="icode">.code</code>
-          <span style="color:var(--muted);font-size:13px">Bloc de code multi-ligne — snippet HTML ou CSS.</span>
+          <span class="caption">Bloc de code multi-ligne — snippet HTML ou CSS.</span>
         </div>
         <code class="code">&lt;!-- Inline dans un paragraphe --&gt;
 &lt;p&gt;La classe &lt;code class="icode"&gt;.hero-sub&lt;/code&gt; pose les sous-titres de hero.&lt;/p&gt;
@@ -826,7 +826,7 @@
 
       <!-- Real usage -->
       <div class="preview-box" style="margin-top:16px">
-        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px;font-weight:600">En situation · en-tête d'article</div>
+        <div class="eyebrow" style="color:var(--muted);margin-bottom:14px">En situation · en-tête d'article</div>
         <div class="example-row" style="align-items:baseline">
           <span class="meta">PUBLIÉ LE 14 MARS 2026</span>
           <span class="meta">·</span>
@@ -835,7 +835,7 @@
           <span class="meta">TVA EUROPE</span>
         </div>
         <h3 style="margin:14px 0 10px">La réforme OSS expliquée</h3>
-        <p style="margin:0;color:var(--text);font-size:15px">Depuis juillet 2021, la classe <code class="icode">.prose</code> peut être utilisée pour styler un article complet. Raccourci <span class="kbd">⌘</span> <span class="kbd">K</span> pour chercher.</p>
+        <p style="margin:0;color:var(--text)">Depuis juillet 2021, la classe <code class="icode">.prose</code> peut être utilisée pour styler un article complet. Raccourci <span class="kbd">⌘</span> <span class="kbd">K</span> pour chercher.</p>
       </div>
     </div>
   </div>
@@ -845,7 +845,7 @@
     <h2>Spacing</h2>
 
     <div class="ds-block">
-      <div class="ds-block-title">Scale (4 → 100 px)</div>
+      <div class="eyebrow eyebrow-accent">Scale (4 → 100 px)</div>
       <div class="spacing-vis">
         <div class="spacing-item"><div class="spacing-block" style="width:4px;height:4px"></div><div class="spacing-lbl">s-1 · 4</div></div>
         <div class="spacing-item"><div class="spacing-block" style="width:8px;height:8px"></div><div class="spacing-lbl">s-2 · 8</div></div>
@@ -862,7 +862,7 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Border radius</div>
+      <div class="eyebrow eyebrow-accent">Border radius</div>
       <div class="radius-grid">
         <div class="radius-box" style="border-radius:10px"><span style="color:var(--head)">sm</span><span>10px</span></div>
         <div class="radius-box" style="border-radius:16px"><span style="color:var(--head)">md</span><span>16px</span></div>
@@ -886,10 +886,10 @@
   <!-- UTILITIES -->
   <div class="mx ds-section" id="utilities">
     <h2>Utilitaires</h2>
-    <p class="ds-section-sub">Classes atomiques de layout pour composer rapidement sans recréer du CSS. À utiliser avec parcimonie — si tu répètes la même combinaison, crée un composant.</p>
+    <p class="lead">Classes atomiques de layout pour composer rapidement sans recréer du CSS. À utiliser avec parcimonie — si tu répètes la même combinaison, crée un composant.</p>
 
     <div class="ds-block">
-      <div class="ds-block-title">Flex</div>
+      <div class="eyebrow eyebrow-accent">Flex</div>
       <div class="preview-box" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
         <div style="padding:18px;background:rgba(94,205,140,0.04);border:1px dashed rgba(94,205,140,0.15);border-radius:10px">
           <code class="icode icode-sm">.flex</code>
@@ -907,7 +907,7 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Gap (8 · 12 · 16 · 24 px)</div>
+      <div class="eyebrow eyebrow-accent">Gap (8 · 12 · 16 · 24 px)</div>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:14px">
         <div class="flex" style="align-items:center;gap:16px"><code class="icode icode-sm icode-muted" style="width:80px">.gap-2</code><div class="flex gap-2"><div style="width:28px;height:28px;background:rgba(94,205,140,0.2);border-radius:4px"></div><div style="width:28px;height:28px;background:rgba(94,205,140,0.2);border-radius:4px"></div><div style="width:28px;height:28px;background:rgba(94,205,140,0.2);border-radius:4px"></div></div></div>
         <div class="flex" style="align-items:center;gap:16px"><code class="icode icode-sm icode-muted" style="width:80px">.gap-3</code><div class="flex gap-3"><div style="width:28px;height:28px;background:rgba(94,205,140,0.2);border-radius:4px"></div><div style="width:28px;height:28px;background:rgba(94,205,140,0.2);border-radius:4px"></div><div style="width:28px;height:28px;background:rgba(94,205,140,0.2);border-radius:4px"></div></div></div>
@@ -917,8 +917,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Marges verticales (.mb-4/6/8 · .mt-4/6/8)</div>
-      <p class="ds-section-sub" style="margin-bottom:16px">Marges bottom / top en pas de <code class="icode icode-sm">16</code>, <code class="icode icode-sm">24</code>, <code class="icode icode-sm">32</code> px. Pour du spacing plus fin, utilise les tokens <code class="icode icode-sm">--s-*</code> directement.</p>
+      <div class="eyebrow eyebrow-accent">Marges verticales (.mb-4/6/8 · .mt-4/6/8)</div>
+      <p class="lead" style="margin-bottom:16px">Marges bottom / top en pas de <code class="icode icode-sm">16</code>, <code class="icode icode-sm">24</code>, <code class="icode icode-sm">32</code> px. Pour du spacing plus fin, utilise les tokens <code class="icode icode-sm">--s-*</code> directement.</p>
       <div class="preview-box">
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
           <div style="background:rgba(94,205,140,0.04);border:1px dashed rgba(94,205,140,0.15);border-radius:10px;padding:10px">
@@ -950,34 +950,34 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Containers (.mx · .mx-sm · .mx-lg)</div>
+      <div class="eyebrow eyebrow-accent">Containers (.mx · .mx-sm · .mx-lg)</div>
       <div class="preview-box">
         <div style="position:relative;height:auto;background:rgba(94,205,140,0.02);border-radius:8px;padding:14px 0">
-          <div style="max-width:1280px;margin:0 auto;padding:0 24px;"><div style="height:24px;background:rgba(94,205,140,0.1);border-radius:4px;display:flex;align-items:center;padding:0 10px;color:var(--accent);font-family:monospace;font-size:10px">.mx-lg — max 1280px</div></div>
-          <div style="max-width:1160px;margin:8px auto 0;padding:0 24px;"><div style="height:24px;background:rgba(94,205,140,0.14);border-radius:4px;display:flex;align-items:center;padding:0 10px;color:var(--accent);font-family:monospace;font-size:10px">.mx — max 1160px · container par défaut</div></div>
-          <div style="max-width:880px;margin:8px auto 0;padding:0 24px;"><div style="height:24px;background:rgba(94,205,140,0.18);border-radius:4px;display:flex;align-items:center;padding:0 10px;color:var(--accent);font-family:monospace;font-size:10px">.mx-sm — max 880px</div></div>
+          <div style="max-width:1280px;margin:0 auto;padding:0 24px;"><div style="height:24px;background:rgba(94,205,140,0.1);border-radius:4px;display:flex;align-items:center;padding:0 10px;color:var(--accent);font-family:var(--ff-mono);font-size:10px">.mx-lg — max 1280px</div></div>
+          <div style="max-width:1160px;margin:8px auto 0;padding:0 24px;"><div style="height:24px;background:rgba(94,205,140,0.14);border-radius:4px;display:flex;align-items:center;padding:0 10px;color:var(--accent);font-family:var(--ff-mono);font-size:10px">.mx — max 1160px · container par défaut</div></div>
+          <div style="max-width:880px;margin:8px auto 0;padding:0 24px;"><div style="height:24px;background:rgba(94,205,140,0.18);border-radius:4px;display:flex;align-items:center;padding:0 10px;color:var(--accent);font-family:var(--ff-mono);font-size:10px">.mx-sm — max 880px</div></div>
         </div>
       </div>
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Wrappers de section (.sec · .sec-sm · .sec-lg)</div>
-      <p class="ds-section-sub" style="margin-bottom:0">Wrappers sémantiques avec padding vertical : <code class="icode icode-sm">.sec-sm</code> 64px · <code class="icode icode-sm">.sec</code> 100px · <code class="icode icode-sm">.sec-lg</code> 140px. Utilise <code class="icode icode-sm">.sec-header</code> pour centrer un titre + sous-titre dans une section.</p>
+      <div class="eyebrow eyebrow-accent">Wrappers de section (.sec · .sec-sm · .sec-lg)</div>
+      <p class="lead" style="margin-bottom:0">Wrappers sémantiques avec padding vertical : <code class="icode icode-sm">.sec-sm</code> 64px · <code class="icode icode-sm">.sec</code> 100px · <code class="icode icode-sm">.sec-lg</code> 140px. Utilise <code class="icode icode-sm">.sec-header</code> pour centrer un titre + sous-titre dans une section.</p>
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">.text-center</div>
-      <p class="ds-section-sub" style="margin-bottom:16px">Classique alignement centré — utilise-la pour les <code class="icode icode-sm">.sec-header</code> et CTAs centrés.</p>
+      <div class="eyebrow eyebrow-accent">.text-center</div>
+      <p class="lead" style="margin-bottom:16px">Classique alignement centré — utilise-la pour les <code class="icode icode-sm">.sec-header</code> et CTAs centrés.</p>
     </div>
   </div>
 
   <!-- DECOR -->
   <div class="mx ds-section" id="decor">
     <h2>Décor</h2>
-    <p class="ds-section-sub">Éléments graphiques <strong style="color:var(--text)">ponctuels</strong> pour ajouter du caractère à une composition. Contrairement aux <a href="#backgrounds" style="color:var(--accent)">fonds & textures</a> (qui remplissent toute une surface), les décors sont des <strong style="color:var(--text)">accents isolés</strong> — posés en un point précis, en général via <code class="icode">position:absolute</code> dans un conteneur <code class="icode">.f-*</code> ou <code class="icode">.hero</code>.</p>
+    <p class="lead">Éléments graphiques <strong style="color:var(--text)">ponctuels</strong> pour ajouter du caractère à une composition. Contrairement aux <a href="#backgrounds" style="color:var(--accent)">fonds & textures</a> (qui remplissent toute une surface), les décors sont des <strong style="color:var(--text)">accents isolés</strong> — posés en un point précis, en général via <code class="icode">position:absolute</code> dans un conteneur <code class="icode">.f-*</code> ou <code class="icode">.hero</code>.</p>
 
     <div class="ds-block">
-      <div class="ds-block-title">Aurora — halo flouté animé</div>
+      <div class="eyebrow eyebrow-accent">Aurora — halo flouté animé</div>
       <div class="preview-box" style="position:relative;overflow:hidden;height:220px">
         <div class="aurora" style="width:380px;height:380px;top:-80px;left:-80px;background:radial-gradient(circle,rgba(94,205,140,0.35),transparent 60%)"></div>
         <div class="aurora" style="width:300px;height:300px;bottom:-60px;right:-60px;background:radial-gradient(circle,rgba(44,80,81,0.5),transparent 60%);animation-delay:-3s"></div>
@@ -986,17 +986,17 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">EU stars — étoiles du drapeau européen</div>
+      <div class="eyebrow eyebrow-accent">EU stars — étoiles du drapeau européen</div>
       <div class="preview-box" style="position:relative;overflow:hidden;height:220px">
         <div class="eu-stars-bg" style="opacity:0.15"><svg viewBox="0 0 200 200" style="width:200px;height:200px"><g fill="rgba(94,205,140,0.5)"><circle cx="100" cy="30" r="3"/><circle cx="135" cy="40" r="3"/><circle cx="160" cy="65" r="3"/><circle cx="170" cy="100" r="3"/><circle cx="160" cy="135" r="3"/><circle cx="135" cy="160" r="3"/><circle cx="100" cy="170" r="3"/><circle cx="65" cy="160" r="3"/><circle cx="40" cy="135" r="3"/><circle cx="30" cy="100" r="3"/><circle cx="40" cy="65" r="3"/><circle cx="65" cy="40" r="3"/></g></svg></div>
       </div>
-      <p class="ds-section-sub" style="margin:12px 0 0">Motif drapeau EU — en background décoratif de section. Très discret (opacité ~5%).</p>
+      <p class="lead" style="margin:12px 0 0">Motif drapeau EU — en background décoratif de section. Très discret (opacité ~5%).</p>
       <code class="code">&lt;div class="eu-stars-bg"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;</code>
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Dividers — séparateurs horizontaux</div>
-      <p class="ds-section-sub"><code class="icode">.divider</code> : ligne dégradée centrée (pour fins de section, accent). <code class="icode">.divider-dashed</code> : pointillé discret entre items d'une liste verticale (reading scale, rows de tableau, blocs empilés).</p>
+      <div class="eyebrow eyebrow-accent">Dividers — séparateurs horizontaux</div>
+      <p class="lead"><code class="icode">.divider</code> : ligne dégradée centrée (pour fins de section, accent). <code class="icode">.divider-dashed</code> : pointillé discret entre items d'une liste verticale (reading scale, rows de tableau, blocs empilés).</p>
       <div class="preview-box">
         <span class="kbd" style="display:inline-block;margin-bottom:10px">.divider</span>
         <hr class="divider">
@@ -1008,7 +1008,7 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Hand tags — étiquettes manuscrites positionnées</div>
+      <div class="eyebrow eyebrow-accent">Hand tags — étiquettes manuscrites positionnées</div>
       <div class="preview-box" style="position:relative;overflow:hidden;height:160px">
         <div class="handtag" style="top:24px;left:32px">
           <div class="handtag-text">noté à la main<span>depuis 2012</span></div>
@@ -1022,24 +1022,24 @@
   <!-- LOGO -->
   <div class="mx ds-section" id="logo">
     <h2>Logo</h2>
-    <p class="ds-section-sub">Identité visuelle Eurofiscalis organisée en <strong style="color:var(--text)">2 familles</strong> : <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">logo complet</em> (symbole + wordmark, 16 fichiers) et <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">symbole seul</em> (5 fichiers). Tous les fichiers sont des PNG transparents officiels, dans <code class="icode">img/brand/</code>. Chaque logo complet existe en deux variantes : <strong style="color:var(--text)">sans tagline</strong> ou <strong style="color:var(--text)">avec tagline</strong> "International Firm".</p>
+    <p class="lead">Identité visuelle Eurofiscalis organisée en <strong style="color:var(--text)">2 familles</strong> : <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">logo complet</em> (symbole + wordmark, 16 fichiers) et <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">symbole seul</em> (5 fichiers). Tous les fichiers sont des PNG transparents officiels, dans <code class="icode">img/brand/</code>. Chaque logo complet existe en deux variantes : <strong style="color:var(--text)">sans tagline</strong> ou <strong style="color:var(--text)">avec tagline</strong> "International Firm".</p>
 
     <!-- RÈGLE ABSOLUE -->
     <div class="ds-block">
-      <div class="ds-block-title" style="color:#FFB8AD">⚠ Règle absolue</div>
+      <div class="eyebrow eyebrow-accent" style="color:#FFB8AD">⚠ Règle absolue</div>
       <div class="preview-box" style="border:1px solid rgba(224,122,110,0.3);background:rgba(224,122,110,0.05)">
-        <p style="color:var(--text);font-size:14px;line-height:1.7;margin:0"><strong style="color:#FFB8AD">Ne jamais recréer, simuler ou approximer le logo.</strong> Interdit : CSS, HTML, SVG, <code class="icode">&lt;div&gt;</code>, formes géométriques. Toujours un fichier image officiel de <code class="icode">img/brand/</code>.</p>
+        <p style="color:var(--text);line-height:1.7;margin:0"><strong style="color:#FFB8AD">Ne jamais recréer, simuler ou approximer le logo.</strong> Interdit : CSS, HTML, SVG, <code class="icode">&lt;div&gt;</code>, formes géométriques. Toujours un fichier image officiel de <code class="icode">img/brand/</code>.</p>
       </div>
     </div>
 
     <!-- FAMILLE 1 — LOGO COMPLET -->
     <div class="ds-block">
-      <div class="ds-block-title">Famille 1 — Logo complet <span style="color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0">(symbole + wordmark, 16 fichiers)</span></div>
+      <div class="eyebrow eyebrow-accent">Famille 1 — Logo complet <span style="color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0">(symbole + wordmark, 16 fichiers)</span></div>
 
       <!-- 1.1 VERSIONS PRINCIPALES (bicolores, charte) -->
       <div style="margin-bottom:28px">
-        <div style="font-family:monospace;font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">★ Versions principales — bicolores, charte officielle</div>
-        <p style="color:var(--muted);font-size:13px;margin-bottom:16px">Les deux versions <strong style="color:var(--text)">signature</strong> de la marque. Bicolores, avec le "is" final accentué en vert menthe pour marquer l'identité brand.</p>
+        <div class="eyebrow eyebrow-mono eyebrow-accent" style="margin-bottom:12px">★ Versions principales — bicolores, charte officielle</div>
+        <p style="color:var(--muted);margin-bottom:16px">Les deux versions <strong style="color:var(--text)">signature</strong> de la marque. Bicolores, avec le "is" final accentué en vert menthe pour marquer l'identité brand.</p>
         <div class="grid-2" style="gap:18px">
           <div>
             <div style="background:var(--teal);border-radius:14px;padding:48px 24px;display:flex;align-items:center;justify-content:center;min-height:140px;border:1px solid rgba(94,205,140,0.08);position:relative">
@@ -1048,7 +1048,7 @@
             </div>
             <div style="padding:12px 4px 0">
               <div style="font-family:var(--ff-display);font-weight:800;color:var(--head);font-size:15px">Blanc + vert, sans tagline</div>
-              <code style="font-family:monospace;font-size:11px;color:var(--muted)">logo-white.png</code>
+              <code style="font-family:var(--ff-mono);color:var(--muted)">logo-white.png</code>
             </div>
           </div>
           <div>
@@ -1058,7 +1058,7 @@
             </div>
             <div style="padding:12px 4px 0">
               <div style="font-family:var(--ff-display);font-weight:800;color:var(--head);font-size:15px">Teal + vert, sans tagline</div>
-              <code style="font-family:monospace;font-size:11px;color:var(--muted)">logo-duo.png</code>
+              <code style="font-family:var(--ff-mono);color:var(--muted)">logo-duo.png</code>
             </div>
           </div>
           <div>
@@ -1067,7 +1067,7 @@
             </div>
             <div style="padding:12px 4px 0">
               <div style="font-family:var(--ff-display);font-weight:800;color:var(--head);font-size:15px">Blanc + vert, avec tagline</div>
-              <code style="font-family:monospace;font-size:11px;color:var(--muted)">logo-white-tagline.png</code>
+              <code style="font-family:var(--ff-mono);color:var(--muted)">logo-white-tagline.png</code>
             </div>
           </div>
           <div>
@@ -1076,7 +1076,7 @@
             </div>
             <div style="padding:12px 4px 0">
               <div style="font-family:var(--ff-display);font-weight:800;color:var(--head);font-size:15px">Teal + vert, avec tagline</div>
-              <code style="font-family:monospace;font-size:11px;color:var(--muted)">logo-duo-tagline.png</code>
+              <code style="font-family:var(--ff-mono);color:var(--muted)">logo-duo-tagline.png</code>
             </div>
           </div>
         </div>
@@ -1084,64 +1084,64 @@
 
       <!-- 1.2 MONOCHROMES NEUTRES -->
       <div style="margin-bottom:28px">
-        <div style="font-family:monospace;font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Monochromes neutres — pour impression, embossage, gravure</div>
-        <p style="color:var(--muted);font-size:13px;margin-bottom:16px">Versions unicolores quand la bicoloration ne passe pas : print 1-ton, tampon, lithographie, gravure laser, ou quand on veut un rendu sobre et uniforme.</p>
+        <div class="eyebrow eyebrow-mono" style="margin-bottom:12px">Monochromes neutres — pour impression, embossage, gravure</div>
+        <p style="color:var(--muted);margin-bottom:16px">Versions unicolores quand la bicoloration ne passe pas : print 1-ton, tampon, lithographie, gravure laser, ou quand on veut un rendu sobre et uniforme.</p>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:28px 16px;display:flex;align-items:center;justify-content:center;min-height:96px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-teal-mono.png" alt="" style="max-height:38px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-teal-mono.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-teal-mono.png</code>
           </div>
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:28px 16px;display:flex;align-items:center;justify-content:center;min-height:96px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-anthracite.png" alt="" style="max-height:38px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-anthracite.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-anthracite.png</code>
           </div>
           <div>
             <div style="background:var(--teal);border-radius:10px;padding:28px 16px;display:flex;align-items:center;justify-content:center;min-height:96px;border:1px solid rgba(94,205,140,0.08)"><img src="img/brand/logo-green-mono.png" alt="" style="max-height:38px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-green-mono.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-green-mono.png</code>
           </div>
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:22px 14px;display:flex;align-items:center;justify-content:center;min-height:92px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-teal-mono-tagline.png" alt="" style="max-height:40px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-teal-mono-tagline.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-teal-mono-tagline.png</code>
           </div>
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:22px 14px;display:flex;align-items:center;justify-content:center;min-height:92px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-anthracite-tagline.png" alt="" style="max-height:40px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-anthracite-tagline.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-anthracite-tagline.png</code>
           </div>
           <div>
             <div style="background:var(--teal);border-radius:10px;padding:22px 14px;display:flex;align-items:center;justify-content:center;min-height:92px;border:1px solid rgba(94,205,140,0.08)"><img src="img/brand/logo-green-mono-tagline.png" alt="" style="max-height:40px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-green-mono-tagline.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-green-mono-tagline.png</code>
           </div>
         </div>
       </div>
 
       <!-- 1.3 COULEURS DÉCORATIVES -->
       <div>
-        <div style="font-family:monospace;font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Couleurs décoratives — co-branding, éditions spéciales</div>
-        <p style="color:var(--muted);font-size:13px;margin-bottom:16px">Variantes colorées hors-charte, pour co-brandings ponctuels, éditions spéciales (Pride, Europe Day…) ou sous-marques thématiques. <strong style="color:var(--text)">À utiliser avec parcimonie</strong>, toujours valider avec le brand manager.</p>
+        <div class="eyebrow eyebrow-mono" style="margin-bottom:12px">Couleurs décoratives — co-branding, éditions spéciales</div>
+        <p style="color:var(--muted);margin-bottom:16px">Variantes colorées hors-charte, pour co-brandings ponctuels, éditions spéciales (Pride, Europe Day…) ou sous-marques thématiques. <strong style="color:var(--text)">À utiliser avec parcimonie</strong>, toujours valider avec le brand manager.</p>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:28px 16px;display:flex;align-items:center;justify-content:center;min-height:96px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-slate.png" alt="" style="max-height:38px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-slate.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-slate.png</code>
           </div>
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:28px 16px;display:flex;align-items:center;justify-content:center;min-height:96px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-coral.png" alt="" style="max-height:38px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-coral.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-coral.png</code>
           </div>
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:28px 16px;display:flex;align-items:center;justify-content:center;min-height:96px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-sand.png" alt="" style="max-height:38px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-sand.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-sand.png</code>
           </div>
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:22px 14px;display:flex;align-items:center;justify-content:center;min-height:92px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-slate-tagline.png" alt="" style="max-height:40px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-slate-tagline.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-slate-tagline.png</code>
           </div>
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:22px 14px;display:flex;align-items:center;justify-content:center;min-height:92px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-coral-tagline.png" alt="" style="max-height:40px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-coral-tagline.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-coral-tagline.png</code>
           </div>
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:22px 14px;display:flex;align-items:center;justify-content:center;min-height:92px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/logo-sand-tagline.png" alt="" style="max-height:40px;max-width:100%"></div>
-            <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-sand-tagline.png</code>
+            <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:6px;word-break:break-all">logo-sand-tagline.png</code>
           </div>
         </div>
       </div>
@@ -1149,12 +1149,12 @@
 
     <!-- FAMILLE 2 — SYMBOLE -->
     <div class="ds-block">
-      <div class="ds-block-title">Famille 2 — Symbole <span style="color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0">(icône seule, 5 fichiers)</span></div>
-      <p class="ds-section-sub" style="margin-bottom:18px">Pour les petits formats où le logo complet devient illisible : favicon, apple-touch-icon, avatar, signature email, app icon.</p>
+      <div class="eyebrow eyebrow-accent">Famille 2 — Symbole <span style="color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0">(icône seule, 5 fichiers)</span></div>
+      <p class="lead" style="margin-bottom:18px">Pour les petits formats où le logo complet devient illisible : favicon, apple-touch-icon, avatar, signature email, app icon.</p>
 
       <!-- Principales -->
       <div style="margin-bottom:24px">
-        <div style="font-family:monospace;font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:12px">★ Versions principales</div>
+        <div class="eyebrow eyebrow-mono eyebrow-accent" style="margin-bottom:12px">★ Versions principales</div>
         <div class="grid-2" style="gap:18px">
           <div>
             <div style="background:var(--teal);border-radius:14px;padding:36px;display:flex;align-items:center;justify-content:center;min-height:140px;border:1px solid rgba(94,205,140,0.08);position:relative">
@@ -1163,7 +1163,7 @@
             </div>
             <div style="padding:12px 4px 0">
               <div style="font-family:var(--ff-display);font-weight:800;color:var(--head);font-size:15px">Symbole blanc</div>
-              <code style="font-family:monospace;font-size:11px;color:var(--muted)">symbol-white.png</code>
+              <code style="font-family:var(--ff-mono);color:var(--muted)">symbol-white.png</code>
             </div>
           </div>
           <div>
@@ -1173,7 +1173,7 @@
             </div>
             <div style="padding:12px 4px 0">
               <div style="font-family:var(--ff-display);font-weight:800;color:var(--head);font-size:15px">Symbole bicolore (teal + vert)</div>
-              <code style="font-family:monospace;font-size:11px;color:var(--muted)">symbol-duo.png</code>
+              <code style="font-family:var(--ff-mono);color:var(--muted)">symbol-duo.png</code>
             </div>
           </div>
         </div>
@@ -1181,27 +1181,27 @@
 
       <!-- Variantes -->
       <div>
-        <div style="font-family:monospace;font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">Variantes</div>
+        <div class="eyebrow eyebrow-mono" style="margin-bottom:12px">Variantes</div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:24px;display:flex;align-items:center;justify-content:center;min-height:100px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/symbol-duo-inverted.png" alt="" style="max-height:56px;max-width:56px"></div>
             <div style="padding:10px 2px 0">
               <div style="font-family:var(--ff-display);font-weight:800;color:var(--head);font-size:13px">Bicolore inversé</div>
-              <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:2px">symbol-duo-inverted.png</code>
+              <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:2px">symbol-duo-inverted.png</code>
             </div>
           </div>
           <div>
             <div style="background:#F7FAF8;border-radius:10px;padding:24px;display:flex;align-items:center;justify-content:center;min-height:100px;border:1px solid rgba(44,80,81,0.12)"><img src="img/brand/symbol-black.png" alt="" style="max-height:56px;max-width:56px"></div>
             <div style="padding:10px 2px 0">
               <div style="font-family:var(--ff-display);font-weight:800;color:var(--head);font-size:13px">Noir — impression 1-ton</div>
-              <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:2px">symbol-black.png</code>
+              <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:2px">symbol-black.png</code>
             </div>
           </div>
           <div>
             <div style="background:#0B1517;border-radius:10px;padding:24px;display:flex;align-items:center;justify-content:center;min-height:100px;border:1px solid rgba(94,205,140,0.08)"><img src="img/brand/symbol-gray.png" alt="" style="max-height:56px;max-width:56px"></div>
             <div style="padding:10px 2px 0">
               <div style="font-family:var(--ff-display);font-weight:800;color:var(--head);font-size:13px">Gris — placeholder / désactivé</div>
-              <code style="font-family:monospace;font-size:10px;color:var(--muted);display:block;margin-top:2px">symbol-gray.png</code>
+              <code style="font-family:var(--ff-mono);color:var(--muted);display:block;margin-top:2px">symbol-gray.png</code>
             </div>
           </div>
         </div>
@@ -1210,7 +1210,7 @@
 
     <!-- RÈGLE DE SÉLECTION -->
     <div class="ds-block">
-      <div class="ds-block-title">Règle de sélection rapide</div>
+      <div class="eyebrow eyebrow-accent">Règle de sélection rapide</div>
       <div class="preview-box" style="padding:0">
         <table class="table" style="font-size:13px">
           <thead>
@@ -1220,7 +1220,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td colspan="2" style="background:rgba(94,205,140,0.04);font-family:monospace;font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);padding:10px 14px">Logo complet</td></tr>
+            <tr><td colspan="2" style="background:rgba(94,205,140,0.04);font-family:var(--ff-mono);font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);padding:10px 14px">Logo complet</td></tr>
             <tr>
               <td>Fond sombre — nav, header, hero, footer, email header</td>
               <td><code class="icode icode-sm">logo-white.png</code> — ou <code class="icode icode-sm">logo-white-tagline.png</code> avec tagline</td>
@@ -1237,7 +1237,7 @@
               <td>Co-branding / édition spéciale</td>
               <td><code class="icode icode-sm">logo-slate.png</code> / <code class="icode icode-sm">logo-coral.png</code> / <code class="icode icode-sm">logo-sand.png</code> (validation brand requise)</td>
             </tr>
-            <tr><td colspan="2" style="background:rgba(94,205,140,0.04);font-family:monospace;font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);padding:10px 14px">Symbole</td></tr>
+            <tr><td colspan="2" style="background:rgba(94,205,140,0.04);font-family:var(--ff-mono);font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);padding:10px 14px">Symbole</td></tr>
             <tr>
               <td>Favicon / avatar / small-format sur fond sombre</td>
               <td><code class="icode icode-sm">symbol-white.png</code></td>
@@ -1261,29 +1261,29 @@
 
     <!-- ZONE D'EXCLUSION -->
     <div class="ds-block">
-      <div class="ds-block-title">Zone d'exclusion — 20px minimum</div>
-      <p class="ds-section-sub" style="margin-bottom:16px">Toujours garder un espace vide d'au moins <strong style="color:var(--text)">20px</strong> autour du logo — pas de texte, d'image ou d'élément graphique dans cette zone. Plus c'est aéré, mieux c'est.</p>
+      <div class="eyebrow eyebrow-accent">Zone d'exclusion — 20px minimum</div>
+      <p class="lead" style="margin-bottom:16px">Toujours garder un espace vide d'au moins <strong style="color:var(--text)">20px</strong> autour du logo — pas de texte, d'image ou d'élément graphique dans cette zone. Plus c'est aéré, mieux c'est.</p>
       <div class="preview-box">
         <div style="background:var(--teal);border-radius:14px;padding:48px;position:relative;display:flex;align-items:center;justify-content:center;min-height:220px">
           <div style="position:relative;padding:20px;outline:1px dashed rgba(94,205,140,0.4);outline-offset:0">
             <img src="img/brand/logo-white.png" alt="Logo Eurofiscalis" style="max-height:60px;display:block">
           </div>
-          <span style="position:absolute;bottom:12px;right:16px;font-family:monospace;font-size:10px;color:rgba(255,255,255,0.5);letter-spacing:0.08em">ZONE D'EXCLUSION = 20PX</span>
+          <span style="position:absolute;bottom:12px;right:16px;font-family:var(--ff-mono);font-size:10px;color:rgba(255,255,255,0.5);letter-spacing:0.08em">ZONE D'EXCLUSION = 20PX</span>
         </div>
       </div>
     </div>
 
     <!-- INTÉGRATION -->
     <div class="ds-block">
-      <div class="ds-block-title">Intégration HTML</div>
+      <div class="eyebrow eyebrow-accent">Intégration HTML</div>
       <code class="code">&lt;!-- Fond sombre --&gt;<br>&lt;img src="img/brand/logo-white.png" alt="Eurofiscalis" style="height:48px"&gt;<br><br>&lt;!-- Fond clair --&gt;<br>&lt;img src="img/brand/logo-duo.png" alt="Eurofiscalis" style="height:48px"&gt;<br><br>&lt;!-- Symbole sur fond sombre --&gt;<br>&lt;img src="img/brand/symbol-white.png" alt="Eurofiscalis" style="height:40px"&gt;<br><br>&lt;!-- Favicon / apple-touch-icon --&gt;<br>&lt;link rel="icon" type="image/png" href="img/brand/symbol-duo.png"&gt;<br>&lt;link rel="apple-touch-icon" href="img/brand/symbol-duo.png"&gt;</code>
     </div>
 
     <!-- DON'TS -->
     <div class="ds-block">
-      <div class="ds-block-title">À ne jamais faire</div>
+      <div class="eyebrow eyebrow-accent">À ne jamais faire</div>
       <div class="preview-box">
-        <ul style="color:var(--text);font-size:14px;line-height:2;padding-left:0;margin:0;list-style:none">
+        <ul style="color:var(--text);line-height:2;padding-left:0;margin:0;list-style:none">
           <li><span style="color:#FFB8AD;font-weight:700;margin-right:10px">✗</span>Recréer le logo en CSS, HTML, SVG ou tout autre code</li>
           <li><span style="color:#FFB8AD;font-weight:700;margin-right:10px">✗</span>Écrire "Eurofiscalis" en texte stylisé pour simuler le logo</li>
           <li><span style="color:#FFB8AD;font-weight:700;margin-right:10px">✗</span>Inventer une icône ou une forme pour remplacer le symbole officiel</li>
@@ -1301,11 +1301,11 @@
   <!-- A11Y -->
   <div class="mx ds-section" id="a11y">
     <h2>Accessibilité</h2>
-    <p class="ds-section-sub">L'accessibilité (a11y) est une responsabilité <strong style="color:var(--text)">partagée</strong> entre ce Design System et chaque site/app qui le consomme. Le DS fournit l'infrastructure ; le site active et complète selon son contexte.</p>
+    <p class="lead">L'accessibilité (a11y) est une responsabilité <strong style="color:var(--text)">partagée</strong> entre ce Design System et chaque site/app qui le consomme. Le DS fournit l'infrastructure ; le site active et complète selon son contexte.</p>
 
     <!-- CE QUE LE DS GÈRE -->
     <div class="ds-block">
-      <div class="ds-block-title">Ce que le DS gère automatiquement</div>
+      <div class="eyebrow eyebrow-accent">Ce que le DS gère automatiquement</div>
       <div class="preview-box" style="padding:0">
         <table class="table" style="font-size:13.5px">
           <thead><tr><th style="width:28%">Aspect</th><th style="width:22%">Implémentation</th><th>Détails</th></tr></thead>
@@ -1326,10 +1326,10 @@
 
     <!-- CE QUE LE SITE DOIT AJOUTER -->
     <div class="ds-block">
-      <div class="ds-block-title">Ce que chaque site/app consommateur DOIT ajouter</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Ces 7 points sont liés au <strong style="color:var(--text)">contenu spécifique</strong> ou à la <strong style="color:var(--text)">composition</strong> de la page — le DS ne peut pas les automatiser.</p>
+      <div class="eyebrow eyebrow-accent">Ce que chaque site/app consommateur DOIT ajouter</div>
+      <p class="lead" style="margin-bottom:14px">Ces 7 points sont liés au <strong style="color:var(--text)">contenu spécifique</strong> ou à la <strong style="color:var(--text)">composition</strong> de la page — le DS ne peut pas les automatiser.</p>
       <div class="preview-box">
-        <ol style="padding-left:20px;color:var(--text);font-size:14px;line-height:1.8;margin:0">
+        <ol style="padding-left:20px;color:var(--text);line-height:1.8;margin:0">
           <li><code class="icode">&lt;html lang="fr"&gt;</code> — déclarer la langue de la page pour les lecteurs d'écran et le SEO</li>
           <li><code class="icode">&lt;main id="main"&gt;</code> autour du contenu principal — landmark pour navigation rapide au clavier</li>
           <li><code class="icode">&lt;a href="#main" class="skip-link"&gt;</code> comme <strong style="color:var(--text)">premier élément focusable</strong> du <code class="icode">&lt;body&gt;</code> — permet de sauter la nav</li>
@@ -1343,7 +1343,7 @@
 
     <!-- SQUELETTE MINIMAL -->
     <div class="ds-block">
-      <div class="ds-block-title">Squelette de page a11y-compliant (copier-coller)</div>
+      <div class="eyebrow eyebrow-accent">Squelette de page a11y-compliant (copier-coller)</div>
       <code class="code">&lt;!DOCTYPE html&gt;
 &lt;html lang="fr"&gt;
 &lt;head&gt;
@@ -1369,9 +1369,9 @@
 
     <!-- CADRE LÉGAL -->
     <div class="ds-block">
-      <div class="ds-block-title">Cadre légal 2026</div>
+      <div class="eyebrow eyebrow-accent">Cadre légal 2026</div>
       <div class="preview-box">
-        <p style="font-size:14px;color:var(--text);line-height:1.65;margin:0">
+        <p style="color:var(--text);line-height:1.65;margin:0">
           Depuis juin 2025, l'<strong style="color:var(--head)">European Accessibility Act (EAA)</strong> rend <strong style="color:var(--head)">WCAG AA obligatoire</strong> pour les sites de services commerciaux en Europe — amendes possibles en cas de non-conformité. Cible minimum : <strong style="color:var(--text)">score Lighthouse a11y ≥ 95</strong>, zéro violation critique axe DevTools.
         </p>
       </div>
@@ -1381,11 +1381,11 @@
   <!-- BUTTONS -->
   <div class="mx ds-section" id="buttons">
     <h2>Boutons</h2>
-    <p class="ds-section-sub">Base <code class="icode">.btn</code> + variante (<code class="icode">.btn-primary</code>, <code class="icode">.btn-gradient</code>…). Chaque exemple ci-dessous affiche les classes exactes à recopier. <strong style="color:var(--text)">Toujours combiner <code class="icode">.btn</code> avec une variante</strong> — la classe <code class="icode">.btn</code> seule n'a pas de style de fond.</p>
+    <p class="lead">Base <code class="icode">.btn</code> + variante (<code class="icode">.btn-primary</code>, <code class="icode">.btn-gradient</code>…). Chaque exemple ci-dessous affiche les classes exactes à recopier. <strong style="color:var(--text)">Toujours combiner <code class="icode">.btn</code> avec une variante</strong> — la classe <code class="icode">.btn</code> seule n'a pas de style de fond.</p>
 
     <div class="ds-block">
-      <div class="ds-block-title">Variantes — fond dark</div>
-      <p class="ds-section-sub">7 styles pour fond sombre. Sur fond clair, utilise <code class="icode">.btn-ghost-lt</code> à la place de <code class="icode">.btn-ghost</code> (voir bloc suivant).</p>
+      <div class="eyebrow eyebrow-accent">Variantes — fond dark</div>
+      <p class="lead">7 styles pour fond sombre. Sur fond clair, utilise <code class="icode">.btn-ghost-lt</code> à la place de <code class="icode">.btn-ghost</code> (voir bloc suivant).</p>
       <div class="preview-box">
         <div class="example-row">
           <figure class="ds-card-ex"><button class="btn btn-primary">Primary</button><figcaption class="ds-card-tag">.btn .btn-primary</figcaption></figure>
@@ -1400,8 +1400,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Variantes — fond light</div>
-      <p class="ds-section-sub">Les mêmes variantes, avec <code class="icode">.btn-ghost-lt</code> qui remplace <code class="icode">.btn-ghost</code> (texte et bordure passent au teal, contraste ajusté au fond clair).</p>
+      <div class="eyebrow eyebrow-accent">Variantes — fond light</div>
+      <p class="lead">Les mêmes variantes, avec <code class="icode">.btn-ghost-lt</code> qui remplace <code class="icode">.btn-ghost</code> (texte et bordure passent au teal, contraste ajusté au fond clair).</p>
       <div class="preview-box f-light">
         <div class="example-row">
           <figure class="ds-card-ex"><button class="btn btn-primary">Primary</button><figcaption class="ds-card-tag">.btn .btn-primary</figcaption></figure>
@@ -1416,8 +1416,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Modificateur — .btn-ico (flèche trailing)</div>
-      <p class="ds-section-sub">Ajoute une flèche <code class="icode">→</code> après le label qui se décale de 4px au hover. À combiner avec n'importe quelle variante. Ne pas utiliser sur <code class="icode">.btn-link</code> (la flèche est déjà dans le label).</p>
+      <div class="eyebrow eyebrow-accent">Modificateur — .btn-ico (flèche trailing)</div>
+      <p class="lead">Ajoute une flèche <code class="icode">→</code> après le label qui se décale de 4px au hover. À combiner avec n'importe quelle variante. Ne pas utiliser sur <code class="icode">.btn-link</code> (la flèche est déjà dans le label).</p>
       <div class="preview-box">
         <div class="example-row">
           <figure class="ds-card-ex"><button class="btn btn-primary btn-ico">Avec flèche</button><figcaption class="ds-card-tag">.btn .btn-primary .btn-ico</figcaption></figure>
@@ -1428,8 +1428,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Tailles — xs · sm · md (défaut) · lg · xl</div>
-      <p class="ds-section-sub">5 tailles via les modificateurs <code class="icode">.btn-xs</code>, <code class="icode">.btn-sm</code>, <code class="icode">.btn-lg</code>, <code class="icode">.btn-xl</code>. La taille par défaut (MD) ne nécessite aucune classe. Sur mobile (<code class="icode">pointer:coarse</code>), XS et SM sont forcés à min-height 44px (tap target WCAG).</p>
+      <div class="eyebrow eyebrow-accent">Tailles — xs · sm · md (défaut) · lg · xl</div>
+      <p class="lead">5 tailles via les modificateurs <code class="icode">.btn-xs</code>, <code class="icode">.btn-sm</code>, <code class="icode">.btn-lg</code>, <code class="icode">.btn-xl</code>. La taille par défaut (MD) ne nécessite aucune classe. Sur mobile (<code class="icode">pointer:coarse</code>), XS et SM sont forcés à min-height 44px (tap target WCAG).</p>
       <div class="preview-box">
         <div class="example-row" style="align-items:center">
           <figure class="ds-card-ex"><button class="btn btn-primary btn-xs">XS · 12px</button><figcaption class="ds-card-tag">.btn-xs</figcaption></figure>
@@ -1442,8 +1442,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Modificateur — .btn-square (coins géométriques, rayon 7px)</div>
-      <p class="ds-section-sub">Abaisse le border-radius de 15px à 7px. À combiner avec n'importe quel style pour un ton plus graphique / éditorial.</p>
+      <div class="eyebrow eyebrow-accent">Modificateur — .btn-square (coins géométriques, rayon 7px)</div>
+      <p class="lead">Abaisse le border-radius de 15px à 7px. À combiner avec n'importe quel style pour un ton plus graphique / éditorial.</p>
       <div class="preview-box">
         <div class="example-row">
           <figure class="ds-card-ex"><button class="btn btn-primary btn-square">Primary square</button><figcaption class="ds-card-tag">.btn-primary .btn-square</figcaption></figure>
@@ -1455,17 +1455,17 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Sémantiques — plein &amp; soft</div>
-      <p class="ds-section-sub">4 couleurs sémantiques (success / warning / danger / info) en deux intensités. <strong style="color:var(--text)">Plein</strong> pour l'action principale d'un état. <strong style="color:var(--text)">Soft</strong> pour les actions inline (listes, cards, tableaux).</p>
+      <div class="eyebrow eyebrow-accent">Sémantiques — plein &amp; soft</div>
+      <p class="lead">4 couleurs sémantiques (success / warning / danger / info) en deux intensités. <strong style="color:var(--text)">Plein</strong> pour l'action principale d'un état. <strong style="color:var(--text)">Soft</strong> pour les actions inline (listes, cards, tableaux).</p>
       <div class="preview-box">
-        <div class="ds-block-title" style="font-size:11px;color:var(--muted);margin-bottom:10px">Plein</div>
+        <div class="eyebrow eyebrow-accent" style="font-size:11px;color:var(--muted);margin-bottom:10px">Plein</div>
         <div class="example-row">
           <figure class="ds-card-ex"><button class="btn btn-success">Valider</button><figcaption class="ds-card-tag">.btn-success</figcaption></figure>
           <figure class="ds-card-ex"><button class="btn btn-warning">Attention</button><figcaption class="ds-card-tag">.btn-warning</figcaption></figure>
           <figure class="ds-card-ex"><button class="btn btn-danger">Supprimer</button><figcaption class="ds-card-tag">.btn-danger</figcaption></figure>
           <figure class="ds-card-ex"><button class="btn btn-info">En savoir plus</button><figcaption class="ds-card-tag">.btn-info</figcaption></figure>
         </div>
-        <div class="ds-block-title" style="font-size:11px;color:var(--muted);margin:24px 0 10px">Soft</div>
+        <div class="eyebrow eyebrow-accent" style="font-size:11px;color:var(--muted);margin:24px 0 10px">Soft</div>
         <div class="example-row">
           <figure class="ds-card-ex"><button class="btn btn-success-soft">Valider</button><figcaption class="ds-card-tag">.btn-success-soft</figcaption></figure>
           <figure class="ds-card-ex"><button class="btn btn-warning-soft">Attention</button><figcaption class="ds-card-tag">.btn-warning-soft</figcaption></figure>
@@ -1476,8 +1476,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Signature — .btn-holographic</div>
-      <p class="ds-section-sub">Dégradé iridescent animé (aurore vert → teal → ambre). À <strong style="color:var(--text)">réserver à un CTA unique</strong> par page (launch, moment fort) — l'effet perd de son impact s'il est répété.</p>
+      <div class="eyebrow eyebrow-accent">Signature — .btn-holographic</div>
+      <p class="lead">Dégradé iridescent animé (aurore vert → teal → ambre). À <strong style="color:var(--text)">réserver à un CTA unique</strong> par page (launch, moment fort) — l'effet perd de son impact s'il est répété.</p>
       <div class="preview-box">
         <div class="example-row">
           <figure class="ds-card-ex"><button class="btn btn-holographic">Holographic</button><figcaption class="ds-card-tag">.btn .btn-holographic</figcaption></figure>
@@ -1488,8 +1488,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">États — loading · success-anim · icon-only</div>
-      <p class="ds-section-sub"><code class="icode">.btn-loading</code> désactive les <code class="icode">pointer-events</code> et affiche un spinner (utile pendant un submit async). <code class="icode">.btn-success-anim</code> dessine un ✓ à l'apparition (à swap après success). <code class="icode">.btn-icon-only</code> pour les barres d'outils — carré 44×44 conforme WCAG 2.5.5.</p>
+      <div class="eyebrow eyebrow-accent">États — loading · success-anim · icon-only</div>
+      <p class="lead"><code class="icode">.btn-loading</code> désactive les <code class="icode">pointer-events</code> et affiche un spinner (utile pendant un submit async). <code class="icode">.btn-success-anim</code> dessine un ✓ à l'apparition (à swap après success). <code class="icode">.btn-icon-only</code> pour les barres d'outils — carré 44×44 conforme WCAG 2.5.5.</p>
       <div class="preview-box">
         <div class="example-row" style="align-items:center">
           <figure class="ds-card-ex"><button class="btn btn-loading">Chargement…</button><figcaption class="ds-card-tag">.btn .btn-loading</figcaption></figure>
@@ -1523,8 +1523,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Boutons collés — .btn-group</div>
-      <p class="ds-section-sub">Plusieurs <code class="icode">.btn</code> côte à côte avec seuls les coins extérieurs arrondis (15px). Wrapper <code class="icode">.btn-group</code> autour des boutons. Modificateurs : <code class="icode">.btn-group-square</code> (coins à 7px), <code class="icode">.btn-group-sm</code> / <code class="icode">.btn-group-xs</code> (tailles réduites, radius proportionnel). Les tailles appliquées sur le wrapper s'imposent à tous les enfants.</p>
+      <div class="eyebrow eyebrow-accent">Boutons collés — .btn-group</div>
+      <p class="lead">Plusieurs <code class="icode">.btn</code> côte à côte avec seuls les coins extérieurs arrondis (15px). Wrapper <code class="icode">.btn-group</code> autour des boutons. Modificateurs : <code class="icode">.btn-group-square</code> (coins à 7px), <code class="icode">.btn-group-sm</code> / <code class="icode">.btn-group-xs</code> (tailles réduites, radius proportionnel). Les tailles appliquées sur le wrapper s'imposent à tous les enfants.</p>
       <div class="preview-box">
         <div class="example-row">
           <figure class="ds-card-ex">
@@ -1589,8 +1589,8 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Groupe segmenté — .btn-group-seg</div>
-      <p class="ds-section-sub">Toggle on/off ou multi-choix. Wrapper <code class="icode">.btn-group-seg</code> contenant des <code class="icode">&lt;button&gt;</code> (sans classe <code class="icode">.btn</code>). Le bouton actif reçoit la classe <code class="icode">.is-on</code> (à gérer côté JS).</p>
+      <div class="eyebrow eyebrow-accent">Groupe segmenté — .btn-group-seg</div>
+      <p class="lead">Toggle on/off ou multi-choix. Wrapper <code class="icode">.btn-group-seg</code> contenant des <code class="icode">&lt;button&gt;</code> (sans classe <code class="icode">.btn</code>). Le bouton actif reçoit la classe <code class="icode">.is-on</code> (à gérer côté JS).</p>
       <div class="preview-box">
         <div class="example-row">
           <figure class="ds-card-ex">
@@ -1625,7 +1625,7 @@
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Référence — récap des classes</div>
+      <div class="eyebrow eyebrow-accent">Référence — récap des classes</div>
       <code class="code">&lt;!-- Base : toujours .btn + 1 variante --&gt;
 &lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
 &lt;button class="btn btn-glass"&gt;Glass&lt;/button&gt;
@@ -1661,16 +1661,16 @@
   <!-- LABELS -->
   <div class="mx ds-section" id="labels">
     <h2>Labels</h2>
-    <p class="ds-section-sub">Pill <strong style="color:var(--text)">avec centrage vertical vérifié</strong> (<code class="icode">line-height:1</code> + <code class="icode">align-items:center</code>). Mêmes variantes déclinées sur fond dark et light. Le <code class="icode">.badge-dot</code> (point animé pulse) se combine avec n'importe quelle variante pour indiquer un statut live.</p>
+    <p class="lead">Pill <strong style="color:var(--text)">avec centrage vertical vérifié</strong> (<code class="icode">line-height:1</code> + <code class="icode">align-items:center</code>). Mêmes variantes déclinées sur fond dark et light. Le <code class="icode">.badge-dot</code> (point animé pulse) se combine avec n'importe quelle variante pour indiquer un statut live.</p>
 
     <div class="ds-block">
-      <div class="ds-block-title">Variantes par fond — dark · light · deep</div>
-      <p class="ds-section-sub">Chaque label est décliné sur les <strong style="color:var(--text)">trois surfaces</strong> du site. Point / flèche / badge-dot sont des modificateurs combinables.</p>
+      <div class="eyebrow eyebrow-accent">Variantes par fond — dark · light · deep</div>
+      <p class="lead">Chaque label est décliné sur les <strong style="color:var(--text)">trois surfaces</strong> du site. Point / flèche / badge-dot sont des modificateurs combinables.</p>
 
       <!-- FOND DARK -->
       <div style="display:flex;align-items:center;gap:10px;margin:0 0 8px">
         <span class="label label-mono" style="margin:0">DARK</span>
-        <span style="color:var(--text-soft);font-size:13px">fond principal des sections (<code class="icode">var(--dark)</code>)</span>
+        <span class="caption">fond principal des sections (<code class="icode">var(--dark)</code>)</span>
       </div>
       <div class="preview-box">
         <div class="example-row" style="gap:14px">
@@ -1690,7 +1690,7 @@
       <!-- FOND LIGHT -->
       <div style="display:flex;align-items:center;gap:10px;margin:24px 0 8px">
         <span class="label label-mono" style="margin:0">LIGHT</span>
-        <span style="color:var(--text-soft);font-size:13px">article, formulaire, doc (<code class="icode">var(--lt-bg)</code>)</span>
+        <span class="caption">article, formulaire, doc (<code class="icode">var(--lt-bg)</code>)</span>
       </div>
       <div class="preview-box f-light">
         <div class="example-row" style="gap:14px">
@@ -1710,7 +1710,7 @@
       <!-- FOND DEEP -->
       <div style="display:flex;align-items:center;gap:10px;margin:24px 0 8px">
         <span class="label label-mono" style="margin:0">DEEP</span>
-        <span style="color:var(--text-soft);font-size:13px">hero, CTA final, moments forts (<code class="icode">var(--deep)</code>)</span>
+        <span class="caption">hero, CTA final, moments forts (<code class="icode">var(--deep)</code>)</span>
       </div>
       <div class="preview-box-deep">
         <div class="example-row" style="gap:14px">
@@ -1730,13 +1730,13 @@
 
     <!-- CHIPS : compact, meta, tags, status -->
     <div class="ds-block">
-      <div class="ds-block-title">.chip — étiquettes compactes (tag & status)</div>
-      <p class="ds-section-sub">Plus petit qu'un <code class="icode">.label</code> (22px vs 28px). Un seul composant qui couvre <strong style="color:var(--text)">deux usages</strong> distincts par convention : <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">tag</em> (descriptif statique) et <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">status</em> (état dynamique avec <code class="icode">.chip-dot</code>).</p>
+      <div class="eyebrow eyebrow-accent">.chip — étiquettes compactes (tag & status)</div>
+      <p class="lead">Plus petit qu'un <code class="icode">.label</code> (22px vs 28px). Un seul composant qui couvre <strong style="color:var(--text)">deux usages</strong> distincts par convention : <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">tag</em> (descriptif statique) et <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">status</em> (état dynamique avec <code class="icode">.chip-dot</code>).</p>
 
       <!-- USAGE TAG -->
       <div style="display:flex;align-items:center;gap:10px;margin:0 0 8px">
         <span class="label label-mono" style="margin:0">TAG</span>
-        <span style="color:var(--muted);font-size:13px">catégorie, attribut, mot-clé, durée — pas de dot</span>
+        <span class="caption">catégorie, attribut, mot-clé, durée — pas de dot</span>
       </div>
       <div class="preview-box">
         <div class="example-row" style="gap:10px;align-items:center">
@@ -1752,7 +1752,7 @@
       <!-- USAGE STATUS -->
       <div style="display:flex;align-items:center;gap:10px;margin:24px 0 8px">
         <span class="label label-mono" style="margin:0">STATUS</span>
-        <span style="color:var(--muted);font-size:13px">état d'une entité — avec <code class="icode">.chip-dot</code>, couleur sémantique</span>
+        <span class="caption">état d'une entité — avec <code class="icode">.chip-dot</code>, couleur sémantique</span>
       </div>
       <div class="preview-box">
         <div class="example-row" style="gap:10px;align-items:center">
@@ -1768,7 +1768,7 @@
       <!-- VARIANT SOLID -->
       <div style="display:flex;align-items:center;gap:10px;margin:24px 0 8px">
         <span class="label label-mono" style="margin:0">SOLID</span>
-        <span style="color:var(--muted);font-size:13px">fond plein — pour signaler un état critique ou très visible</span>
+        <span class="caption">fond plein — pour signaler un état critique ou très visible</span>
       </div>
       <div class="preview-box">
         <div class="example-row" style="gap:10px;align-items:center">
@@ -1783,7 +1783,7 @@
       <!-- TAILLE XS -->
       <div style="display:flex;align-items:center;gap:10px;margin:24px 0 8px">
         <span class="label label-mono" style="margin:0">XS</span>
-        <span style="color:var(--muted);font-size:13px">pour inline dense (tableaux, meta, listes serrées)</span>
+        <span class="caption">pour inline dense (tableaux, meta, listes serrées)</span>
       </div>
       <div class="preview-box">
         <div class="example-row" style="gap:8px;align-items:center">
@@ -1799,7 +1799,7 @@
       <!-- SUR FOND LIGHT -->
       <div style="display:flex;align-items:center;gap:10px;margin:24px 0 8px">
         <span class="label label-mono" style="margin:0">LIGHT</span>
-        <span style="color:var(--muted);font-size:13px">adaptations <code class="icode">-lt</code> pour fond clair</span>
+        <span class="caption">adaptations <code class="icode">-lt</code> pour fond clair</span>
       </div>
       <div class="preview-box f-light">
         <div class="example-row" style="gap:10px;align-items:center">
@@ -1815,8 +1815,8 @@
 
     <!-- CODE D'UTILISATION -->
     <div class="ds-block">
-      <div class="ds-block-title">Code d'utilisation</div>
-      <p class="ds-section-sub">Structure : <code class="icode">.label</code> + <strong style="color:var(--text)">une variante de fond</strong> (<code class="icode">-dk</code>, <code class="icode">-lt</code>, <code class="icode">-solid</code>, <code class="icode">-outline</code>) + <strong style="color:var(--text)">modificateurs optionnels</strong> (<code class="icode">-dot</code>, <code class="icode">-arrow</code>, <code class="icode">-mono</code>, <code class="icode">-bar</code>, <code class="icode">-under</code>).</p>
+      <div class="eyebrow eyebrow-accent">Code d'utilisation</div>
+      <p class="lead">Structure : <code class="icode">.label</code> + <strong style="color:var(--text)">une variante de fond</strong> (<code class="icode">-dk</code>, <code class="icode">-lt</code>, <code class="icode">-solid</code>, <code class="icode">-outline</code>) + <strong style="color:var(--text)">modificateurs optionnels</strong> (<code class="icode">-dot</code>, <code class="icode">-arrow</code>, <code class="icode">-mono</code>, <code class="icode">-bar</code>, <code class="icode">-under</code>).</p>
       <code class="code">&lt;!-- Variantes principales (choisir UNE) --&gt;
 &lt;span class="label label-dk"&gt;Sur fond dark&lt;/span&gt;
 &lt;span class="label label-lt"&gt;Sur fond light&lt;/span&gt;
@@ -1858,12 +1858,12 @@
   <!-- CARDS -->
   <div class="mx ds-section" id="cards">
     <h2>Cards</h2>
-    <p class="ds-section-sub">Composant composable : <code class="icode">.card</code> (base) + un <strong style="color:var(--text)">style de surface</strong> + un <strong style="color:var(--text)">layout</strong> + modifiers optionnels (hover effect, padding). 5 styles × 6 layouts × 4 hovers × 3 paddings — mais en pratique, on reste sur les <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">recettes canoniques</em> (voir plus bas).</p>
+    <p class="lead">Composant composable : <code class="icode">.card</code> (base) + un <strong style="color:var(--text)">style de surface</strong> + un <strong style="color:var(--text)">layout</strong> + modifiers optionnels (hover effect, padding). 5 styles × 6 layouts × 4 hovers × 3 paddings — mais en pratique, on reste sur les <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">recettes canoniques</em> (voir plus bas).</p>
 
     <!-- BLOCK 1 — STYLES -->
     <div class="ds-block" id="cards-styles">
-      <div class="ds-block-title">5 styles de surface</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Même layout <code class="icode">.card-icon-top</code>, 5 traitements visuels différents selon l'intention.</p>
+      <div class="eyebrow eyebrow-accent">5 styles de surface</div>
+      <p class="lead" style="margin-bottom:14px">Même layout <code class="icode">.card-icon-top</code>, 5 traitements visuels différents selon l'intention.</p>
       <div class="preview-box" style="padding:24px">
         <div class="grid-3">
           <div class="card card-glass card-icon-top"><div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Glass</h3><p>Backdrop-filter + bord vert subtil. Défaut pour la plupart des cards.</p></div>
@@ -1877,7 +1877,7 @@
 
     <!-- BLOCK 2 — LAYOUTS -->
     <div class="ds-block" id="cards-layouts">
-      <div class="ds-block-title">6 layouts internes — <span style="color:var(--text)">change le style de surface ci-dessous</span></div>
+      <div class="eyebrow eyebrow-accent">6 layouts internes — <span style="color:var(--text)">change le style de surface ci-dessous</span></div>
       <div class="card-style-menu">
         <button class="css-chip is-active" data-style="glass">Glass</button>
         <button class="css-chip" data-style="outline">Outline</button>
@@ -1945,15 +1945,15 @@
 
     <!-- BLOCK 3 — HOVER EFFECTS -->
     <div class="ds-block" id="cards-hovers">
-      <div class="ds-block-title">4 effets au survol — passe la souris dessus</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Par défaut la card fait un <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">lift</em> (translateY -3px + glow subtil). 3 modifiers optionnels ajoutent un effet supplémentaire.</p>
+      <div class="eyebrow eyebrow-accent">4 effets au survol — passe la souris dessus</div>
+      <p class="lead" style="margin-bottom:14px">Par défaut la card fait un <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">lift</em> (translateY -3px + glow subtil). 3 modifiers optionnels ajoutent un effet supplémentaire.</p>
       <div class="preview-box" style="padding:24px">
         <div class="grid-4">
           <figure class="ds-card-ex">
             <div class="card card-glass card-icon-top">
               <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
               <h3>Lift (défaut)</h3>
-              <p style="font-size:13.5px">Translation verticale + shadow accent léger.</p>
+              <p style="">Translation verticale + shadow accent léger.</p>
             </div>
             <figcaption class="ds-card-tag">(aucun modifier)</figcaption>
           </figure>
@@ -1961,7 +1961,7 @@
             <div class="card card-glass card-icon-top card-hover-glow">
               <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
               <h3>Glow</h3>
-              <p style="font-size:13.5px">Halo vert marqué + ring accent 1px.</p>
+              <p style="">Halo vert marqué + ring accent 1px.</p>
             </div>
             <figcaption class="ds-card-tag">.card-hover-glow</figcaption>
           </figure>
@@ -1969,7 +1969,7 @@
             <div class="card card-glass card-icon-top card-hover-scale">
               <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 8l8 8M16 8l-8 8"/></svg></div>
               <h3>Scale</h3>
-              <p style="font-size:13.5px">Grossit de 3%. Bon pour carrousels.</p>
+              <p style="">Grossit de 3%. Bon pour carrousels.</p>
             </div>
             <figcaption class="ds-card-tag">.card-hover-scale</figcaption>
           </figure>
@@ -1977,7 +1977,7 @@
             <div class="card card-glass card-icon-top card-hover-shine">
               <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
               <h3>Shine</h3>
-              <p style="font-size:13.5px">Balayage lumineux diagonal. Effet premium.</p>
+              <p style="">Balayage lumineux diagonal. Effet premium.</p>
             </div>
             <figcaption class="ds-card-tag">.card-hover-shine</figcaption>
           </figure>
@@ -1987,21 +1987,21 @@
 
     <!-- BLOCK 4 — PADDING -->
     <div class="ds-block" id="cards-paddings">
-      <div class="ds-block-title">Padding — .card-compact · défaut · .card-airy</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Modulateurs de densité. Défaut = 28px. <code class="icode">.card-compact</code> (20px) pour les grilles denses ; <code class="icode">.card-airy</code> (40×36px) pour les cards héroïques sur fond aéré.</p>
+      <div class="eyebrow eyebrow-accent">Padding — .card-compact · défaut · .card-airy</div>
+      <p class="lead" style="margin-bottom:14px">Modulateurs de densité. Défaut = 28px. <code class="icode">.card-compact</code> (20px) pour les grilles denses ; <code class="icode">.card-airy</code> (40×36px) pour les cards héroïques sur fond aéré.</p>
       <div class="preview-box">
         <div class="grid-3">
           <div class="card card-glass card-compact">
             <h3 style="font-size:16px">Compact · 20px</h3>
-            <p style="font-size:13px;margin-top:6px">Pour grilles 3–4 col denses, listes produit.</p>
+            <p style="margin-top:6px">Pour grilles 3–4 col denses, listes produit.</p>
           </div>
           <div class="card card-glass">
             <h3 style="font-size:17px">Défaut · 28px</h3>
-            <p style="font-size:14px;margin-top:6px">Valeur standard. Utilisée partout sauf contre-indication.</p>
+            <p style="margin-top:6px">Valeur standard. Utilisée partout sauf contre-indication.</p>
           </div>
           <div class="card card-glass card-airy">
             <h3 style="font-size:18px">Airy · 40×36px</h3>
-            <p style="font-size:14px;margin-top:6px">Cards héros, sections 2-col, feature blocks.</p>
+            <p style="margin-top:6px">Cards héros, sections 2-col, feature blocks.</p>
           </div>
         </div>
       </div>
@@ -2009,8 +2009,8 @@
 
     <!-- BLOCK 5 — RECETTES CANONIQUES -->
     <div class="ds-block" id="cards-recipes">
-      <div class="ds-block-title">Recettes canoniques — les 4 combos qu'on utilise 95% du temps</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Plutôt que d'explorer les 360 combinaisons possibles, reste sur ces patterns éprouvés pour garder la cohérence du site.</p>
+      <div class="eyebrow eyebrow-accent">Recettes canoniques — les 4 combos qu'on utilise 95% du temps</div>
+      <p class="lead" style="margin-bottom:14px">Plutôt que d'explorer les 360 combinaisons possibles, reste sur ces patterns éprouvés pour garder la cohérence du site.</p>
 
       <!-- Recette 1 — Feature grid -->
       <p class="caption" style="margin:18px 0 10px 0"><strong class="eyebrow">1 · Feature grid</strong> — <code class="icode icode-sm">.card.card-glass.card-icon-top</code></p>
@@ -2120,7 +2120,7 @@
 
     <!-- BLOCK 6 — SUR FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light" style="padding:24px">
         <div class="grid-3">
           <div class="card card-outline card-icon-top"><div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></div><h3>Outline light</h3><p>Bordure teal sur light. Très neutre.</p></div>
@@ -2146,7 +2146,7 @@
   <!-- ALERTS -->
   <div class="mx ds-section" id="alerts">
     <h2>Alerts</h2>
-    <p class="ds-section-sub">Callout sémantique in-flow — 4 variantes (<code class="icode">.alert-success</code> par défaut · <code class="icode">.alert-info</code> · <code class="icode">.alert-warn</code> · <code class="icode">.alert-danger</code>) × 3 tailles (<code class="icode">.alert-compact</code>, défaut, <code class="icode">.alert-rich</code>). Structure libre : icône + titre optionnel + body + actions + close optionnel. Pour les <em style="font-style:italic;color:var(--accent)">toasts flottants</em>, voir un composant séparé (à venir).</p>
+    <p class="lead">Callout sémantique in-flow — 4 variantes (<code class="icode">.alert-success</code> par défaut · <code class="icode">.alert-info</code> · <code class="icode">.alert-warn</code> · <code class="icode">.alert-danger</code>) × 3 tailles (<code class="icode">.alert-compact</code>, défaut, <code class="icode">.alert-rich</code>). Structure libre : icône + titre optionnel + body + actions + close optionnel. Pour les <em style="font-style:italic;color:var(--accent)">toasts flottants</em>, voir un composant séparé (à venir).</p>
 
     <!-- SVG ICONS definitions (réutilisés par tous les alerts de la page) -->
     <svg style="position:absolute;width:0;height:0" aria-hidden="true"><defs>
@@ -2158,7 +2158,7 @@
 
     <!-- 4 variantes sémantiques -->
     <div class="ds-block">
-      <div class="ds-block-title">4 variantes sémantiques — défaut (success, info, warn, danger)</div>
+      <div class="eyebrow eyebrow-accent">4 variantes sémantiques — défaut (success, info, warn, danger)</div>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:12px">
         <div class="alert alert-success">
           <span class="alert-icon"><svg><use href="#ico-check"/></svg></span>
@@ -2181,7 +2181,7 @@
 
     <!-- Rich — titre + body + actions + close -->
     <div class="ds-block">
-      <div class="ds-block-title">.alert-rich — structure complète (titre, actions, close)</div>
+      <div class="eyebrow eyebrow-accent">.alert-rich — structure complète (titre, actions, close)</div>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:12px">
         <div class="alert alert-rich alert-warn">
           <span class="alert-icon"><svg><use href="#ico-warn"/></svg></span>
@@ -2212,7 +2212,7 @@
 
     <!-- Compact — 1 ligne -->
     <div class="ds-block">
-      <div class="ds-block-title">.alert-compact — 1 ligne, padding réduit</div>
+      <div class="eyebrow eyebrow-accent">.alert-compact — 1 ligne, padding réduit</div>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:10px">
         <div class="alert alert-compact alert-info">
           <span class="alert-icon"><svg><use href="#ico-info"/></svg></span>
@@ -2227,7 +2227,7 @@
 
     <!-- Sur fond light -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light" style="display:flex;flex-direction:column;gap:12px">
         <div class="alert alert-info">
           <span class="alert-icon"><svg><use href="#ico-info"/></svg></span>
@@ -2266,14 +2266,14 @@
   <!-- TABS -->
   <div class="mx ds-section" id="tabs">
     <h2>Tabs</h2>
-    <p class="ds-section-sub">2 patterns selon le contexte.
+    <p class="lead">2 patterns selon le contexte.
 <br><br><strong style="color:var(--text)"><code class="icode">.tabs-underline</code></strong> — navigation in-flow aérée (header de section, filtres). Le <code class="icode">.tab-panels</code> reste nu, comme un contenu qui respire.
 <br><br><strong style="color:var(--text)"><code class="icode">.tabs-card</code></strong> — pattern "dossier à onglets". Le <code class="icode">.tab-panels</code> est <strong style="color:var(--text)">toujours englobé dans une card visible</strong>, et les onglets paraissent <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">sortir du haut</em> de cette card. L'onglet actif partage le fond de la card pour créer une continuité parfaite (titre de la feuille ouverte).
 <br><br>Structure commune : <code class="icode">.tabs.tabs-[underline|card]</code> &gt; <code class="icode">.tab-list</code> + <code class="icode">.tab-panels</code>. Support du compteur via <code class="icode">.tab-badge</code>, scroll horizontal sur mobile avec fades latéraux (underline uniquement — sur card le scroll est désactivé car <code class="icode">overflow:visible</code> est nécessaire au rendu).</p>
 
     <!-- UNDERLINE -->
     <div class="ds-block">
-      <div class="ds-block-title">Underline — ligne sous l'onglet actif (classique, Google/Stripe)</div>
+      <div class="eyebrow eyebrow-accent">Underline — ligne sous l'onglet actif (classique, Google/Stripe)</div>
       <div class="preview-box">
         <div class="tabs tabs-underline">
           <div class="tab-list" role="tablist">
@@ -2284,11 +2284,11 @@
             <button class="tab" role="tab" aria-selected="false">Paramètres</button>
           </div>
           <div class="tab-panels">
-            <div class="tab-panel is-active" role="tabpanel"><p style="margin:0;font-size:14px">Vue d'ensemble — 5 immatriculations actives, 12 déclarations en cours, dernière activité il y a 2h.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">Immatriculations TVA actives dans 5 pays : FR, DE, IT, ES, NL.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">12 déclarations en cours — 3 à valider, 9 en attente.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">127 factures TVA émises ce trimestre.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">Paramètres du compte — notifications, langue, facturation.</p></div>
+            <div class="tab-panel is-active" role="tabpanel"><p style="margin:0">Vue d'ensemble — 5 immatriculations actives, 12 déclarations en cours, dernière activité il y a 2h.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">Immatriculations TVA actives dans 5 pays : FR, DE, IT, ES, NL.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">12 déclarations en cours — 3 à valider, 9 en attente.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">127 factures TVA émises ce trimestre.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">Paramètres du compte — notifications, langue, facturation.</p></div>
           </div>
         </div>
       </div>
@@ -2296,7 +2296,7 @@
 
     <!-- CARD HEADERS -->
     <div class="ds-block">
-      <div class="ds-block-title">Card headers — onglets "papier" (file system, navigateur)</div>
+      <div class="eyebrow eyebrow-accent">Card headers — onglets "papier" (file system, navigateur)</div>
       <div class="preview-box">
         <div class="tabs tabs-card">
           <div class="tab-list" role="tablist">
@@ -2307,11 +2307,11 @@
             <button class="tab" role="tab" aria-selected="false">Paramètres</button>
           </div>
           <div class="tab-panels">
-            <div class="tab-panel is-active" role="tabpanel"><p style="margin:0;font-size:14px">Vue d'ensemble — 5 immatriculations actives, 12 déclarations en cours, dernière activité il y a 2h.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">Immatriculations TVA actives dans 5 pays : FR, DE, IT, ES, NL.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">12 déclarations en cours — 3 à valider, 9 en attente.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">127 factures TVA émises ce trimestre.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">Paramètres du compte — notifications, langue, facturation.</p></div>
+            <div class="tab-panel is-active" role="tabpanel"><p style="margin:0">Vue d'ensemble — 5 immatriculations actives, 12 déclarations en cours, dernière activité il y a 2h.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">Immatriculations TVA actives dans 5 pays : FR, DE, IT, ES, NL.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">12 déclarations en cours — 3 à valider, 9 en attente.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">127 factures TVA émises ce trimestre.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">Paramètres du compte — notifications, langue, facturation.</p></div>
           </div>
         </div>
       </div>
@@ -2319,7 +2319,7 @@
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light" style="display:flex;flex-direction:column;gap:24px">
         <div class="tabs tabs-underline">
           <div class="tab-list" role="tablist">
@@ -2330,11 +2330,11 @@
             <button class="tab" role="tab" aria-selected="false">Paramètres</button>
           </div>
           <div class="tab-panels">
-            <div class="tab-panel is-active" role="tabpanel"><p style="margin:0;font-size:14px">Vue d'ensemble — 5 immatriculations actives, 12 déclarations en cours, dernière activité il y a 2h.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">Immatriculations TVA actives dans 5 pays : FR, DE, IT, ES, NL.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">12 déclarations en cours — 3 à valider, 9 en attente.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">127 factures TVA émises ce trimestre.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">Paramètres du compte — notifications, langue, facturation.</p></div>
+            <div class="tab-panel is-active" role="tabpanel"><p style="margin:0">Vue d'ensemble — 5 immatriculations actives, 12 déclarations en cours, dernière activité il y a 2h.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">Immatriculations TVA actives dans 5 pays : FR, DE, IT, ES, NL.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">12 déclarations en cours — 3 à valider, 9 en attente.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">127 factures TVA émises ce trimestre.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">Paramètres du compte — notifications, langue, facturation.</p></div>
           </div>
         </div>
         <div class="tabs tabs-card">
@@ -2346,11 +2346,11 @@
             <button class="tab" role="tab" aria-selected="false">Paramètres</button>
           </div>
           <div class="tab-panels">
-            <div class="tab-panel is-active" role="tabpanel"><p style="margin:0;font-size:14px">Vue d'ensemble — 5 immatriculations actives, 12 déclarations en cours, dernière activité il y a 2h.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">Immatriculations TVA actives dans 5 pays : FR, DE, IT, ES, NL.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">12 déclarations en cours — 3 à valider, 9 en attente.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">127 factures TVA émises ce trimestre.</p></div>
-            <div class="tab-panel" role="tabpanel"><p style="margin:0;font-size:14px">Paramètres du compte — notifications, langue, facturation.</p></div>
+            <div class="tab-panel is-active" role="tabpanel"><p style="margin:0">Vue d'ensemble — 5 immatriculations actives, 12 déclarations en cours, dernière activité il y a 2h.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">Immatriculations TVA actives dans 5 pays : FR, DE, IT, ES, NL.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">12 déclarations en cours — 3 à valider, 9 en attente.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">127 factures TVA émises ce trimestre.</p></div>
+            <div class="tab-panel" role="tabpanel"><p style="margin:0">Paramètres du compte — notifications, langue, facturation.</p></div>
           </div>
         </div>
       </div>
@@ -2377,11 +2377,11 @@
   <!-- ACCORDION -->
   <div class="mx ds-section" id="accordion">
     <h2>Accordion</h2>
-    <p class="ds-section-sub">Basé sur les éléments natifs <code class="icode">&lt;details&gt;</code> / <code class="icode">&lt;summary&gt;</code> — zéro JS, accessibilité clavier gratuite, ARIA implicite. 2 containers selon le contexte : <code class="icode">.accordion</code> (liste compacte, pour FAQ/specs denses) · <code class="icode">.accordion-cards</code> (chaque item = card glass indépendante, pour blocs respirants). Mode <strong style="color:var(--text)">exclusif</strong> (un seul ouvert à la fois) : ajouter l'attribut <code class="icode">name="..."</code> commun aux <code class="icode">&lt;details&gt;</code> — standard HTML depuis 2024.</p>
+    <p class="lead">Basé sur les éléments natifs <code class="icode">&lt;details&gt;</code> / <code class="icode">&lt;summary&gt;</code> — zéro JS, accessibilité clavier gratuite, ARIA implicite. 2 containers selon le contexte : <code class="icode">.accordion</code> (liste compacte, pour FAQ/specs denses) · <code class="icode">.accordion-cards</code> (chaque item = card glass indépendante, pour blocs respirants). Mode <strong style="color:var(--text)">exclusif</strong> (un seul ouvert à la fois) : ajouter l'attribut <code class="icode">name="..."</code> commun aux <code class="icode">&lt;details&gt;</code> — standard HTML depuis 2024.</p>
 
     <!-- COMPACT -->
     <div class="ds-block">
-      <div class="ds-block-title">.accordion — liste compacte (simple, chacun indépendant)</div>
+      <div class="eyebrow eyebrow-accent">.accordion — liste compacte (simple, chacun indépendant)</div>
       <div class="preview-box">
         <div class="accordion">
           <details class="accordion-item" open>
@@ -2427,7 +2427,7 @@
 
     <!-- EXCLUSIF -->
     <div class="ds-block">
-      <div class="ds-block-title">.accordion + name="..." — mode exclusif (1 seul ouvert à la fois)</div>
+      <div class="eyebrow eyebrow-accent">.accordion + name="..." — mode exclusif (1 seul ouvert à la fois)</div>
       <div class="preview-box">
         <div class="accordion">
           <details class="accordion-item" name="ds-faq-excl" open>
@@ -2460,7 +2460,7 @@
 
     <!-- CARDS -->
     <div class="ds-block">
-      <div class="ds-block-title">.accordion-cards — chaque item en card glass (respirant)</div>
+      <div class="eyebrow eyebrow-accent">.accordion-cards — chaque item en card glass (respirant)</div>
       <div class="preview-box">
         <div class="accordion accordion-cards">
           <details class="accordion-item" open>
@@ -2493,7 +2493,7 @@
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light">
         <div class="accordion">
           <details class="accordion-item" open>
@@ -2541,11 +2541,11 @@
   <!-- TOOLTIP -->
   <div class="mx ds-section" id="tooltip">
     <h2>Tooltip</h2>
-    <p class="ds-section-sub">CSS-only — pattern <code class="icode">&lt;element class="tooltip" data-tooltip="texte"&gt;</code>. L'élément doit être focusable (bouton, lien, ou <code class="icode">tabindex="0"</code> sinon) pour déclencher l'affichage au clavier. 4 positions via modifiers (défaut top, <code class="icode">.tooltip-right</code>, <code class="icode">.tooltip-bottom</code>, <code class="icode">.tooltip-left</code>). Délai d'apparition 400ms (évite les flash au survol accidentel).</p>
+    <p class="lead">CSS-only — pattern <code class="icode">&lt;element class="tooltip" data-tooltip="texte"&gt;</code>. L'élément doit être focusable (bouton, lien, ou <code class="icode">tabindex="0"</code> sinon) pour déclencher l'affichage au clavier. 4 positions via modifiers (défaut top, <code class="icode">.tooltip-right</code>, <code class="icode">.tooltip-bottom</code>, <code class="icode">.tooltip-left</code>). Délai d'apparition 400ms (évite les flash au survol accidentel).</p>
 
     <!-- 4 POSITIONS -->
     <div class="ds-block">
-      <div class="ds-block-title">4 positions — top (défaut), right, bottom, left</div>
+      <div class="eyebrow eyebrow-accent">4 positions — top (défaut), right, bottom, left</div>
       <div class="preview-box" style="padding:64px 32px">
         <div class="example-row" style="gap:40px;align-items:center;justify-content:center">
           <button class="btn btn-ghost btn-sm tooltip" data-tooltip="Tooltip en haut (défaut)">Survole-moi (top)</button>
@@ -2558,7 +2558,7 @@
 
     <!-- USAGES RÉELS -->
     <div class="ds-block">
-      <div class="ds-block-title">Usages typiques — icône info, raccourcis, statuts</div>
+      <div class="eyebrow eyebrow-accent">Usages typiques — icône info, raccourcis, statuts</div>
       <div class="preview-box" style="padding:48px 32px">
         <div class="example-row" style="gap:28px;align-items:center;justify-content:center;flex-wrap:wrap">
           <span style="color:var(--text);font-size:14px;display:inline-flex;align-items:center;gap:6px">
@@ -2579,7 +2579,7 @@
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light" style="padding:48px 32px">
         <div class="example-row" style="gap:28px;align-items:center;justify-content:center">
           <button class="btn btn-ghost-lt btn-sm tooltip" data-tooltip="Tooltip en haut">Survole-moi (top)</button>
@@ -2606,15 +2606,15 @@
   <!-- TABLE -->
   <div class="mx ds-section" id="table">
     <h2>Table</h2>
-    <p class="ds-section-sub">Deux styles selon le contexte.
+    <p class="lead">Deux styles selon le contexte.
 <br><br><strong style="color:var(--text)"><code class="icode">.table</code></strong> — <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">editorial par défaut</em> : th accent vert, fond léger, pas de wrapper. Pour comparaisons, matrices, tableaux de référence (tarifs, pays, services). C'est le cas majoritaire — utilisé partout dans cette page de doc.
 <br><br><strong style="color:var(--text)"><code class="icode">.table.table-data</code></strong> — <em style="color:var(--accent);font-family:var(--ff-em);font-style:italic">interactive</em> : th muted sombre, wrapper <code class="icode">.table-wrap</code> avec border, pensé pour dashboards / listes à trier, sélectionner, filtrer.
 <br><br>Les modifiers sont <strong style="color:var(--text)">combinables sur les deux styles</strong> : <code class="icode">.table-dense</code> · <code class="icode">.table-zebra</code> · <code class="icode">.table-hover</code> · <code class="icode">.table-sticky</code> · <code class="icode">data-sort="asc|desc"</code> · <code class="icode">.table-select</code> · <code class="icode">.table-actions</code>.</p>
 
     <!-- EDITORIAL (DEFAULT) -->
     <div class="ds-block">
-      <div class="ds-block-title">.table — style editorial (défaut)</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Pour comparatifs, matrices de services, tableaux de référence. Pas de wrapper, pas de chrome — léger et lisible.</p>
+      <div class="eyebrow eyebrow-accent">.table — style editorial (défaut)</div>
+      <p class="lead" style="margin-bottom:14px">Pour comparatifs, matrices de services, tableaux de référence. Pas de wrapper, pas de chrome — léger et lisible.</p>
       <div class="preview-box">
         <table class="table">
           <thead>
@@ -2669,7 +2669,7 @@
 
     <!-- FULL FEATURED -->
     <div class="ds-block">
-      <div class="ds-block-title">.table.table-data — interactive (zebra + hover + sort + select + actions)</div>
+      <div class="eyebrow eyebrow-accent">.table.table-data — interactive (zebra + hover + sort + select + actions)</div>
       <div class="preview-box">
         <div class="table-wrap">
           <table class="table table-data table-zebra table-hover">
@@ -2738,7 +2738,7 @@
 
     <!-- DENSE -->
     <div class="ds-block">
-      <div class="ds-block-title">.table-dense — liste compacte (type journal)</div>
+      <div class="eyebrow eyebrow-accent">.table-dense — liste compacte (type journal)</div>
       <div class="preview-box">
         <div class="table-wrap">
           <table class="table table-data table-dense table-hover">
@@ -2781,7 +2781,7 @@
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light">
         <div class="table-wrap">
           <table class="table table-data table-hover">
@@ -2866,11 +2866,11 @@
   <!-- PAGINATION -->
   <div class="mx ds-section" id="pagination">
     <h2>Pagination</h2>
-    <p class="ds-section-sub">2 patterns selon le contexte — <code class="icode">.pagination</code> (numérotée, pour listes longues) · <code class="icode">.pagination-simple</code> (prev/next, pour listes courtes ou mobile). Info optionnelle <code class="icode">.pagination-info</code> ("Affichage 1-10 sur 127"). États : <code class="icode">[aria-current="page"]</code> pour la page active, <code class="icode">[aria-disabled="true"]</code> pour prev/next désactivés.</p>
+    <p class="lead">2 patterns selon le contexte — <code class="icode">.pagination</code> (numérotée, pour listes longues) · <code class="icode">.pagination-simple</code> (prev/next, pour listes courtes ou mobile). Info optionnelle <code class="icode">.pagination-info</code> ("Affichage 1-10 sur 127"). États : <code class="icode">[aria-current="page"]</code> pour la page active, <code class="icode">[aria-disabled="true"]</code> pour prev/next désactivés.</p>
 
     <!-- NUMBERED -->
     <div class="ds-block">
-      <div class="ds-block-title">.pagination — numérotée avec ellipsis</div>
+      <div class="eyebrow eyebrow-accent">.pagination — numérotée avec ellipsis</div>
       <div class="preview-box">
         <nav class="pagination" aria-label="Pagination déclarations">
           <span class="pagination-info">Affichage <strong style="color:var(--text)">11–20</strong> sur <strong style="color:var(--text)">127</strong> résultats</span>
@@ -2890,7 +2890,7 @@
 
     <!-- FIRST PAGE (prev disabled) -->
     <div class="ds-block">
-      <div class="ds-block-title">Première page — prev désactivé</div>
+      <div class="eyebrow eyebrow-accent">Première page — prev désactivé</div>
       <div class="preview-box">
         <nav class="pagination" aria-label="Pagination">
           <span class="pagination-info">Affichage <strong style="color:var(--text)">1–10</strong> sur <strong style="color:var(--text)">127</strong></span>
@@ -2909,7 +2909,7 @@
 
     <!-- SIMPLE -->
     <div class="ds-block">
-      <div class="ds-block-title">.pagination-simple — prev/next (listes courtes, mobile)</div>
+      <div class="eyebrow eyebrow-accent">.pagination-simple — prev/next (listes courtes, mobile)</div>
       <div class="preview-box">
         <nav class="pagination pagination-simple" aria-label="Pagination">
           <a href="#" class="pagination-btn" aria-label="Page précédente"><span>←</span><span>Précédent</span></a>
@@ -2921,7 +2921,7 @@
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light">
         <nav class="pagination" aria-label="Pagination">
           <span class="pagination-info">1–10 sur 127</span>
@@ -2964,11 +2964,11 @@
   <!-- BREADCRUMB -->
   <div class="mx ds-section" id="breadcrumb">
     <h2>Breadcrumb</h2>
-    <p class="ds-section-sub">Fil d'Ariane — repérage de hiérarchie. Balisage sémantique <code class="icode">&lt;nav&gt; &gt; &lt;ol class="breadcrumb"&gt;</code>. Séparateur chevron <code class="icode">›</code> injecté automatiquement entre items via <code class="icode">::before</code>. Page courante en <code class="icode">[aria-current="page"]</code>, non cliquable et légèrement mise en avant.</p>
+    <p class="lead">Fil d'Ariane — repérage de hiérarchie. Balisage sémantique <code class="icode">&lt;nav&gt; &gt; &lt;ol class="breadcrumb"&gt;</code>. Séparateur chevron <code class="icode">›</code> injecté automatiquement entre items via <code class="icode">::before</code>. Page courante en <code class="icode">[aria-current="page"]</code>, non cliquable et légèrement mise en avant.</p>
 
     <!-- STANDARD -->
     <div class="ds-block">
-      <div class="ds-block-title">Standard — 4 niveaux</div>
+      <div class="eyebrow eyebrow-accent">Standard — 4 niveaux</div>
       <div class="preview-box">
         <nav aria-label="Fil d'Ariane">
           <ol class="breadcrumb">
@@ -2983,7 +2983,7 @@
 
     <!-- COURT -->
     <div class="ds-block">
-      <div class="ds-block-title">Court — 2 niveaux</div>
+      <div class="eyebrow eyebrow-accent">Court — 2 niveaux</div>
       <div class="preview-box">
         <nav aria-label="Fil d'Ariane">
           <ol class="breadcrumb">
@@ -2996,8 +2996,8 @@
 
     <!-- AVEC ELLIPSIS MANUEL -->
     <div class="ds-block">
-      <div class="ds-block-title">Chemin long avec ellipsis manuel</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Pas de troncation auto ; insérer un <code class="icode">&lt;li&gt;…&lt;/li&gt;</code> au besoin.</p>
+      <div class="eyebrow eyebrow-accent">Chemin long avec ellipsis manuel</div>
+      <p class="lead" style="margin-bottom:14px">Pas de troncation auto ; insérer un <code class="icode">&lt;li&gt;…&lt;/li&gt;</code> au besoin.</p>
       <div class="preview-box">
         <nav aria-label="Fil d'Ariane">
           <ol class="breadcrumb">
@@ -3012,7 +3012,7 @@
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light">
         <nav aria-label="Fil d'Ariane">
           <ol class="breadcrumb">
@@ -3038,11 +3038,11 @@
   <!-- MODAL -->
   <div class="mx ds-section" id="modal">
     <h2>Modal</h2>
-    <p class="ds-section-sub">2 styles retenus. Basé sur <code class="icode">&lt;dialog&gt;</code> natif HTML5 (focus trap, ESC pour fermer, backdrop natif gratuits). Pattern d'ouverture : <code class="icode">dialog.showModal()</code>. Fermeture au clic sur le backdrop géré par JS.</p>
+    <p class="lead">2 styles retenus. Basé sur <code class="icode">&lt;dialog&gt;</code> natif HTML5 (focus trap, ESC pour fermer, backdrop natif gratuits). Pattern d'ouverture : <code class="icode">dialog.showModal()</code>. Fermeture au clic sur le backdrop géré par JS.</p>
 
     <!-- FUNCTIONAL DEMOS -->
     <div class="ds-block">
-      <div class="ds-block-title">Test en conditions réelles — cliquer sur un bouton pour ouvrir</div>
+      <div class="eyebrow eyebrow-accent">Test en conditions réelles — cliquer sur un bouton pour ouvrir</div>
       <div class="preview-box" style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;padding:40px">
         <button class="btn btn-primary btn-ico" data-modal-open="ds-modal-glass">Ouvrir — Glass dark</button>
         <button class="btn btn-ghost btn-ico" data-modal-open="ds-modal-light">Ouvrir — Light panel</button>
@@ -3051,7 +3051,7 @@
 
     <!-- LIGHT BG COMPARISON -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light (même boutons, mêmes dialogs)</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light (même boutons, mêmes dialogs)</div>
       <div class="preview-box f-light" style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;padding:40px">
         <button class="btn btn-primary btn-ico" data-modal-open="ds-modal-glass">Ouvrir — Glass dark</button>
         <button class="btn btn-ghost-lt btn-ico" data-modal-open="ds-modal-light">Ouvrir — Light panel</button>
@@ -3060,8 +3060,8 @@
 
     <!-- SIZES -->
     <div class="ds-block">
-      <div class="ds-block-title">4 tailles — sm · md (défaut) · lg · xl</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Applique <code class="icode icode-sm">.modal-sm</code> (400px), <code class="icode icode-sm">.modal-md</code> (560px, défaut), <code class="icode icode-sm">.modal-lg</code> (720px) ou <code class="icode icode-sm">.modal-xl</code> (960px) sur le <code class="icode icode-sm">&lt;dialog class="modal"&gt;</code>.</p>
+      <div class="eyebrow eyebrow-accent">4 tailles — sm · md (défaut) · lg · xl</div>
+      <p class="lead" style="margin-bottom:14px">Applique <code class="icode icode-sm">.modal-sm</code> (400px), <code class="icode icode-sm">.modal-md</code> (560px, défaut), <code class="icode icode-sm">.modal-lg</code> (720px) ou <code class="icode icode-sm">.modal-xl</code> (960px) sur le <code class="icode icode-sm">&lt;dialog class="modal"&gt;</code>.</p>
       <div class="preview-box" style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;padding:40px">
         <button class="btn btn-ghost btn-sm" data-modal-open="ds-modal-sm">sm — 400px</button>
         <button class="btn btn-ghost btn-sm" data-modal-open="ds-modal-md">md — 560px</button>
@@ -3101,7 +3101,7 @@ document.getElementById('confirm').close();</code>
       </div>
       <div class="modal-body">
         <p>Voulez-vous vraiment supprimer l'immatriculation TVA Allemagne (<span class="mono" style="font-family:var(--ff-mono);font-size:13px;color:var(--accent)">DE271819302</span>) ?</p>
-        <p style="font-size:13px;margin-top:10px">Cette action est irréversible et nécessitera une nouvelle demande complète si vous souhaitez la réactiver.</p>
+        <p style="margin-top:10px">Cette action est irréversible et nécessitera une nouvelle demande complète si vous souhaitez la réactiver.</p>
       </div>
       <div class="modal-footer">
         <button class="btn btn-ghost btn-sm" data-modal-close>Annuler</button>
@@ -3116,7 +3116,7 @@ document.getElementById('confirm').close();</code>
       </div>
       <div class="modal-body">
         <p>Voulez-vous vraiment supprimer l'immatriculation TVA Allemagne (<span class="mono" style="font-family:var(--ff-mono);font-size:13px;color:var(--accent)">DE271819302</span>) ?</p>
-        <p style="font-size:13px;margin-top:10px">Cette action est irréversible et nécessitera une nouvelle demande complète si vous souhaitez la réactiver.</p>
+        <p style="margin-top:10px">Cette action est irréversible et nécessitera une nouvelle demande complète si vous souhaitez la réactiver.</p>
       </div>
       <div class="modal-footer">
         <button class="btn btn-ghost btn-sm" data-modal-close>Annuler</button>
@@ -3132,28 +3132,28 @@ document.getElementById('confirm').close();</code>
   </dialog>
   <dialog class="modal modal-glass modal-md" id="ds-modal-md">
     <div class="modal-header"><h3 class="modal-title">Medium — 560px (défaut)</h3><button class="modal-close" aria-label="Fermer" data-modal-close><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
-    <div class="modal-body"><p>La taille par défaut. Bon compromis pour la plupart des usages : confirmations riches, courts formulaires, messages avec contexte.</p><p style="font-size:13px;margin-top:10px">Équivaut à <code class="icode icode-sm">&lt;dialog class="modal"&gt;</code> sans modifier de taille.</p></div>
+    <div class="modal-body"><p>La taille par défaut. Bon compromis pour la plupart des usages : confirmations riches, courts formulaires, messages avec contexte.</p><p style="margin-top:10px">Équivaut à <code class="icode icode-sm">&lt;dialog class="modal"&gt;</code> sans modifier de taille.</p></div>
     <div class="modal-footer"><button class="btn btn-ghost btn-sm" data-modal-close>Annuler</button><button class="btn btn-primary btn-sm" data-modal-close>Valider</button></div>
   </dialog>
   <dialog class="modal modal-glass modal-lg" id="ds-modal-lg">
     <div class="modal-header"><h3 class="modal-title">Large — 720px</h3><button class="modal-close" aria-label="Fermer" data-modal-close><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
-    <div class="modal-body"><p>Formulaires moyens, listes d'éléments, résumés avec plusieurs sections. Pour quand <code class="icode icode-sm">.modal-md</code> est trop serré sans qu'on ait besoin d'un wrapper pleine largeur.</p><p style="font-size:13px;margin-top:10px">Exemple : édition d'une fiche client avec 2 colonnes de champs.</p></div>
+    <div class="modal-body"><p>Formulaires moyens, listes d'éléments, résumés avec plusieurs sections. Pour quand <code class="icode icode-sm">.modal-md</code> est trop serré sans qu'on ait besoin d'un wrapper pleine largeur.</p><p style="margin-top:10px">Exemple : édition d'une fiche client avec 2 colonnes de champs.</p></div>
     <div class="modal-footer"><button class="btn btn-ghost btn-sm" data-modal-close>Annuler</button><button class="btn btn-primary btn-sm" data-modal-close>Enregistrer</button></div>
   </dialog>
   <dialog class="modal modal-glass modal-xl" id="ds-modal-xl">
     <div class="modal-header"><h3 class="modal-title">Extra large — 960px</h3><button class="modal-close" aria-label="Fermer" data-modal-close><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
-    <div class="modal-body"><p>Cas intensifs : éditeur complet, tableau embarqué, aperçu de document. À réserver aux contextes où la modale devient quasi une page — sinon préférer une route dédiée.</p><p style="font-size:13px;margin-top:10px">Si tu atteins cette taille régulièrement, pose-toi la question d'un vrai écran plein-page plutôt qu'une modale.</p></div>
+    <div class="modal-body"><p>Cas intensifs : éditeur complet, tableau embarqué, aperçu de document. À réserver aux contextes où la modale devient quasi une page — sinon préférer une route dédiée.</p><p style="margin-top:10px">Si tu atteins cette taille régulièrement, pose-toi la question d'un vrai écran plein-page plutôt qu'une modale.</p></div>
     <div class="modal-footer"><button class="btn btn-ghost btn-sm" data-modal-close>Fermer</button><button class="btn btn-primary btn-sm" data-modal-close>Appliquer</button></div>
   </dialog>
 
   <!-- LOADERS -->
   <div class="mx ds-section" id="loaders">
     <h2>Loaders</h2>
-    <p class="ds-section-sub">3 indicateurs de chargement pour couvrir tous les cas : <code class="icode">.progress</code> (barre horizontale avec valeur), <code class="icode">.skeleton</code> (placeholder shimmer en attendant le contenu réel), <code class="icode">.spinner</code> (chargement indéfini court). Les animations sont désactivées via <code class="icode">prefers-reduced-motion</code>.</p>
+    <p class="lead">3 indicateurs de chargement pour couvrir tous les cas : <code class="icode">.progress</code> (barre horizontale avec valeur), <code class="icode">.skeleton</code> (placeholder shimmer en attendant le contenu réel), <code class="icode">.spinner</code> (chargement indéfini court). Les animations sont désactivées via <code class="icode">prefers-reduced-motion</code>.</p>
 
     <!-- PROGRESS -->
     <div class="ds-block">
-      <div class="ds-block-title">.progress — barre de progression déterminée (couleur par défaut : accent)</div>
+      <div class="eyebrow eyebrow-accent">.progress — barre de progression déterminée (couleur par défaut : accent)</div>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:16px">
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13px;color:var(--text)">Immatriculation Allemagne</span><span style="font-size:13px;color:var(--muted);font-family:var(--ff-mono)">35%</span></div>
@@ -3172,8 +3172,8 @@ document.getElementById('confirm').close();</code>
 
     <!-- COLOR CUSTOMIZATION -->
     <div class="ds-block">
-      <div class="ds-block-title">Couleur custom via --progress-color (palette uniquement)</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Exemple : <code class="icode">&lt;div class="progress" style="--progress-color:var(--info)"&gt;</code>. Toujours utiliser un token de la palette, jamais un hex libre.</p>
+      <div class="eyebrow eyebrow-accent">Couleur custom via --progress-color (palette uniquement)</div>
+      <p class="lead" style="margin-bottom:14px">Exemple : <code class="icode">&lt;div class="progress" style="--progress-color:var(--info)"&gt;</code>. Toujours utiliser un token de la palette, jamais un hex libre.</p>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:14px">
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:12px;color:var(--muted);font-family:var(--ff-mono)">var(--accent) — défaut</span><span style="font-size:12px;color:var(--muted);font-family:var(--ff-mono)">60%</span></div>
@@ -3203,7 +3203,7 @@ document.getElementById('confirm').close();</code>
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Tailles — .progress-xs / .progress-sm / default / .progress-lg</div>
+      <div class="eyebrow eyebrow-accent">Tailles — .progress-xs / .progress-sm / default / .progress-lg</div>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:12px">
         <div class="progress progress-xs"><div class="progress-bar" style="width:60%"></div></div>
         <div class="progress progress-sm"><div class="progress-bar" style="width:60%"></div></div>
@@ -3213,7 +3213,7 @@ document.getElementById('confirm').close();</code>
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">.progress-indeterminate — animation continue (chargement de durée inconnue)</div>
+      <div class="eyebrow eyebrow-accent">.progress-indeterminate — animation continue (chargement de durée inconnue)</div>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:12px">
         <div class="progress progress-indeterminate"><div class="progress-bar"></div></div>
         <div class="progress progress-indeterminate" style="--progress-color:var(--info)"><div class="progress-bar"></div></div>
@@ -3222,10 +3222,10 @@ document.getElementById('confirm').close();</code>
 
     <!-- SKELETON -->
     <div class="ds-block">
-      <div class="ds-block-title">.skeleton — placeholder shimmer en attendant le contenu</div>
+      <div class="eyebrow eyebrow-accent">.skeleton — placeholder shimmer en attendant le contenu</div>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:18px">
         <div>
-          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;font-weight:600">Card client — structure simulée</div>
+          <div class="eyebrow" style="color:var(--muted);margin-bottom:12px">Card client — structure simulée</div>
           <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;background:rgba(14,28,30,0.35);border-radius:12px;border:1px solid rgba(94,205,140,0.08)">
             <span class="skeleton skeleton-circle" style="width:48px"></span>
             <div style="flex:1;display:flex;flex-direction:column;gap:8px">
@@ -3236,7 +3236,7 @@ document.getElementById('confirm').close();</code>
           </div>
         </div>
         <div>
-          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;font-weight:600">Article — header + paragraphe</div>
+          <div class="eyebrow" style="color:var(--muted);margin-bottom:12px">Article — header + paragraphe</div>
           <div style="padding:18px;background:rgba(14,28,30,0.35);border-radius:12px;border:1px solid rgba(94,205,140,0.08);display:flex;flex-direction:column;gap:10px">
             <span class="skeleton skeleton-line-lg skeleton-w-60"></span>
             <span class="skeleton skeleton-line skeleton-w-100"></span>
@@ -3246,7 +3246,7 @@ document.getElementById('confirm').close();</code>
           </div>
         </div>
         <div>
-          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;font-weight:600">Galerie — image + légende</div>
+          <div class="eyebrow" style="color:var(--muted);margin-bottom:12px">Galerie — image + légende</div>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
             <div style="display:flex;flex-direction:column;gap:8px">
               <span class="skeleton skeleton-rect" style="height:100px"></span>
@@ -3267,10 +3267,10 @@ document.getElementById('confirm').close();</code>
 
     <!-- SPINNER -->
     <div class="ds-block">
-      <div class="ds-block-title">.spinner — chargement indéfini court</div>
+      <div class="eyebrow eyebrow-accent">.spinner — chargement indéfini court</div>
       <div class="preview-box" style="display:flex;flex-direction:column;gap:22px">
         <div>
-          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;font-weight:600">Tailles</div>
+          <div class="eyebrow" style="color:var(--muted);margin-bottom:12px">Tailles</div>
           <div class="example-row" style="gap:28px;align-items:center">
             <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span class="spinner spinner-xs"></span><span style="font-size:10px;color:var(--muted);font-family:var(--ff-mono)">xs</span></div>
             <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><span class="spinner spinner-sm"></span><span style="font-size:10px;color:var(--muted);font-family:var(--ff-mono)">sm</span></div>
@@ -3280,7 +3280,7 @@ document.getElementById('confirm').close();</code>
           </div>
         </div>
         <div>
-          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;font-weight:600">Dans les boutons</div>
+          <div class="eyebrow" style="color:var(--muted);margin-bottom:12px">Dans les boutons</div>
           <div class="example-row" style="gap:14px;align-items:center">
             <button class="btn btn-primary btn-sm" disabled><span class="spinner spinner-sm spinner-white"></span>Enregistrement…</button>
             <button class="btn btn-ghost btn-sm" disabled><span class="spinner spinner-sm"></span>Chargement</button>
@@ -3292,7 +3292,7 @@ document.getElementById('confirm').close();</code>
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light" style="display:flex;flex-direction:column;gap:18px">
         <div>
           <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13px;color:var(--lt-text)">Dossier en cours</span><span style="font-size:13px;color:var(--lt-muted);font-family:var(--ff-mono)">62%</span></div>
@@ -3340,11 +3340,11 @@ document.getElementById('confirm').close();</code>
   <!-- DROPDOWN -->
   <div class="mx ds-section" id="dropdown">
     <h2>Dropdown</h2>
-    <p class="ds-section-sub">2 cas d'usage distincts regroupés. <code class="icode">.dropdown-menu</code> (Popover API natif — menu d'actions contextuelles, ESC et click-outside gratuits) · <code class="icode">.select</code> (<code class="icode">&lt;select&gt;</code> natif restylé via <code class="icode">appearance:none</code> — pour les formulaires). Positionnement du menu : bas par défaut, auto-flip si pas assez de place, ou forçage vers le haut via <code class="icode">.dropdown-up</code>.</p>
+    <p class="lead">2 cas d'usage distincts regroupés. <code class="icode">.dropdown-menu</code> (Popover API natif — menu d'actions contextuelles, ESC et click-outside gratuits) · <code class="icode">.select</code> (<code class="icode">&lt;select&gt;</code> natif restylé via <code class="icode">appearance:none</code> — pour les formulaires). Positionnement du menu : bas par défaut, auto-flip si pas assez de place, ou forçage vers le haut via <code class="icode">.dropdown-up</code>.</p>
 
     <!-- DROPDOWN MENU -->
     <div class="ds-block">
-      <div class="ds-block-title">.dropdown-menu — menu d'actions contextuelles</div>
+      <div class="eyebrow eyebrow-accent">.dropdown-menu — menu d'actions contextuelles</div>
       <div class="preview-box" style="padding:48px 32px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap">
         <button class="btn btn-ghost btn-sm" popovertarget="ds-dd-1">Actions <svg class="dd-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4.5l4 4 4-4"/></svg></button>
         <div class="dropdown-menu" id="ds-dd-1" popover="auto">
@@ -3386,7 +3386,7 @@ document.getElementById('confirm').close();</code>
 
     <!-- SELECT -->
     <div class="ds-block">
-      <div class="ds-block-title">.select — <code class="icode">&lt;select&gt;</code> natif re-stylé</div>
+      <div class="eyebrow eyebrow-accent">.select — <code class="icode">&lt;select&gt;</code> natif re-stylé</div>
       <div class="preview-box" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
         <div class="field">
           <label for="ds-sel-1">Pays d'immatriculation</label>
@@ -3426,7 +3426,7 @@ document.getElementById('confirm').close();</code>
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
         <div class="field">
           <label for="ds-sel-lt">Pays</label>
@@ -3480,11 +3480,11 @@ document.getElementById('confirm').close();</code>
   <!-- AVATAR -->
   <div class="mx ds-section" id="avatar">
     <h2>Avatar</h2>
-    <p class="ds-section-sub">Photo ou initiales. 5 tailles. Fallback initiales coloré via <strong style="color:var(--text)">hash algorithmique</strong> du nom (6 tons opaques dérivés de la palette brand/sémantique, texte blanc) — appliqué automatiquement par le JS du DS si aucune classe <code class="icode">.avatar-c[1–6]</code> n'est présente. Option status dot et stack.</p>
+    <p class="lead">Photo ou initiales. 5 tailles. Fallback initiales coloré via <strong style="color:var(--text)">hash algorithmique</strong> du nom (6 tons opaques dérivés de la palette brand/sémantique, texte blanc) — appliqué automatiquement par le JS du DS si aucune classe <code class="icode">.avatar-c[1–6]</code> n'est présente. Option status dot et stack.</p>
 
     <!-- TAILLES -->
     <div class="ds-block">
-      <div class="ds-block-title">5 tailles — xs · sm · md (défaut) · lg · xl</div>
+      <div class="eyebrow eyebrow-accent">5 tailles — xs · sm · md (défaut) · lg · xl</div>
       <div class="preview-box">
         <div class="example-row" style="gap:20px;align-items:center">
           <div class="avatar avatar-xs" data-name="Kevin Sagnie">KS</div>
@@ -3498,7 +3498,7 @@ document.getElementById('confirm').close();</code>
 
     <!-- PHOTO VS INITIALES -->
     <div class="ds-block">
-      <div class="ds-block-title">Photo ou fallback initiales</div>
+      <div class="eyebrow eyebrow-accent">Photo ou fallback initiales</div>
       <div class="preview-box">
         <div class="example-row" style="gap:20px;align-items:center">
           <div class="avatar avatar-lg"><img src="img/kevin.jpg" alt="Kevin Sagnie"></div>
@@ -3513,8 +3513,8 @@ document.getElementById('confirm').close();</code>
 
     <!-- PALETTE ALGO -->
     <div class="ds-block">
-      <div class="ds-block-title">6 tons algorithmiques — dérivés de la palette</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Chaque ton est tiré automatiquement d'un hash du nom. Ci-dessous, les 6 tons montrés explicitement via <code class="icode">.avatar-c1</code>…<code class="icode">.avatar-c6</code>.</p>
+      <div class="eyebrow eyebrow-accent">6 tons algorithmiques — dérivés de la palette</div>
+      <p class="lead" style="margin-bottom:14px">Chaque ton est tiré automatiquement d'un hash du nom. Ci-dessous, les 6 tons montrés explicitement via <code class="icode">.avatar-c1</code>…<code class="icode">.avatar-c6</code>.</p>
       <div class="preview-box">
         <div class="example-row" style="gap:16px;align-items:center">
           <div style="text-align:center"><div class="avatar avatar-lg avatar-c1">A</div><div style="font-size:10px;color:var(--muted);margin-top:8px;font-family:var(--ff-mono)">c1 accent</div></div>
@@ -3529,7 +3529,7 @@ document.getElementById('confirm').close();</code>
 
     <!-- STATUS DOT -->
     <div class="ds-block">
-      <div class="ds-block-title">Status dot — .avatar-status + .avatar-status-[online|busy|offline]</div>
+      <div class="eyebrow eyebrow-accent">Status dot — .avatar-status + .avatar-status-[online|busy|offline]</div>
       <div class="preview-box">
         <div class="example-row" style="gap:20px;align-items:center">
           <div class="avatar avatar-lg avatar-status avatar-status-online" data-name="Kevin S">KS</div>
@@ -3542,8 +3542,8 @@ document.getElementById('confirm').close();</code>
 
     <!-- STACK -->
     <div class="ds-block">
-      <div class="ds-block-title">.avatar-stack — avatars empilés</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">Pour signifier un groupe (équipe assignée, témoignages, participants).</p>
+      <div class="eyebrow eyebrow-accent">.avatar-stack — avatars empilés</div>
+      <p class="lead" style="margin-bottom:14px">Pour signifier un groupe (équipe assignée, témoignages, participants).</p>
       <div class="preview-box">
         <div style="display:flex;flex-direction:column;gap:18px">
           <div class="avatar-stack">
@@ -3570,7 +3570,7 @@ document.getElementById('confirm').close();</code>
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light">
         <div class="example-row" style="gap:20px;align-items:center">
           <div class="avatar avatar-lg" data-name="Kevin Sagnie">KS</div>
@@ -3612,10 +3612,10 @@ document.getElementById('confirm').close();</code>
   <!-- NAV -->
   <div class="mx ds-section" id="nav">
     <h2>Nav</h2>
-    <p class="ds-section-sub">Nav unique pour toutes les pages — 5 liens + CTA. S'adapte au mode light. En dessous de 880px, les liens disparaissent et <code class="icode">.nav-burger</code> prend le relais.</p>
+    <p class="lead">Nav unique pour toutes les pages — 5 liens + CTA. S'adapte au mode light. En dessous de 880px, les liens disparaissent et <code class="icode">.nav-burger</code> prend le relais.</p>
 
     <div class="ds-block">
-      <div class="ds-block-title">Desktop — fond dark</div>
+      <div class="eyebrow eyebrow-accent">Desktop — fond dark</div>
       <div class="preview-box" style="padding:0;overflow:hidden">
         <nav style="padding:16px 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,13,14,0.6);backdrop-filter:blur(28px);border-bottom:1px solid rgba(94,205,140,0.05)">
           <div class="nav-logo"><img src="img/logo.png" alt=""><span></span></div>
@@ -3632,8 +3632,8 @@ document.getElementById('confirm').close();</code>
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Mobile — .nav-burger (simulé à 360px)</div>
-      <p class="ds-section-sub">Le burger est automatiquement affiché en dessous de 880px. Ci-dessous, simulation dans une frame fixe 360px.</p>
+      <div class="eyebrow eyebrow-accent">Mobile — .nav-burger (simulé à 360px)</div>
+      <p class="lead">Le burger est automatiquement affiché en dessous de 880px. Ci-dessous, simulation dans une frame fixe 360px.</p>
       <div class="preview-box" style="padding:20px;display:flex;justify-content:center">
         <div style="width:360px;border:1px solid var(--stroke);border-radius:18px;overflow:hidden;background:rgba(6,13,14,0.85)">
           <nav style="padding:14px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(94,205,140,0.05)">
@@ -3662,10 +3662,10 @@ document.getElementById('confirm').close();</code>
   <!-- HERO -->
   <div class="mx ds-section" id="hero">
     <h2>Hero</h2>
-    <p class="ds-section-sub">Pattern de haut de page — fond radial mesh, badge pulsé, H1 avec italique éditorial, sous-titre, CTAs. Compose <code class="icode">.hero</code> (wrapper) + <code class="icode">.hero-badge</code> / <code class="icode">.hero-eyebrow</code> / <code class="icode">.hero-sub</code> + les boutons standards.</p>
+    <p class="lead">Pattern de haut de page — fond radial mesh, badge pulsé, H1 avec italique éditorial, sous-titre, CTAs. Compose <code class="icode">.hero</code> (wrapper) + <code class="icode">.hero-badge</code> / <code class="icode">.hero-eyebrow</code> / <code class="icode">.hero-sub</code> + les boutons standards.</p>
 
     <div class="ds-block">
-      <div class="ds-block-title">Rendu complet</div>
+      <div class="eyebrow eyebrow-accent">Rendu complet</div>
       <div class="preview-box" style="padding:0;overflow:hidden;border-radius:16px">
         <section class="hero" style="padding:80px 40px 70px;position:relative">
           <span class="hero-badge"><span class="badge-dot"></span>400+ sellers Amazon accompagnés</span>
@@ -3682,7 +3682,7 @@ document.getElementById('confirm').close();</code>
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">Anatomie — classes disponibles</div>
+      <div class="eyebrow eyebrow-accent">Anatomie — classes disponibles</div>
       <div class="preview-box" style="padding:0">
         <table class="table" style="font-size:13.5px">
           <thead><tr><th style="width:24%">Classe</th><th style="width:28%">Rôle</th><th>Spécificités</th></tr></thead>
@@ -3710,7 +3710,7 @@ document.getElementById('confirm').close();</code>
   <!-- STATS -->
   <div class="mx ds-section" id="stats">
     <h2>Stats</h2>
-    <p class="ds-section-sub">Bandeau de chiffres clés — réutilisé sur index, amazon, à-propos.</p>
+    <p class="lead">Bandeau de chiffres clés — réutilisé sur index, amazon, à-propos.</p>
     <div class="preview-box" style="padding:20px">
       <div class="stat-bar">
         <div class="stat"><div class="stat-num">400<span class="stat-plus">+</span></div><div class="stat-lbl">Sellers accompagnés</div></div>
@@ -3738,7 +3738,7 @@ document.getElementById('confirm').close();</code>
   <!-- LOGO WALL -->
   <div class="mx ds-section" id="logos">
     <h2>Logos clients</h2>
-    <p class="ds-section-sub">Bloc de preuves sociales — grille responsive 7→4→3 colonnes avec séparateurs.</p>
+    <p class="lead">Bloc de preuves sociales — grille responsive 7→4→3 colonnes avec séparateurs.</p>
     <div class="preview-box" style="padding:20px">
       <div class="logos-box">
         <div class="logos-grid">
@@ -3789,7 +3789,7 @@ document.getElementById('confirm').close();</code>
   <!-- CTA FINAL -->
   <div class="mx ds-section" id="cta">
     <h2>CTA</h2>
-    <p class="ds-section-sub">Bloc fin de page unifié — utilisé sur toutes les pages.</p>
+    <p class="lead">Bloc fin de page unifié — utilisé sur toutes les pages.</p>
     <div class="cta-final">
       <span class="label label-dk label-dot" style="margin-bottom:16px">Prêt à vous lancer ?</span>
       <h2>Parlons de <em>votre</em> TVA en 30 minutes</h2>
@@ -3813,11 +3813,11 @@ document.getElementById('confirm').close();</code>
   <!-- FORM CONTROLS -->
   <div class="mx ds-section" id="form-controls">
     <h2>Form controls</h2>
-    <p class="ds-section-sub">3 contrôles de choix — <code class="icode">.switch</code> (toggle iOS), <code class="icode">.checkbox</code> (case à cocher, avec état <em style="font-style:italic;color:var(--accent)">indeterminate</em>), <code class="icode">.radio</code> (bouton radio). Pattern <strong style="color:var(--text)">full custom</strong> : l'input natif reste accessible (focus clavier, submission, ARIA) via <code class="icode">.sr-only</code>, le visuel est dessiné en CSS.</p>
+    <p class="lead">3 contrôles de choix — <code class="icode">.switch</code> (toggle iOS), <code class="icode">.checkbox</code> (case à cocher, avec état <em style="font-style:italic;color:var(--accent)">indeterminate</em>), <code class="icode">.radio</code> (bouton radio). Pattern <strong style="color:var(--text)">full custom</strong> : l'input natif reste accessible (focus clavier, submission, ARIA) via <code class="icode">.sr-only</code>, le visuel est dessiné en CSS.</p>
 
     <!-- TOGGLE -->
     <div class="ds-block">
-      <div class="ds-block-title">.switch — toggle iOS-style</div>
+      <div class="eyebrow eyebrow-accent">.switch — toggle iOS-style</div>
       <div class="preview-box">
         <div style="display:flex;flex-direction:column;gap:14px">
           <label class="switch"><input type="checkbox" class="sr-only"><span class="switch-track"><span class="switch-thumb"></span></span><span class="switch-label">Notifications par email</span></label>
@@ -3830,7 +3830,7 @@ document.getElementById('confirm').close();</code>
 
     <!-- CHECKBOX -->
     <div class="ds-block">
-      <div class="ds-block-title">.checkbox — case à cocher (avec état indeterminate)</div>
+      <div class="eyebrow eyebrow-accent">.checkbox — case à cocher (avec état indeterminate)</div>
       <div class="preview-box">
         <div style="display:flex;flex-direction:column;gap:14px">
           <label class="checkbox"><input type="checkbox" class="sr-only"><span class="checkbox-box"></span><span class="checkbox-label">J'accepte les CGV &amp; CGU</span></label>
@@ -3844,10 +3844,10 @@ document.getElementById('confirm').close();</code>
 
     <!-- RADIO -->
     <div class="ds-block">
-      <div class="ds-block-title">.radio — groupe de choix exclusif</div>
+      <div class="eyebrow eyebrow-accent">.radio — groupe de choix exclusif</div>
       <div class="preview-box">
         <div style="display:flex;flex-direction:column;gap:14px">
-          <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;font-weight:700;margin-bottom:4px">Facturation</div>
+          <div class="eyebrow" style="color:var(--muted);margin-bottom:4px">Facturation</div>
           <label class="radio"><input type="radio" name="ds-billing" class="sr-only" checked><span class="radio-dot"></span><span class="radio-label">Mensuelle <span style="color:var(--muted);font-size:12px">— 89 €/mois</span></span></label>
           <label class="radio"><input type="radio" name="ds-billing" class="sr-only"><span class="radio-dot"></span><span class="radio-label">Annuelle <span style="color:var(--muted);font-size:12px">— 890 € (-17 %)</span></span></label>
           <label class="radio"><input type="radio" name="ds-billing" class="sr-only"><span class="radio-dot"></span><span class="radio-label">Sur mesure <span style="color:var(--muted);font-size:12px">— sur devis</span></span></label>
@@ -3858,7 +3858,7 @@ document.getElementById('confirm').close();</code>
 
     <!-- FOND LIGHT -->
     <div class="ds-block">
-      <div class="ds-block-title">Sur fond light</div>
+      <div class="eyebrow eyebrow-accent">Sur fond light</div>
       <div class="preview-box f-light">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
           <div style="display:flex;flex-direction:column;gap:12px">
@@ -3928,10 +3928,10 @@ document.getElementById('confirm').close();</code>
   <!-- PROSE -->
   <div class="mx ds-section" id="prose">
     <h2>Article</h2>
-    <p class="ds-section-sub">Styles de lecture pour le blog. <code class="icode">.prose</code> pour fond light (mode par défaut des articles), <code class="icode">.prose-dark</code> pour fond sombre (CTAs éditoriaux, doc technique dark).</p>
+    <p class="lead">Styles de lecture pour le blog. <code class="icode">.prose</code> pour fond light (mode par défaut des articles), <code class="icode">.prose-dark</code> pour fond sombre (CTAs éditoriaux, doc technique dark).</p>
 
     <div class="ds-block">
-      <div class="ds-block-title">.prose — fond light (défaut blog)</div>
+      <div class="eyebrow eyebrow-accent">.prose — fond light (défaut blog)</div>
       <div class="preview-box f-light" style="padding:48px 40px">
         <div class="prose" style="margin:0">
           <h2 style="margin-top:0">La TVA e-commerce en Europe</h2>
@@ -3944,8 +3944,8 @@ document.getElementById('confirm').close();</code>
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">2 variantes de blockquote — .q-lit · .q-card</div>
-      <p class="ds-section-sub" style="margin-bottom:14px">À ajouter sur le <code class="icode icode-sm">&lt;blockquote&gt;</code> dans un <code class="icode icode-sm">.prose</code>. Sans modifier = style par défaut (barre verte + fond léger).</p>
+      <div class="eyebrow eyebrow-accent">2 variantes de blockquote — .q-lit · .q-card</div>
+      <p class="lead" style="margin-bottom:14px">À ajouter sur le <code class="icode icode-sm">&lt;blockquote&gt;</code> dans un <code class="icode icode-sm">.prose</code>. Sans modifier = style par défaut (barre verte + fond léger).</p>
       <div class="preview-box f-light" style="padding:48px 40px">
         <div class="prose" style="margin:0">
           <p><strong>1. .q-lit</strong> — éditorial, guillemet décoratif, sans fond.</p>
@@ -3959,8 +3959,8 @@ document.getElementById('confirm').close();</code>
     </div>
 
     <div class="ds-block">
-      <div class="ds-block-title">.prose + .prose-dark — fond sombre</div>
-      <p class="ds-section-sub" style="margin-bottom:14px"><code class="icode icode-sm">.prose-dark</code> est un modifier : toujours l'ajouter <strong style="color:var(--text)">en plus de</strong> <code class="icode icode-sm">.prose</code> (qui apporte la structure typo). Il override uniquement les couleurs pour un fond sombre.</p>
+      <div class="eyebrow eyebrow-accent">.prose + .prose-dark — fond sombre</div>
+      <p class="lead" style="margin-bottom:14px"><code class="icode icode-sm">.prose-dark</code> est un modifier : toujours l'ajouter <strong style="color:var(--text)">en plus de</strong> <code class="icode icode-sm">.prose</code> (qui apporte la structure typo). Il override uniquement les couleurs pour un fond sombre.</p>
       <div class="preview-box" style="padding:48px 40px">
         <div class="prose prose-dark" style="margin:0">
           <h2 style="margin-top:0">La TVA e-commerce en Europe</h2>
@@ -3992,11 +3992,11 @@ document.getElementById('confirm').close();</code>
   <!-- FOOTER -->
   <div class="mx ds-section" id="footer">
     <h2>Footer</h2>
-    <p class="ds-section-sub">Deux patterns selon le contexte. <code class="icode">.footer</code> — version standard 4 colonnes, pour les pages internes. <code class="icode">.footer-mega</code> — version dense 6 colonnes avec mini-CTA "Prendre RDV", pour les landing marketing.</p>
+    <p class="lead">Deux patterns selon le contexte. <code class="icode">.footer</code> — version standard 4 colonnes, pour les pages internes. <code class="icode">.footer-mega</code> — version dense 6 colonnes avec mini-CTA "Prendre RDV", pour les landing marketing.</p>
 
     <!-- PATTERN A — FOOTER STANDARD -->
     <div class="ds-block">
-      <div class="ds-block-title">.footer — standard (4 colonnes)</div>
+      <div class="eyebrow eyebrow-accent">.footer — standard (4 colonnes)</div>
       <div class="preview-box" style="padding:0;overflow:hidden;border-radius:16px">
         <footer class="footer">
           <div class="footer-inner">
@@ -4066,7 +4066,7 @@ document.getElementById('confirm').close();</code>
 
     <!-- PATTERN C — MEGA FOOTER -->
     <div class="ds-block">
-      <div class="ds-block-title">.footer-mega — landing (6 colonnes + mini-CTA)</div>
+      <div class="eyebrow eyebrow-accent">.footer-mega — landing (6 colonnes + mini-CTA)</div>
       <div class="preview-box" style="padding:0;overflow:hidden;border-radius:16px">
         <footer class="footer-mega">
           <div class="footer-inner">

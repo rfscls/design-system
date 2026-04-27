@@ -1,15 +1,18 @@
 /* ─── Design System Doc — styles propres à la page de documentation ─── */
 
-/* Page de doc — structure spécifique */
+/* Page de doc — structure spécifique.
+   Tous les overrides typographiques ont été retirés au profit des classes du DS
+   (.lead, .eyebrow.eyebrow-accent, .icode, .caption). Ce fichier ne contient
+   plus que des contraintes structurelles (padding, margin, max-width). */
 .ds-top{padding-block:120px 40px}
-.ds-top h1{font-size:clamp(40px,5vw,68px);margin-bottom:16px}
-.ds-top p{font-size:17px;color:var(--muted);max-width:640px;line-height:1.65}
+.ds-top h1{margin-bottom:16px}
+.ds-top p{color:var(--muted);max-width:640px}
 
 .ds-section{padding-block:72px;border-top:1px solid rgba(94,205,140,0.06)}
-.ds-section h2{font-size:clamp(28px,3.2vw,40px);margin-bottom:8px}
-.ds-section-sub{color:var(--text);margin-bottom:40px;font-size:15px;max-width:600px}
+.ds-section h2{margin-bottom:8px}
+.ds-section .lead{max-width:600px;margin-bottom:40px;font-size:1.125rem;line-height:1.7}
 .ds-block{margin-bottom:48px}
-.ds-block-title{font-family:var(--ff-body);font-size:10.5px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;line-height:1}
+.ds-block .eyebrow{margin-bottom:18px}
 
 /* Card style chip menu */
 .card-style-menu{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;padding:10px;background:rgba(14,28,30,0.5);border:1px solid rgba(94,205,140,0.08);border-radius:14px}
@@ -19,14 +22,14 @@
 
 /* Card examples with tag below */
 .ds-card-ex{margin:0;display:flex;flex-direction:column;gap:10px}
-.ds-card-tag{font-family:monospace;font-size:11px;color:var(--muted);text-align:center;padding:6px 10px;background:rgba(6,13,14,0.5);border:1px solid rgba(94,205,140,0.06);border-radius:8px}
+.ds-card-tag{font-family:var(--ff-mono);font-size:11px;color:var(--muted);text-align:center;padding:6px 10px;background:rgba(6,13,14,0.5);border:1px solid rgba(94,205,140,0.06);border-radius:8px}
 :where(.is-light, .f-light) .ds-card-tag{color:var(--lt-muted);background:rgba(255,255,255,0.6);border-color:var(--stroke-lt)}
 
 .swatch-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
 .swatch{padding:18px 16px 14px;border-radius:12px;position:relative;overflow:hidden;min-height:118px;display:flex;flex-direction:column;justify-content:flex-end;gap:3px;border:1px solid rgba(94,205,140,0.08)}
 .swatch-name{font-size:11px;font-weight:700;letter-spacing:0.05em;color:var(--head);text-transform:uppercase}
-.swatch-hex{font-size:11.5px;font-family:'Courier New',monospace;font-weight:600;color:rgba(255,255,255,0.85)}
-.swatch-val{font-size:10px;font-family:'Courier New',monospace;color:rgba(255,255,255,0.5)}
+.swatch-hex{font-size:11.5px;font-family:var(--ff-mono);font-weight:600;color:rgba(255,255,255,0.85)}
+.swatch-val{font-size:10px;font-family:var(--ff-mono);color:rgba(255,255,255,0.5)}
 .swatch.on-light .swatch-name{color:var(--lt-head)}
 .swatch.on-light .swatch-hex{color:rgba(15,30,32,0.85)}
 .swatch.on-light .swatch-val{color:rgba(15,30,32,0.55)}
@@ -48,21 +51,23 @@
 .spacing-vis{display:flex;align-items:flex-end;gap:10px;padding:20px;background:rgba(14,28,30,0.35);border-radius:12px}
 .spacing-item{display:flex;flex-direction:column;align-items:center;gap:8px}
 .spacing-block{background:var(--accent);border-radius:3px}
-.spacing-lbl{font-size:10px;color:var(--muted);font-family:'Courier New',monospace}
+.spacing-lbl{font-size:10px;color:var(--muted);font-family:var(--ff-mono)}
 
 .radius-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.radius-box{aspect-ratio:1;background:rgba(94,205,140,0.08);border:1px solid rgba(94,205,140,0.18);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-size:10px;color:var(--muted);font-family:'Courier New',monospace}
+.radius-box{aspect-ratio:1;background:rgba(94,205,140,0.08);border:1px solid rgba(94,205,140,0.18);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-size:10px;color:var(--muted);font-family:var(--ff-mono)}
 
 
 /* Font swap system supprimé — ne chargeait plus aucune des polices listées.
-   Défauts figés : Fraunces (display), Plus Jakarta Sans (body), JetBrains Mono. */
+   Défauts figés : Fraunces (display), Lato (body), JetBrains Mono. */
 
 
 
 
 
 
-/* .icode list — présentation des classes inline code/kbd/meta */
+/* .icode list — présentation des classes inline code/kbd/meta.
+   Le contenu typo (name/desc) utilise maintenant .icode et .caption du DS.
+   Ce bloc ne contient plus que la structure du tableau. */
 .ds-icode-list{display:flex;flex-direction:column;border:1px solid rgba(94,205,140,0.08);border-radius:14px;overflow:hidden;background:rgba(14,28,30,0.35)}
 .ds-icode-row{
   display:grid;grid-template-columns:minmax(220px,1.4fr) 1fr 1fr;align-items:center;gap:0;
@@ -70,8 +75,6 @@
 }
 .ds-icode-row:last-child{border-bottom:none}
 .ds-icode-meta{padding:18px 20px;display:flex;flex-direction:column;gap:6px}
-.ds-icode-name{font-family:var(--ff-mono);font-size:13px;line-height:1}
-.ds-icode-desc{color:var(--muted);font-size:12.5px;line-height:1.5}
 .ds-icode-sample{
   padding:18px 20px;display:flex;align-items:center;justify-content:center;gap:6px;
   min-height:100%;border-left:1px solid rgba(94,205,140,0.06);

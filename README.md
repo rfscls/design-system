@@ -74,7 +74,7 @@ window.DS.initDropdowns();
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/path/to/design-system.css">
   <script src="/path/to/design-system.js" defer></script>
 </head>
@@ -190,7 +190,7 @@ Tous les tokens sont déclarés dans `:root`. Les plus utilisés :
 --success, --warning, --danger, --info (+ -bg variantes)
 
 /* Typo */
---ff-display (Fraunces), --ff-body (Plus Jakarta), --ff-em (Georgia italic),
+--ff-display (Fraunces), --ff-body (Lato), --ff-em (Georgia italic),
 --ff-hand (Caveat), --ff-mono (JetBrains Mono)
 
 /* Espacement (rem-based) */
@@ -231,7 +231,7 @@ Ce que **le consommateur doit fournir** : voir section "Squelette HTML a11y-comp
 
 ---
 
-## Versioning
+## Versioning et mise à jour
 
 `@eurofiscalis/design-system` suit le [semver](https://semver.org/lang/fr/) :
 
@@ -239,13 +239,28 @@ Ce que **le consommateur doit fournir** : voir section "Squelette HTML a11y-comp
 - **Minor** (1.1.0) — ajout de composant, ajout de variante, nouveau token
 - **Patch** (1.0.1) — correction visuelle, ajustement de contraste, fix JS
 
-Pour mettre à jour côté consommateur, bumper le tag dans le `package.json` :
+### Mettre à jour le DS dans un projet consommateur
 
-```json
-"@eurofiscalis/design-system": "github:rfscls/design-system#v1.0.1"
-```
+Procédure standard, à appliquer dans n'importe quelle app qui dépend du DS (webb, etc.) :
 
-Puis `npm install`. Les bumps major sont documentés au cas par cas.
+1. **Lire le `CHANGELOG.md`** du DS pour la version cible — savoir ce qui change avant d'installer.
+2. **Bumper le tag** dans le `package.json` du consommateur :
+   ```json
+   "@eurofiscalis/design-system": "git+ssh://git@github.com/rfscls/design-system.git#v1.0.4"
+   ```
+3. **Réinstaller** : `pnpm install` (ou `npm install`). Le lockfile fige le commit hash → reproductible.
+4. **Tester en dev** : `pnpm dev`, parcourir les pages clés (article, home, services). Pour un bump **minor** ou **major**, prévoir un test plus large.
+5. **Commit** avec un message explicite : `chore: bump @eurofiscalis/design-system v1.0.3 → v1.0.4`.
+
+### En cas de régression visuelle
+
+Le tag git rend le rollback trivial — il suffit de remettre l'ancien tag dans `package.json` et de `pnpm install`. Aucune dépendance transitive ne bouge, c'est immédiat.
+
+Reporter ensuite le bug au mainteneur du DS (cf. section Mainteneur). Les patches correctifs sont prioritaires.
+
+### Pour le mainteneur du DS
+
+Workflow détaillé (bump, tag, push, rollback, hotfix) : voir [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 

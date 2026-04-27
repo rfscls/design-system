@@ -4,11 +4,11 @@
    Import:   <link rel="stylesheet" href="assets/design-system.css">
 
    ⚠️ FONTS — NON EMBARQUÉES DANS CE CSS
-   Ce fichier référence Fraunces + Plus Jakarta Sans + Caveat +
+   Ce fichier référence Fraunces + Lato + Caveat +
    JetBrains Mono via CSS variables, mais n'embarque PAS les
    @font-face. Le consommateur DOIT ajouter ce <link> :
 
-   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
    Sans ce <link>, tout tombe en fallback Georgia/Times.
 
@@ -19,7 +19,7 @@
 
    Cards   = glassmorphism (dark .gd  /  light .gl)
    Accent  = #5ECD8C (vert)
-   Display = Fraunces | Body = Plus Jakarta Sans | Hand = Caveat | Mono = JetBrains Mono
+   Display = Fraunces | Body = Lato | Hand = Caveat | Mono = JetBrains Mono
    ================================================================ */
 
 @layer tokens, base, components, utilities;
@@ -107,7 +107,7 @@
 
   /* — Type (config figée v1.1) */
   --ff-display:'Fraunces',Georgia,serif;
-  --ff-body:'Plus Jakarta Sans',system-ui,sans-serif;
+  --ff-body:'Lato',system-ui,sans-serif;
   --ff-hand:'Caveat',cursive;
   --ff-em:Georgia,'Times New Roman',serif;
   --ff-mono:'JetBrains Mono','Fira Code',monospace;
@@ -151,12 +151,12 @@ body{
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
-p{font-size:1.0625rem;font-weight:450;line-height:1.65;max-width:65ch}
-.caption{font-size:0.8125rem;line-height:1.55;color:var(--muted);letter-spacing:0.01em}
-.eyebrow{font-family:var(--ff-body);font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text);font-style:normal;line-height:1}
+p{font-size:1.125rem;font-weight:450;line-height:1.6;max-width:65ch}
+.caption{font-size:0.875rem;line-height:1.55;color:var(--muted);letter-spacing:0.01em}
+.eyebrow{font-family:var(--ff-body);font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text);font-style:normal;line-height:1}
 .eyebrow.eyebrow-mono{font-family:'JetBrains Mono','Fira Code',monospace;font-size:0.625rem;font-weight:800;letter-spacing:0.18em;color:var(--muted)}
 .eyebrow.eyebrow-accent{color:var(--accent)}
-.lead{font-size:1.1875rem;font-weight:450;line-height:1.6;color:var(--text);max-width:62ch}
+.lead{font-size:1.3125rem;font-weight:450;line-height:1.5;color:var(--text);max-width:62ch}
 body.is-light{background:var(--light);color:var(--lt-text);color-scheme:light}
 img{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit}
@@ -214,10 +214,10 @@ a:focus-visible{outline-offset:3px;border-radius:2px}
 /* Fraunces display — weight 600 pour éviter la lourdeur */
 h1,h2,h3,h4,h5,h6{font-family:var(--ff-display);letter-spacing:-0.025em;line-height:1.1;color:var(--head)}
 :where(.is-light, .f-light) :is(h1,h2,h3,h4,h5,h6){color:var(--lt-head)}
-h1{font-weight:600;font-size:clamp(2.125rem,5vw,3.625rem)}
-h2{font-weight:600;font-size:clamp(1.875rem,4.4vw,3.125rem)}
-h3{font-family:var(--ff-body);font-weight:700;font-size:clamp(1.0625rem,2vw,1.3125rem);line-height:1.3;letter-spacing:-0.01em}
-h4,h5,h6{font-family:var(--ff-body);font-weight:700;font-size:1rem;line-height:1.4;letter-spacing:-0.01em}
+h1{font-weight:600;font-size:clamp(2.25rem,5vw,4rem)}
+h2{font-weight:600;font-size:clamp(2rem,4.4vw,3.375rem)}
+h3{font-family:var(--ff-body);font-weight:700;font-size:clamp(1.375rem,2vw,1.75rem);line-height:1.3;letter-spacing:-0.01em}
+h4,h5,h6{font-family:var(--ff-body);font-weight:700;font-size:1.1875rem;line-height:1.4;letter-spacing:-0.01em}
 
 h1 em,h2 em{
   font-family:var(--ff-em);
@@ -577,7 +577,7 @@ body:has(.ds-sidebar){padding-left:var(--ds-sidebar-w)}
   transition:all var(--tr);overflow:hidden;
 }
 .card h3{font-family:var(--ff-body);font-weight:700;font-size:1.1875rem;letter-spacing:-0.01em;color:var(--head);margin-bottom:10px;line-height:1.3}
-.card p{font-size:14.5px;line-height:1.6;color:var(--text)}
+.card p{font-size:0.9375rem;line-height:1.6;color:var(--text)}
 :where(.is-light, .f-light) .card h3{color:var(--lt-head)}
 :where(.is-light, .f-light) .card p{color:var(--lt-text)}
 
@@ -840,10 +840,10 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
    READING / LONGFORM — tailles body optimisées recherche UX
    Basé sur: USWDS (≥16px), Baymard (≤80 CPL), Smashing (1.5 line-height)
 ---------------------------------------------------------------- */
-.read-lg{font-size:1.1875rem;line-height:1.7;max-width:62ch;color:var(--text)}
-.read-md{font-size:1.0625rem;line-height:1.7;max-width:65ch;color:var(--text)}
-.read-sm{font-size:15.5px;line-height:1.65;max-width:68ch;color:var(--text)}
-.read-xs{font-size:13.5px;line-height:1.55;max-width:72ch;color:var(--text);letter-spacing:0.005em}
+.read-lg{font-size:1.25rem;line-height:1.7;max-width:62ch;color:var(--text)}
+.read-md{font-size:1.125rem;line-height:1.7;max-width:65ch;color:var(--text)}
+.read-sm{font-size:1rem;line-height:1.65;max-width:68ch;color:var(--text)}
+.read-xs{font-size:0.875rem;line-height:1.55;max-width:72ch;color:var(--text);letter-spacing:0.005em}
 .read-full{max-width:none}
 :where(.is-light, .f-light) .read-lg,:where(.is-light, .f-light) .read-md,:where(.is-light, .f-light) .read-sm{color:var(--lt-text)}
 :where(.is-light, .f-light) .read-xs{color:var(--lt-muted)}
@@ -993,18 +993,18 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
    ARTICLE (light) — typo lecture
 ---------------------------------------------------------------- */
 .prose{max-width:720px;margin:0 auto;color:var(--lt-text)}
-.prose p{font-size:1.0625rem;line-height:1.75;margin-bottom:22px}
-.prose h2{font-size:clamp(1.75rem,3vw,2.375rem);margin:48px 0 20px;color:var(--lt-head)}
-.prose h3{font-family:var(--ff-display);font-weight:800;font-size:1.375rem;letter-spacing:-0.02em;margin:36px 0 14px;color:var(--lt-head)}
+.prose p{font-size:1.125rem;line-height:1.7;margin-bottom:22px}
+.prose h2{font-size:clamp(1.875rem,3vw,2.5rem);margin:48px 0 20px;color:var(--lt-head)}
+.prose h3{font-family:var(--ff-display);font-weight:800;font-size:1.75rem;letter-spacing:-0.02em;margin:36px 0 14px;color:var(--lt-head)}
 .prose a{color:var(--teal);border-bottom:1px solid rgba(44,80,81,0.25);transition:all .2s}
 .prose a:hover{color:var(--accent);border-color:var(--accent)}
 .prose ul,.prose ol{margin:0 0 22px 22px}
-.prose li{margin-bottom:8px;font-size:16.5px;line-height:1.7}
+.prose li{margin-bottom:8px;font-size:1.125rem;line-height:1.65}
 .prose strong{color:var(--lt-head);font-weight:700}
 .prose blockquote{
   margin:30px 0;padding:22px 28px;border-left:3px solid var(--accent);
   background:rgba(94,205,140,0.05);border-radius:0 14px 14px 0;
-  font-size:1.0625rem;font-style:italic;color:var(--lt-text);
+  font-size:1.125rem;font-style:italic;color:var(--lt-text);
 }
 
 /* Blockquote variants — à combiner : <blockquote class="q-lit|q-card"> dans .prose */
@@ -1013,7 +1013,7 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
 .prose blockquote.q-lit{
   background:transparent;border:none;border-radius:0;
   padding:8px 0 8px 48px;margin:32px 0;
-  font-family:var(--ff-em);font-style:italic;font-size:1.1875rem;line-height:1.6;
+  font-family:var(--ff-em);font-style:italic;font-size:1.25rem;line-height:1.6;
   color:var(--lt-text);position:relative;
 }
 .prose blockquote.q-lit::before{
@@ -1035,7 +1035,7 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
   font-size:2.375rem;line-height:1;color:var(--accent);opacity:0.7;
 }
 .prose blockquote.q-card footer{
-  font-size:0.8125rem;color:var(--lt-muted);margin-top:12px;font-style:normal;
+  font-size:0.875rem;color:var(--lt-muted);margin-top:12px;font-style:normal;
 }
 .prose blockquote.q-card footer::before{content:'— '}
 
