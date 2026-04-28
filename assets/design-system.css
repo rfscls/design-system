@@ -1,5 +1,5 @@
 /* ================================================================
-   EUROFISCALIS — DESIGN SYSTEM v1.0.7
+   EUROFISCALIS — DESIGN SYSTEM v1.0.8
    ================================================================
    Import:   <link rel="stylesheet" href="assets/design-system.css">
 
@@ -719,8 +719,10 @@ body:has(.ds-sidebar){padding-left:var(--ds-sidebar-w)}
   background:var(--light);
   color:var(--lt-text);
 }
-:where(.is-light, .f-light) :is(h2,h3){color:var(--lt-head)}
-:where(.is-light, .f-light) .sub{color:var(--lt-muted)}
+/* Note : les overrides .is-light/.f-light pour h1-h6 et .sub sont définis
+   dans @layer base (lignes ~216 et ~235). Les dupliquer ici en utilities
+   les rendrait plus prioritaires que les composants (.cta-final h2 etc.)
+   et les empêcherait de poser leur propre couleur — suppression volontaire. */
 
 
 /* Divider — horizontal gradient line (full-bleed) */

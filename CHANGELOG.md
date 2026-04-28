@@ -4,6 +4,17 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.8] — 2026-04-28
+
+### Fixed
+- **Cascade `@layer` sur les titres en mode light** : suppression de deux règles dupliquées dans `@layer utilities` (`:where(.is-light, .f-light) :is(h2,h3){color:var(--lt-head)}` et `:where(.is-light, .f-light) .sub{color:var(--lt-muted)}`). Ces règles étaient déjà définies dans `@layer base` (lignes 216 et 235) — leur promotion en utilities cassait la cascade pour les composants comme `.cta-final h2` qui définissent leur propre couleur (`var(--head)` blanc) en `@layer components`.
+
+### Why
+Un `.cta-final` au sein d'une page `body.is-light` rendait son `<h2>` en `var(--lt-head)` (noir) au lieu de `var(--head)` (blanc), parce qu'`utilities > components` dans la cascade des layers. Le composant a un fond intrinsèquement dark — son `<h2>` doit rester blanc, peu importe le mode global de la page. Symptôme visible : titre quasi illisible sur le bloc CTA fin d'article.
+
+### Migration
+Aucun impact sur l'API. Les consommateurs qui dépendaient de la priorité élevée de ces règles (override `h2 { color: red }` sans layer dans leur CSS) doivent maintenant utiliser `@layer base` ou augmenter leur specificity. Cas de figure rare et anti-pattern.
+
 ## [1.0.7] — 2026-04-28
 
 ### Added
