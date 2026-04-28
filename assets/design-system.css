@@ -1,5 +1,5 @@
 /* ================================================================
-   EUROFISCALIS — DESIGN SYSTEM v1.0.5
+   EUROFISCALIS — DESIGN SYSTEM v1.0.7
    ================================================================
    Import:   <link rel="stylesheet" href="assets/design-system.css">
 
@@ -1006,6 +1006,12 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
   background:rgba(94,205,140,0.05);border-radius:0 14px 14px 0;
   font-size:1.125rem;font-style:italic;color:var(--lt-text);
 }
+
+/* Blocs "insertions" dans un article — encarts visuels qui interrompent le
+   flow textuel. Plus d'air qu'un paragraphe (22px) pour marquer la rupture. */
+.prose > .table-wrap,
+.prose > figure,
+.prose > .alert{margin:30px 0}
 
 /* Blockquote variants — à combiner : <blockquote class="q-lit|q-card"> dans .prose */
 

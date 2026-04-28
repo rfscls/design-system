@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.7] — 2026-04-28
+
+### Added
+- **Spacing inter-blocs dans `.prose`** — règle `.prose > .table-wrap, .prose > figure, .prose > .alert { margin: 30px 0 }`. Ces blocs « insertions » (tables, figures, callouts) reçoivent maintenant un rythme vertical cohérent avec `blockquote` au lieu de coller au paragraphe précédent.
+
+### Why
+Sans cette règle, dans un article qui enchaîne « paragraphe → table → callout », les blocs s'empilaient sans respiration. Le rythme typographique d'un texte de lecture longue exige une rupture visuelle nette autour des éléments non-textuels.
+
 ## [1.0.6] — 2026-04-28
 
 ### Added
