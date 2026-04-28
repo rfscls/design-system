@@ -1,6 +1,6 @@
 {
   "name": "@eurofiscalis/design-system",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Design System Eurofiscalis — tokens CSS, composants, JS a11y et règles d'usage.",
   "author": "Eurofiscalis",
   "license": "UNLICENSED",
@@ -13,6 +13,7 @@
     "./css": "./assets/design-system.css",
     "./js": "./assets/design-system.js",
     "./topo": "./assets/topo-generated.css",
+    "./icons.svg": "./assets/icons.svg",
     "./brand/*": "./img/brand/*",
     "./package.json": "./package.json"
   },
@@ -20,6 +21,7 @@
     "assets/design-system.css",
     "assets/design-system.js",
     "assets/topo-generated.css",
+    "assets/icons.svg",
     "img/brand",
     "README.md"
   ],

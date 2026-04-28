@@ -4,6 +4,23 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.6] — 2026-04-28
+
+### Added
+- **`assets/icons.svg`** — sprite SVG des 4 icônes système (`ico-check`, `ico-info`, `ico-warn`, `ico-danger`) utilisées par `.alert` et ses variantes. Disponible via l'export `@eurofiscalis/design-system/icons.svg`.
+- Section **« Sprite SVG des icônes système »** dans le README, avec le pattern d'import recommandé pour Astro/Vite (`?raw` + `<Fragment set:html>`) et la procédure HTML statique.
+
+### Why
+Les composants `.alert` du DS référencent les icônes via `<use href="#ico-X"/>`. Jusqu'ici, chaque consommateur devait dupliquer le sprite SVG dans son markup (cf. la doc HTML qui le pose inline en haut du `<body>`). Cette duplication était fragile et empêchait les évolutions du DS d'icônes de se propager. Le sprite est maintenant un asset officiel du package.
+
+### Migration
+Aucune ancienne API cassée. Côté consommateur, remplacer un sprite SVG dupliqué par :
+
+```astro
+import iconsSprite from '@eurofiscalis/design-system/icons.svg?raw';
+<Fragment set:html={iconsSprite} />
+```
+
 ## [1.0.5] — 2026-04-27
 
 ### Fixed

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Eurofiscalis Design System — sprite SVG des icônes système.
+
+  Usage côté consommateur (Astro/Vite) :
+    import iconsSprite from '@eurofiscalis/design-system/icons.svg?raw';
+    <Fragment set:html={iconsSprite} />  (à poser une fois au début du <body>)
+
+  Puis référencer une icône via :
+    <svg><use href="#ico-check"/></svg>
+
+  Les 4 icônes ci-dessous sont utilisées par le composant .alert (cf README).
+  Toutes héritent de currentColor (la couleur est gérée par .alert-icon ou
+  les variantes .alert-success / .alert-info / .alert-warn / .alert-danger).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0" aria-hidden="true">
+  <defs>
+    <symbol id="ico-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="10" r="9"/>
+      <path d="M6 10.5l3 3 5.5-6.5"/>
+    </symbol>
+    <symbol id="ico-info" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="10" r="9"/>
+      <path d="M10 9.5v5"/>
+      <circle cx="10" cy="6" r="1" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="ico-warn" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 2 L18.5 17 L1.5 17 Z"/>
+      <path d="M10 8.5v4"/>
+      <circle cx="10" cy="15" r="1" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="ico-danger" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="10" r="9"/>
+      <path d="M7 7l6 6M13 7l-6 6"/>
+    </symbol>
+  </defs>
+</svg>

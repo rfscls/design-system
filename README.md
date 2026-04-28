@@ -89,6 +89,36 @@ import logo from '@eurofiscalis/design-system/brand/logo-white.png';
 
 La famille complète est listée dans la section `#logo` de la doc (`design-system.html`).
 
+### Sprite SVG des icônes système
+
+Les composants `.alert` (et plus tard d'autres) référencent des icônes via `<use href="#ico-X"/>` — il faut donc poser le sprite SVG une fois dans le `<body>` du consommateur.
+
+#### Avec Astro / Vite (recommandé pour SSG)
+
+```astro
+---
+import iconsSprite from '@eurofiscalis/design-system/icons.svg?raw';
+---
+<body>
+  <Fragment set:html={iconsSprite} />
+  <!-- reste du markup -->
+</body>
+```
+
+Le `?raw` (Vite) importe le fichier comme string. `set:html` l'injecte au build → présent dans le HTML statique → indexable par les crawlers, pas de FOUC, compatible SSG.
+
+#### Sans bundler (HTML statique)
+
+Copier-coller directement le contenu de `node_modules/@eurofiscalis/design-system/assets/icons.svg` dans le `<body>` de la page.
+
+#### Référencer une icône
+
+```html
+<svg><use href="#ico-check"/></svg>
+```
+
+4 IDs disponibles : `ico-check`, `ico-info`, `ico-warn`, `ico-danger`. Les 4 héritent de `currentColor` — la couleur est portée par le composant parent (`.alert-icon`, etc.).
+
 ---
 
 ## Squelette HTML a11y-compliant
