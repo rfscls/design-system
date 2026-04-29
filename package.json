@@ -1,6 +1,6 @@
 {
   "name": "@eurofiscalis/design-system",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Design System Eurofiscalis — tokens CSS, composants, JS a11y et règles d'usage.",
   "author": "Eurofiscalis",
   "license": "UNLICENSED",
@@ -26,7 +26,8 @@
     "README.md"
   ],
   "sideEffects": [
-    "*.css"
+    "*.css",
+    "./assets/design-system.js"
   ],
   "engines": {
     "node": ">=18"
