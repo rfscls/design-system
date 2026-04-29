@@ -4,6 +4,17 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.9] — 2026-04-29
+
+### Fixed
+- **Curseur `pointer` manquant sur les `<a href>` qui wrappent du contenu riche** : ajout dans le reset (`@layer base`) de `a[href] { cursor: pointer }` et `a[href] * { cursor: inherit }`. Les liens natifs ont déjà `cursor:pointer` via la stylesheet UA, mais sur un pattern « stretched link » (ex. card cliquable wrappant `<p>`, `<h3>`...), le navigateur affichait l'I-beam contextuel sur le texte enfant au lieu du pointer. Le force désormais à la propagation explicite.
+
+### Why
+Pattern récurrent dans les apps consommatrices (author cards, article cards, country cards) : on enveloppe une carte entière dans un `<a>` pour tout rendre cliquable. Sans ce reset, l'utilisateur voit alternativement la main et la flèche/I-beam selon où il survole — affordance brouillée. Le fix est défensif et ne touche pas les `<a>` sans `href` (ancres décoratives, placeholders) qui restent au comportement par défaut.
+
+### Migration
+Aucune. Les consommateurs qui posaient un workaround `cursor: pointer` en local peuvent le retirer (devient redondant), mais aucun changement obligatoire.
+
 ## [1.0.8] — 2026-04-28
 
 ### Fixed
