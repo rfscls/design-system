@@ -4,6 +4,19 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.11] — 2026-04-29
+
+### Changed
+- **Reset curseur étendu à tous les éléments interactifs natifs** : la règle ne couvre plus seulement `a[href]` mais aussi `button:not(:disabled)`, `[role="button"]:not([aria-disabled="true"])`, `summary`, `label[for]`, et tous leurs descendants. Approche philosophique « si c'est interactif, c'est pointer ».
+
+### Why
+Sur les navigateurs modernes (Chrome/Firefox), `<button>` natif a `cursor: default` par défaut (UA stylesheet) — contre-intuitif. La classe `.btn` du DS posait `cursor: pointer`, mais un `<button>` brut sans `.btn` (form natif, dropdown trigger, etc.) restait en flèche. Idem pour `<summary>`, `<label for>`, et les éléments avec `role="button"` qui ne sont pas des `<button>` natifs (divs ARIA-isés). Les apps consommatrices se retrouvaient à patcher au cas par cas. Cette règle systémique élimine la classe entière de bugs.
+
+Les états désactivés (`[disabled]`, `[aria-disabled="true"]`) sont volontairement exclus pour préserver leur `cursor: not-allowed`.
+
+### Migration
+Aucune. Tout élément qui devait être `pointer` l'est désormais sans intervention. Les workarounds locaux (cursor: pointer manuel dans les composants apps) deviennent redondants et peuvent être retirés.
+
 ## [1.0.10] — 2026-04-29
 
 ### Changed

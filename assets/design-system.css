@@ -160,8 +160,20 @@ p{font-size:1.125rem;font-weight:450;line-height:1.6;max-width:65ch}
 body.is-light{background:var(--light);color:var(--lt-text);color-scheme:light}
 img{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit}
-a[href],a[href] *{cursor:pointer}
 button{font-family:inherit}
+/* Curseur cohérent sur tous les éléments interactifs : pointer sur l'élément
+   ET ses descendants (couvre le pattern « stretched link »). Les états
+   désactivés gardent leur cursor:not-allowed défini par leurs composants. */
+a[href],
+a[href] *,
+button:not(:disabled),
+button:not(:disabled) *,
+[role="button"]:not([aria-disabled="true"]),
+[role="button"]:not([aria-disabled="true"]) *,
+summary,
+summary *,
+label[for],
+label[for] *{cursor:pointer}
 
 /* ----------------------------------------------------------------
    FOCUS VISIBLE — accessibilité clavier (WCAG 2.4.7)
