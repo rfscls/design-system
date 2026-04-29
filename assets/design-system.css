@@ -160,8 +160,7 @@ p{font-size:1.125rem;font-weight:450;line-height:1.6;max-width:65ch}
 body.is-light{background:var(--light);color:var(--lt-text);color-scheme:light}
 img{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit}
-a[href]{cursor:pointer}
-a[href] *{cursor:inherit}
+a[href],a[href] *{cursor:pointer}
 button{font-family:inherit}
 
 /* ----------------------------------------------------------------

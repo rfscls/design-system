@@ -4,6 +4,17 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.10] — 2026-04-29
+
+### Changed
+- **Reset curseur sur `a[href]` simplifié** : la règle `a[href] *{cursor:inherit}` (v1.0.9) est remplacée par `a[href],a[href] *{cursor:pointer}`. La chaîne d'héritage `inherit` pouvait être fragile selon l'ordre des `@layer` après bundling Vite/Astro et ne propageait pas systématiquement le `pointer` jusqu'aux feuilles. La règle directe garantit le bon curseur sur tous les descendants d'un lien actif.
+
+### Why
+Les apps consommatrices reportaient encore des cas où le curseur restait en I-beam sur du texte enfant d'une card cliquable malgré v1.0.9. La cause probable : `cursor: inherit` peut être écrasé par la valeur initiale `auto` si une règle non-layered intervient quelque part dans la cascade. La règle directe ne souffre pas de ce risque.
+
+### Migration
+Aucune. Comportement identique pour tous les liens, plus robuste.
+
 ## [1.0.9] — 2026-04-29
 
 ### Fixed
