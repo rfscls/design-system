@@ -4,6 +4,17 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.14] — 2026-04-30
+
+### Changed
+- **`.lead` passe de `1.3125rem` (21px) à `1.25rem` (20px)** : taille du chapô / lead paragraph légèrement réduite. Garde le contraste typo avec le body (`1.125rem` / 18px) — ratio 1.11 — sans paraître surdimensionné.
+
+### Why
+Sur les pages article (template Astro consommateur), un chapô à 22px (override local) puis 21px (`.lead` DS) paraissait trop pesant face au body 18px. 20px conserve la hiérarchie « lead vs body » tout en restant discret. Convention éditoriale standard (NYT/Medium font 18-20 sur leur lead).
+
+### Migration
+Aucune. Les usages de `.lead` rapetissent légèrement (1px) — différence visuelle imperceptible sur la majorité des écrans. Si un consommateur souhaitait l'ancienne valeur, override local : `font-size: 1.3125rem`.
+
 ## [1.0.11] — 2026-04-29
 
 ### Changed

@@ -157,7 +157,7 @@ p{font-size:1.125rem;font-weight:450;line-height:1.6;max-width:65ch}
 .eyebrow{font-family:var(--ff-body);font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text);font-style:normal;line-height:1}
 .eyebrow.eyebrow-mono{font-family:'JetBrains Mono','Fira Code',monospace;font-size:0.625rem;font-weight:800;letter-spacing:0.18em;color:var(--muted)}
 .eyebrow.eyebrow-accent{color:var(--accent)}
-.lead{font-size:1.3125rem;font-weight:450;line-height:1.5;color:var(--text);max-width:62ch}
+.lead{font-size:1.25rem;font-weight:450;line-height:1.5;color:var(--text);max-width:62ch}
 body.is-light{background:var(--light);color:var(--lt-text);color-scheme:light}
 img{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit}
