@@ -1,5 +1,5 @@
 /* ================================================================
-   EUROFISCALIS — DESIGN SYSTEM v1.0.12
+   EUROFISCALIS — DESIGN SYSTEM v1.0.13
    ================================================================
    Import:   <link rel="stylesheet" href="assets/design-system.css">
 
@@ -53,7 +53,8 @@
   /* — Brand */
   --accent:#5ECD8C;
   --accent-2:#7DE5A8;
-  --accent-dk:#2E8F52;  /* version foncée du vert pour fond light — lisible + identitaire */
+  --accent-dk:#1F6238;  /* vert foncé brand — AA compliant sur fond clair (>7:1 sur blanc).
+                            Anciennement #2E8F52 (3.7:1, sous AA) — assombri pour passer WCAG normal text. */
   --teal:#2C5051;
   --teal2:#1A3233;
 
