@@ -1026,8 +1026,68 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
 /* Blocs "insertions" dans un article — encarts visuels qui interrompent le
    flow textuel. Plus d'air qu'un paragraphe (22px) pour marquer la rupture. */
 .prose > .table-wrap,
-.prose > figure,
-.prose > .alert{margin:30px 0}
+.prose > figure{margin:30px 0}
+
+/* ─── Callouts d'expertise dans .prose ──────────────────────────────────
+   Variante éditoriale du composant .alert quand il vit à l'intérieur d'un
+   contexte rédactionnel (.prose) : layout grid icône+contenu, fond teinté
+   doux, sans bordure ni ombre. Les couleurs `--alert-c` / `--alert-c-soft`
+   sont AA-compliant (≥6:1) sur leur fond teinté à 10%.
+   Convention éditoriale : default = success (vert), warn = ambre,
+   danger = rouge, info = bleu. */
+.prose .alert{
+  --alert-c:#1f6238;
+  --alert-c-soft:rgba(46,143,82,0.10);
+}
+.prose .alert.alert-warn{
+  --alert-c:#8a5202;
+  --alert-c-soft:rgba(217,119,6,0.10);
+}
+.prose .alert.alert-danger{
+  --alert-c:#8a1414;
+  --alert-c-soft:rgba(220,38,38,0.10);
+}
+.prose .alert.alert-info{
+  --alert-c:#1e3a8a;
+  --alert-c-soft:rgba(37,99,235,0.10);
+}
+.prose aside.alert{
+  display:grid;
+  grid-template-columns:24px 1fr;
+  gap:14px;
+  padding:22px 26px;
+  margin:24px 0;
+  background:var(--alert-c-soft);
+  border:0;
+  border-radius:14px;
+  box-shadow:none;
+}
+.prose aside.alert .alert-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:24px;
+  height:24px;
+  background:transparent;
+  color:var(--alert-c);
+}
+.prose aside.alert .alert-icon svg{
+  width:22px;
+  height:22px;
+}
+.prose aside.alert .alert-title{
+  display:block;
+  font-size:1rem;
+  font-weight:700;
+  line-height:24px;
+  color:var(--alert-c);
+  margin:0 0 8px;
+}
+.prose aside.alert .alert-body{
+  font-size:0.97rem;
+  line-height:1.6;
+  color:#1f2937;
+}
 /* Sans cet override, .prose p { margin-bottom: 22px } fait sauter l'aération
    interne du callout. On rétablit un espace propre uniquement entre <p>
    consécutifs dans le corps de l'alerte. */

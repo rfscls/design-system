@@ -4,6 +4,21 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.1.0] — 2026-05-04
+
+### Added
+- **Variante éditoriale `.prose .alert`** — quand un `.alert` (callout) vit dans un contexte `.prose`, il adopte automatiquement le look "callout d'expertise" : layout grid icône+contenu, fond teinté doux, sans bordure ni ombre, radius 14px. Couleurs AA-compliant (≥6:1) par variante via `--alert-c` / `--alert-c-soft` :
+  - default (success) = `#1f6238` sur fond vert 10%
+  - `.alert-warn` = `#8a5202` sur fond ambre 10%
+  - `.alert-danger` = `#8a1414` sur fond rouge 10%
+  - `.alert-info` = `#1e3a8a` sur fond bleu 10%
+
+### Why
+Ce style était dupliqué dans `BlogDetailPage.astro` (et sur le point de l'être dans `GlossaireDetailPage.astro`). `.prose` et `.alert` sont tous deux des composants DS — la composition mérite d'être canonique. Tout `.alert` à l'intérieur d'un `.prose` hérite désormais du même look éditorial, sans patch côté consommateur.
+
+### Migration
+Aucune action requise. Les pages qui scopaient leurs overrides `.alert` à un wrapper local (`.article-body-col` etc.) peuvent désormais retirer ces blocs — le DS prend le relais via `.prose .alert`.
+
 ## [1.0.15] — 2026-05-04
 
 ### Fixed
