@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.0.15] — 2026-05-04
+
+### Fixed
+- **Aération interne des callouts (`.alert`) dans `.prose`** : la règle `.prose p { margin-bottom: 22px }` cassait la mise en page des `<p>` à l'intérieur d'un `.alert-body`. Override ajouté pour neutraliser ce margin et rétablir un espacement propre (10px) uniquement entre `<p>` consécutifs.
+
+### Why
+Dupliqué jusqu'ici dans chaque page consommatrice (`BlogDetailPage`, `GlossaireDetailPage`). `.prose` et `.alert` sont tous deux des composants DS — la collision doit être résolue à la source.
+
 ## [1.0.14] — 2026-04-30
 
 ### Changed

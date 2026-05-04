@@ -1028,6 +1028,11 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
 .prose > .table-wrap,
 .prose > figure,
 .prose > .alert{margin:30px 0}
+/* Sans cet override, .prose p { margin-bottom: 22px } fait sauter l'aération
+   interne du callout. On rétablit un espace propre uniquement entre <p>
+   consécutifs dans le corps de l'alerte. */
+.prose .alert-body p{margin:0}
+.prose .alert-body p + p{margin-top:10px}
 
 /* Blockquote variants — à combiner : <blockquote class="q-lit|q-card"> dans .prose */
 
