@@ -4,6 +4,19 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.1.2] — 2026-05-11
+
+### Fixed
+- **Extension du fix 1.1.1 au composant `.hero`** — le `.hero` pose son propre fond gradient sombre intégré (radial deep + teal + accent) mais n'est ni `.f-deep` ni `.f-dark`. Du coup, sous un `body.is-light`, ses headings et son body text restaient en couleurs claires (lt-head / lt-text) → invisibles sur le fond sombre du hero.
+
+`.hero` ajouté aux trois règles posées en 1.1.1 :
+- `.hero :is(h1...) { color: var(--head) }`
+- `.hero :is(h1,h2) em { background: gradient accent lumineux }`
+- `.hero { color: var(--text) }` + `.hero .sub { color: var(--text) }`
+
+### Migration
+Aucune. Si vous patchiez localement la couleur du h1 dans votre hero pour le faire ressortir sur fond sombre, vous pouvez retirer cet override.
+
 ## [1.1.1] — 2026-05-11
 
 ### Fixed
