@@ -4,6 +4,19 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.1.3] — 2026-05-11
+
+### Fixed
+- **`.card h3` et `.card p` dans `.f-deep`/`.f-dark`/`.hero`** — le fix 1.1.1/1.1.2 sur les headings ne couvrait pas les `.card h3` et `.card p` à cause d'une règle plus spécifique du DS : `:where(.is-light, .f-light) .card h3 { color: --lt-head }` (spécificité 0,1,1) battait `.f-deep :is(h1...)` (0,1,1) à égalité ou inférieure selon l'ordre. Résultat : sur les pages avec `body.is-light`, les titres et descriptions des `.card` à l'intérieur d'une section `.f-deep`/`.f-dark` restaient en couleur sombre, illisibles.
+
+Réinversions ajoutées avec spécificité supérieure (0,2,1) :
+- `.f-deep .card h3, .f-dark .card h3, .hero .card h3 { color: var(--head) }`
+- `.f-deep .card :is(h1,h2,h4,h5,h6), ... { color: var(--head) }`
+- `.f-deep .card p, .f-dark .card p, .hero .card p { color: var(--text) }`
+
+### Migration
+Aucune. Les consommateurs qui forçaient localement la couleur des `.card h3`/`.card p` dans leurs sections sombres peuvent retirer ces overrides.
+
 ## [1.1.2] — 2026-05-11
 
 ### Fixed

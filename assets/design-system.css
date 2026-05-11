@@ -615,6 +615,14 @@ body:has(.ds-sidebar){padding-left:var(--ds-sidebar-w)}
 .card p{font-size:0.9375rem;line-height:1.6;color:var(--text)}
 :where(.is-light, .f-light) .card h3{color:var(--lt-head)}
 :where(.is-light, .f-light) .card p{color:var(--lt-text)}
+/* Réinversion : sous .f-deep/.f-dark/.hero les .card retrouvent les
+   couleurs de leur surface locale (le sélecteur ci-dessus a spécificité
+   0,1,1 — on monte à 0,2,1 ici pour le battre). */
+.f-deep .card h3,.f-dark .card h3,.hero .card h3,
+.f-deep .card :is(h1,h2,h4,h5,h6),
+.f-dark .card :is(h1,h2,h4,h5,h6),
+.hero .card :is(h1,h2,h4,h5,h6){color:var(--head)}
+.f-deep .card p,.f-dark .card p,.hero .card p{color:var(--text)}
 
 /* 1. Glass — actuel */
 .card-glass{
