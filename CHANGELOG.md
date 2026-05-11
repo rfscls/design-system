@@ -4,6 +4,22 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.1.1] — 2026-05-11
+
+### Fixed
+- **Headings & body text dans `.f-deep`/`.f-dark` imbriqués sous `body.is-light`** — quand une section `.f-deep` ou `.f-dark` était posée à l'intérieur d'un `<body class="is-light">` (cas courant : page principalement claire avec quelques sections sombres), les `h1`–`h6` héritaient de `:where(.is-light, .f-light) :is(h1,...) { color: --lt-head }` → couleur sombre sur fond sombre, quasi-invisible. Idem pour les `<em>` brand qui prenaient le gradient `accent-dk` (foncé, prévu pour fond clair) au lieu du gradient `accent`/`accent-2` lumineux. Et idem pour le body text (`<p>`, `.sub`) qui restait en `--lt-text`.
+
+Trois règles ajoutées qui re-forcent la couleur appropriée pour la surface locale :
+- `.f-deep :is(h1...), .f-dark :is(h1...) { color: var(--head) }`
+- `.f-deep :is(h1,h2) em, .f-dark :is(h1,h2) em { background: gradient accent lumineux }`
+- `.f-deep, .f-dark { color: var(--text) }` + `.f-deep .sub, .f-dark .sub { color: var(--text) }`
+
+### Why
+Le DS posait `:where(.is-light, .f-light)` sur `<body>` mais ne prévoyait pas la situation inverse : surface sombre imbriquée dans un body clair. La spécificité `(0,1,1)` des nouvelles règles bat le `(0,0,1)` du sélecteur d'origine, peu importe l'ordre dans la cascade.
+
+### Migration
+Aucune action requise. Les consommateurs qui patchaient manuellement la couleur de leurs headings sur `.f-deep`/`.f-dark` peuvent retirer ces overrides.
+
 ## [1.1.0] — 2026-05-04
 
 ### Added
