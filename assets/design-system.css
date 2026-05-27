@@ -244,6 +244,11 @@ h4,h5,h6{font-family:var(--ff-body);font-weight:700;font-size:1.1875rem;line-hei
 
 h1 em,h2 em{
   font-family:var(--ff-em);
+  /* Georgia (--ff-em) a des métriques verticales plus petites que Fraunces
+     (--ff-display) à taille égale : on le grossit légèrement pour aligner
+     optiquement les deux polices et égaliser la hauteur des rectangles
+     ::selection dans les titres bi-police. */
+  font-size:1.06em;
   font-style:italic;font-weight:400;
   background:linear-gradient(120deg,var(--accent),var(--accent-2),var(--accent));
   -webkit-background-clip:text;background-clip:text;color:transparent;
