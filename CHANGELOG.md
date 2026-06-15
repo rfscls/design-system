@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.1] — 2026-06-15
+
+### Changed
+- **Largeur de conteneur unique portée à 1280px** — `--w-container` passe de 1200px à 1280px, soit la largeur déjà utilisée par `.mx-lg` sur la majorité des pages (home, blog, glossaire, hubs…). `.mx`, `.mx-lg` et `.footer-inner` valent maintenant tous 1280px : le menu, le contenu et le footer ont exactement la même largeur sur **toutes** les pages, quel que soit le `containerSize`. `.mx` et `.mx-lg` sont désormais identiques.
+
+### Migration
+Aucune migration de code. Le contenu et le footer des pages qui n'étaient pas déjà en `.mx-lg` s'élargissent de 1200px à 1280px.
+
 ## [1.2.0] — 2026-06-15
 
 ### Added

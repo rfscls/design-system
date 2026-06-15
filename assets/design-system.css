@@ -134,11 +134,12 @@
   --deco-opacity:1;
 
   /* — Layout : largeurs de conteneur (source de vérité unique).
-     `.mx` (contenu + menu) et `.footer-inner` partagent la MÊME largeur pour
-     que header, contenu et footer s'alignent parfaitement sur toute la page.
-     `--w-container-lg` (.mx-lg) reste plus large pour les pages éditoriales
-     en 3 colonnes. */
-  --w-container:1200px;
+     UNE seule largeur de site (1280px) : `.mx`, `.mx-lg` et `.footer-inner`
+     la partagent, pour que header, contenu et footer s'alignent parfaitement
+     sur TOUTES les pages, quel que soit le `containerSize`. `.mx` et `.mx-lg`
+     sont donc désormais identiques (la distinction historique a été retirée).
+     `--w-container-sm` (.mx-sm) reste plus étroit pour les colonnes de lecture. */
+  --w-container:1280px;
   --w-container-sm:880px;
   --w-container-lg:1280px;
 }
