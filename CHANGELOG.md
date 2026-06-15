@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.2] — 2026-06-15
+
+### Fixed
+- **Alignement du menu sur le footer** — la gouttière latérale du menu était portée par le conteneur interne (`.mx`/`.mx-lg`, `padding-inline:clamp(20px,4vw,48px)`), alors que le footer la porte par son bandeau (`.footer`), `.footer-inner` n'ayant aucun padding. Conséquence : sur grand écran, le contenu du menu était rentré d'environ 48px par rapport au contenu du footer (ex. à 1440px : menu à x=128, footer à x=80). La gouttière passe désormais sur le bandeau `.nav` et `.nav .mx`/`.nav .mx-lg` ont `padding-inline:0` → le contenu du menu s'aligne exactement sur celui du footer (au ras de la boîte `--w-container`).
+
+### Migration
+Aucune. Le contenu du menu se décale vers les bords pour s'aligner sur le footer.
+
 ## [1.2.1] — 2026-06-15
 
 ### Changed

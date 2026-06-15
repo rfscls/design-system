@@ -511,7 +511,12 @@ body.is-light h1 em,body.is-light h2 em,:where(.is-light,.f-light) h1 em,:where(
     voir plus bas .ds-sidebar)
 ---------------------------------------------------------------- */
 .nav{
-  position:relative;z-index:100;padding:10px 0;
+  position:relative;z-index:100;
+  /* Gouttière latérale portée par le BANDEAU (comme .footer), pas par le
+     conteneur interne : le contenu du menu s'aligne ainsi exactement sur celui
+     du footer (au ras de la boîte de --w-container), au lieu d'être rentré du
+     padding de .mx. */
+  padding:10px clamp(20px,4vw,48px);
   background:rgba(6,13,14,0.65);
   backdrop-filter:blur(28px) saturate(1.5);-webkit-backdrop-filter:blur(28px) saturate(1.5);
   border-bottom:1px solid rgba(94,205,140,0.05);
@@ -520,6 +525,9 @@ body.is-light .nav{
   background:rgba(247,250,248,0.78);
   border-bottom:1px solid rgba(44,80,81,0.08);
 }
+/* Le conteneur interne du menu ne porte plus la gouttière (déplacée sur .nav) :
+   son contenu touche le bord de la boîte --w-container, aligné sur .footer-inner. */
+.nav .mx,.nav .mx-lg{padding-inline:0}
 .nav .mx{display:flex;align-items:center;justify-content:space-between}
 .nav-logo{
   display:inline-flex;align-items:center;gap:10px;
