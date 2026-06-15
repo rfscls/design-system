@@ -4,6 +4,17 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.0] — 2026-06-15
+
+### Added
+- **Tokens de largeur de conteneur** — `--w-container` (1200px), `--w-container-sm` (880px), `--w-container-lg` (1280px) dans `:root`. Source de vérité unique pour les largeurs de layout : `.mx`, `.mx-sm`, `.mx-lg` et `.footer-inner` consomment désormais ces tokens.
+
+### Changed
+- **`.mx` aligné sur `.footer-inner` (1140px → 1200px)** — le conteneur standard `.mx` (contenu de page + menu de navigation) était plus étroit que le footer (`.footer-inner`, 1200px), créant un désalignement des bords entre le chrome (header/footer) et le contenu sur toutes les pages. `.mx` passe à 1200px : header, contenu et footer partagent maintenant exactement la même largeur. `.mx-lg` (1280px, pages éditoriales 3 colonnes) et `.mx-sm` (880px) inchangés.
+
+### Migration
+Aucune migration de code. Le contenu des pages utilisant `.mx` s'élargit de 60px — vérifier les mises en page tendues (héros, grilles serrées) calibrées pour 1140px.
+
 ## [1.1.3] — 2026-05-11
 
 ### Fixed

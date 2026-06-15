@@ -132,6 +132,15 @@
 
   /* — Density (tweakable) */
   --deco-opacity:1;
+
+  /* — Layout : largeurs de conteneur (source de vérité unique).
+     `.mx` (contenu + menu) et `.footer-inner` partagent la MÊME largeur pour
+     que header, contenu et footer s'alignent parfaitement sur toute la page.
+     `--w-container-lg` (.mx-lg) reste plus large pour les pages éditoriales
+     en 3 colonnes. */
+  --w-container:1200px;
+  --w-container-sm:880px;
+  --w-container-lg:1280px;
 }
 }
 
@@ -211,9 +220,9 @@ a:focus-visible{outline-offset:3px;border-radius:2px}
 /* ----------------------------------------------------------------
    LAYOUT
 ---------------------------------------------------------------- */
-.mx{max-width:1140px;margin:0 auto;padding-inline:clamp(20px,4vw,48px)}
-.mx-sm{max-width:880px;margin:0 auto;padding-inline:clamp(20px,4vw,48px)}
-.mx-lg{max-width:1280px;margin:0 auto;padding-inline:clamp(20px,4vw,48px)}
+.mx{max-width:var(--w-container);margin:0 auto;padding-inline:clamp(20px,4vw,48px)}
+.mx-sm{max-width:var(--w-container-sm);margin:0 auto;padding-inline:clamp(20px,4vw,48px)}
+.mx-lg{max-width:var(--w-container-lg);margin:0 auto;padding-inline:clamp(20px,4vw,48px)}
 
 .sec{position:relative;overflow:visible;padding:100px 0}
 .sec>*{position:relative;z-index:2}
@@ -1327,7 +1336,7 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
   padding-block:var(--s-11) var(--s-6);
   padding-inline:clamp(20px,4vw,48px);
 }
-.footer-inner{max-width:1200px;margin:0 auto}
+.footer-inner{max-width:var(--w-container);margin:0 auto}
 
 /* Grilles de colonnes */
 .footer-grid{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:32px;margin-bottom:var(--s-9)}
