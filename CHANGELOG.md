@@ -4,6 +4,11 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.4] — 2026-06-19
+
+### Fixed
+- **Rognage du glyphe italique (suite de 1.2.3)** — `0.12em` ne suffisait pas pour le débordement de l'italique Fraunces à taille display (le crochet supérieur du « f » restait coupé). Valeur portée à `0.28em` sur `h1 em,h2 em`. Sans incidence de layout : la marge négative associée compense intégralement, donc surdimensionner ne décale rien.
+
 ## [1.2.3] — 2026-06-19
 
 ### Fixed
