@@ -262,6 +262,12 @@ h1 em,h2 em{
   font-style:italic;font-weight:400;
   background:linear-gradient(120deg,var(--accent),var(--accent-2),var(--accent));
   -webkit-background-clip:text;background-clip:text;color:transparent;
+  /* `background-clip:text` rogne la peinture sur la chasse des glyphes. En
+     italique, le jambage penché du DERNIER caractère (ex. le « f » de
+     « take care of ») déborde sa chasse et se fait couper à droite (bug
+     WebKit/Blink). On élargit la boîte du clip ; la marge négative compense
+     pour ne pas décaler le texte qui suit (cas des <em> en milieu de titre). */
+  padding-right:0.12em;margin-right:-0.12em;
 }
 body.is-light h1 em,body.is-light h2 em,:where(.is-light,.f-light) h1 em,:where(.is-light,.f-light) h2 em{
   background:linear-gradient(120deg,var(--accent-dk),var(--accent),var(--accent-dk));

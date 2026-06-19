@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.3] — 2026-06-19
+
+### Fixed
+- **Rognage du dernier glyphe italique des `<em>` de titres** — les `<em>` de `h1`/`h2` sont peints avec `background-clip:text; color:transparent` (gradient brand). En italique, `background-clip:text` rogne la peinture sur la chasse des glyphes : le jambage penché du dernier caractère (ex. le « f » de « take care of », ou un mot brand en fin de titre) était coupé à droite (bug WebKit/Blink). Ajout de `padding-right:0.12em; margin-right:-0.12em` sur `h1 em,h2 em` : la boîte du clip englobe désormais le débordement, et la marge négative compense pour ne décaler ni le texte qui suit (cas des `<em>` en milieu de titre) ni l'alignement.
+
+### Migration
+Aucune.
+
 ## [1.2.2] — 2026-06-15
 
 ### Fixed
