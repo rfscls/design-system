@@ -138,6 +138,10 @@
      la partagent, pour que header, contenu et footer s'alignent parfaitement
      sur TOUTES les pages, quel que soit le `containerSize`. `.mx` et `.mx-lg`
      sont donc désormais identiques (la distinction historique a été retirée).
+     La gouttière latérale (clamp 20→48px) est portée par le conteneur INTERNE
+     partout (`.mx`, `.nav .mx`, `.footer-inner`) ; les bandeaux nav/footer
+     restent pleine largeur. Contenu, menu et footer sont ainsi alignés sur le
+     même bord intérieur, jamais collés au bord de l'écran.
      `--w-container-sm` (.mx-sm) reste plus étroit pour les colonnes de lecture. */
   --w-container:1280px;
   --w-container-sm:880px;
@@ -518,11 +522,11 @@ body.is-light h1 em,body.is-light h2 em,:where(.is-light,.f-light) h1 em,:where(
 ---------------------------------------------------------------- */
 .nav{
   position:relative;z-index:100;
-  /* Gouttière latérale portée par le BANDEAU (comme .footer), pas par le
-     conteneur interne : le contenu du menu s'aligne ainsi exactement sur celui
-     du footer (au ras de la boîte de --w-container), au lieu d'être rentré du
-     padding de .mx. */
-  padding:10px clamp(20px,4vw,48px);
+  /* Le BANDEAU reste pleine largeur (fond flouté edge-to-edge) ; la gouttière
+     latérale est portée par le conteneur interne `.mx`, comme pour le contenu
+     des pages. Le contenu du menu s'aligne ainsi exactement sur celui des
+     sections ET du footer (tous rentrés du même padding de .mx). */
+  padding:10px 0;
   background:rgba(6,13,14,0.65);
   backdrop-filter:blur(28px) saturate(1.5);-webkit-backdrop-filter:blur(28px) saturate(1.5);
   border-bottom:1px solid rgba(94,205,140,0.05);
@@ -531,9 +535,8 @@ body.is-light .nav{
   background:rgba(247,250,248,0.78);
   border-bottom:1px solid rgba(44,80,81,0.08);
 }
-/* Le conteneur interne du menu ne porte plus la gouttière (déplacée sur .nav) :
-   son contenu touche le bord de la boîte --w-container, aligné sur .footer-inner. */
-.nav .mx,.nav .mx-lg{padding-inline:0}
+/* Le conteneur interne du menu garde la gouttière standard de `.mx` : son
+   contenu s'aligne sur l'inset des sections et du footer. */
 .nav .mx{display:flex;align-items:center;justify-content:space-between}
 .nav-logo{
   display:inline-flex;align-items:center;gap:10px;
@@ -1349,9 +1352,11 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
   position:relative;background:var(--deep);color:var(--muted);
   border-top:1px solid rgba(94,205,140,0.08);
   padding-block:var(--s-11) var(--s-6);
-  padding-inline:clamp(20px,4vw,48px);
 }
-.footer-inner{max-width:var(--w-container);margin:0 auto}
+/* Bandeau pleine largeur ; la gouttière est portée par le conteneur interne
+   (comme `.mx` et `.nav .mx`) → le contenu du footer s'aligne sur l'inset des
+   sections et du menu. */
+.footer-inner{max-width:var(--w-container);margin:0 auto;padding-inline:clamp(20px,4vw,48px)}
 
 /* Grilles de colonnes */
 .footer-grid{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:32px;margin-bottom:var(--s-9)}
