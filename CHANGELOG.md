@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.6] — 2026-07-08
+
+### Fixed
+- **Barre de fenêtre du bloc `.code` figée pendant le scroll horizontal** — `.code` portait à la fois le scroll (`overflow-x:auto`) et les décorations de « barre de fenêtre » (pastilles `::before`, séparateur `::after`) en `position:absolute`. Ces pseudo-éléments étant ancrés sur l'origine de scroll de `.code`, ils défilaient avec le code quand il débordait → la barre glissait, effet perturbant. Fix en deux couches : le contenu s'enveloppe désormais dans un `.code-body` interne qui prend le scroll, `.code` cessant de scroller (`overflow:hidden`) pour figer la barre. Un `:has(>.code-body)` conditionne le nouveau comportement : le markup historique (contenu directement dans `.code`) reste scrollable tel quel.
+
+### Migration
+Aucune (rétro-compatible). Pour bénéficier du fix, enveloppe le contenu du bloc dans un `.code-body` : `<pre class="code"><span class="code-body">…</span></pre>`. Sans wrapper, le comportement reste identique à avant.
+
 ## [1.2.5] — 2026-06-24
 
 ### Changed

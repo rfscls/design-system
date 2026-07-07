@@ -812,16 +812,16 @@
       <div style="margin-top:18px">
         <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:10px">
           <code class="icode">.code</code>
-          <span class="caption">Bloc de code multi-ligne — snippet HTML ou CSS.</span>
+          <span class="caption">Bloc de code multi-ligne — enveloppe le contenu dans <code class="icode">.code-body</code> pour que la barre de fenêtre reste figée quand le code déborde et scrolle horizontalement.</span>
         </div>
-        <code class="code">&lt;!-- Inline dans un paragraphe --&gt;
-&lt;p&gt;La classe &lt;code class="icode"&gt;.hero-sub&lt;/code&gt; pose les sous-titres de hero.&lt;/p&gt;
+        <code class="code"><span class="code-body">&lt;!-- Enveloppe le contenu dans .code-body pour un scroll horizontal propre (barre figée) --&gt;
+&lt;pre class="code"&gt;&lt;span class="code-body"&gt;…votre code, même très large, la barre de fenêtre ne bouge plus…&lt;/span&gt;&lt;/pre&gt;
 
 &lt;!-- Raccourcis --&gt;
 &lt;span class="kbd"&gt;⌘&lt;/span&gt; &lt;span class="kbd"&gt;K&lt;/span&gt;
 
 &lt;!-- Méta éditorial --&gt;
-&lt;span class="meta"&gt;PUBLIÉ · 14 MARS 2026&lt;/span&gt;</code>
+&lt;span class="meta"&gt;PUBLIÉ · 14 MARS 2026&lt;/span&gt;</span></code>
       </div>
 
       <!-- Real usage -->

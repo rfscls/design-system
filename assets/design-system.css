@@ -1268,6 +1268,14 @@ body.is-light .divider-dashed,:where(.is-light,.f-light) .divider-dashed{border-
 .code{display:block;position:relative;padding:34px 20px 18px;background:#0E1013;border:1px solid rgba(201,204,208,0.08);border-radius:8px;font-family:var(--ff-mono);font-size:0.6875rem;color:#9EA3A9;line-height:1.7;overflow-x:auto;letter-spacing:-0.01em;white-space:pre;margin:6px 0}
 .code::before{content:"";position:absolute;top:10px;left:14px;width:10px;height:10px;border-radius:50%;background:#E07A6E;box-shadow:16px 0 0 #E2B862,32px 0 0 #5ECD8C}
 .code::after{content:"";position:absolute;top:26px;left:0;right:0;height:1px;background:rgba(201,204,208,0.08)}
+/* Barre de fenêtre figée pendant le scroll horizontal. .code porte à la fois le
+   scroll (overflow-x:auto ci-dessus) ET les décorations en position:absolute
+   (::before/::after) → quand le code déborde, la barre défile avec lui. Fix en
+   deux couches : si le contenu est enveloppé dans .code-body, .code cesse de
+   scroller (barre figée) et le scroll passe à la couche interne. Le :has() garde
+   le markup historique (contenu direct dans .code) scrollable tel quel. */
+.code:has(>.code-body){overflow:hidden}
+.code>.code-body{display:block;overflow-x:auto;white-space:pre}
 
 /* .font-table — utilitaire doc uniquement, défini dans design-system-doc.css */
 
