@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.7] — 2026-08-18
+
+### Fixed
+- **Le style de lien `.prose a` ne repeint plus les boutons** — un `<a class="btn …">` posé dans un `.prose` (CTA d'outil embarqué, bouton en fin d'article) héritait du style de lien de texte : soulignement parasite au repos, et libellé passé à l'accent au survol — illisible sur le fond accent de `.btn-primary` (vécu sur les CTA des outils embarqués de webb, chaque outil devant embarquer sa propre parade CSS). Exclusion `:not(.btn)` sur `.prose a` et `.prose a:hover` : un bouton n'est pas un lien de texte.
+
+### Migration
+Aucune (rétro-compatible). Les parades locales des consommateurs (sélecteurs spécifiques qui refigent la couleur des CTA dans un `.prose`) deviennent superflues et peuvent être retirées à l'occasion. Nuance de spécificité : `.prose a:not(.btn)` passe de 0-1-1 à 0-2-1 — un override consommateur qui battait `.prose a` uniquement par ordre de source (à spécificité 0-1-1 égale) doit monter d'un cran.
+
 ## [1.2.6] — 2026-07-08
 
 ### Fixed
