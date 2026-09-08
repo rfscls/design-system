@@ -3,5 +3,13 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/", "destination": "/design-system" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
   ]
 }
