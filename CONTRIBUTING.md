@@ -237,6 +237,7 @@ Si tu ne touches qu'à `design-system.html` (correction de typo, meilleure descr
 - **Le `main` = toujours buildable** — ne commit pas un CSS cassé ou un JS qui throw, même en work-in-progress.
 - **Une release par commit** — n'accumule pas 5 fixes en un seul bump. Plusieurs petits patches valent mieux qu'un mega-patch.
 - **CHANGELOG tenu à jour à CHAQUE release** — pas rétroactivement 3 mois plus tard, tu ne te rappelleras plus.
+- **Préfixes : `-webkit-` d'abord, la propriété standard ensuite** (`-webkit-backdrop-filter:X;backdrop-filter:X`). Dans l'autre ordre, Lightning CSS (Next 16 / Turbopack) ne garde que la version préfixée et Chrome perd le flou sans aucune erreur. Contrôle : `getComputedStyle(el).backdropFilter` dans Chrome ne doit pas valoir `none`.
 - **Teste sur un projet consommateur** avant un bump **minor** ou **major**. Au moins une fois, sur une page réelle.
 
 ---

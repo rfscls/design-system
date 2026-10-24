@@ -4,6 +4,14 @@ Toutes les évolutions notables de `@eurofiscalis/design-system` sont documenté
 
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), et le projet respecte [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [1.2.8] — 2026-10-24
+
+### Fixed
+- **Le flou des verres disparaissait dans Chrome chez les consommateurs Next.js 16** — les verres (`.nav`, `.card-glass`, `.btn-glass`, `.modal-glass`, `.dropdown-menu`, `.hero-badge`, `.stat-bar`, `.label`, `.ds-sidebar`, `.team-card`, `.accordion-cards`…) écrivaient `backdrop-filter` PUIS `-webkit-backdrop-filter`. Lightning CSS (moteur CSS de Next 16 / Turbopack) fusionne la paire et ne garde que la dernière, préfixée, que Chrome ignore : `getComputedStyle(el).backdropFilter` valait `none`, sans erreur. Vécu sur hub.eurofiscalis.app. L'ordre est inversé partout (`-webkit-` d'abord, standard ensuite) : Lightning CSS garde alors les deux. `.label-bar`, `.label-under` et `.ds-sidebar-backdrop`, qui n'avaient que la version standard, reçoivent leur préfixe pour Safari ≤ 17.
+
+### Migration
+Aucune (rétro-compatible). Rendu inchangé pour les consommateurs qui ne passent pas par Lightning CSS (webb, build Astro actuel) ; les consommateurs Next 16 retrouvent le flou en passant au tag `v1.2.8`.
+
 ## [1.2.7] — 2026-08-18
 
 ### Fixed
